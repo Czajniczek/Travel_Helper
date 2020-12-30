@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Travel Helper</string>
+
+    <!--LOGIN-->
+    <string name="logo_image_content_description" translatable="false">CAR</string>
+    <string name="logo_name" translatable="false">Hello there Welcome back</string>
+    <string name="sign_in_to_continue" translatable="false">Sign in to continue</string>
+    <string name="email" translatable="false">E-mail</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="forgot_password" translatable="false">Forgot password?</string>
+    <string name="sign_in" translatable="false">Sign in</string>
+    <string name="new_user" translatable="false">NEW USER?</string>
+    <string name="sign_up" translatable="false">Sign up</string>
+
+</resources>
