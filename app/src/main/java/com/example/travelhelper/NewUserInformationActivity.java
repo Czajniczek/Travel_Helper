@@ -100,7 +100,8 @@ public class NewUserInformationActivity extends AppCompatActivity {
                 Toast.makeText(NewUserInformationActivity.this, "User created", Toast.LENGTH_SHORT).show();
                 SaveUserData(name, phoneNumber, city);
             } else {
-                Toast.makeText(NewUserInformationActivity.this, "Error: " + task.getException(), Toast.LENGTH_SHORT).show();
+                /*Toast.makeText(NewUserInformationActivity.this, "Error: " + task.getException(), Toast.LENGTH_SHORT).show();*/
+                Toast.makeText(NewUserInformationActivity.this, "Error", Toast.LENGTH_SHORT).show();
                 loadingDialog.DismissDialog();
             }
             //Nie udało się
@@ -116,8 +117,8 @@ public class NewUserInformationActivity extends AppCompatActivity {
 
         Map<String, Object> userMap = new HashMap<>();
         userMap.put("Name", name);
-        userMap.put("Phone number", phoneNumber);
         userMap.put("City", city);
+        userMap.put("Phone number", phoneNumber);
 
         documentReference.set(userMap).addOnSuccessListener(aVoid -> {
             Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();

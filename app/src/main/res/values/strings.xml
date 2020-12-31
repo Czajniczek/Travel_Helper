@@ -2,7 +2,7 @@
     <string name="app_name">Travel Helper</string>
 
     <!--SIGN IN-->
-    <string name="logo_image_content_description" translatable="false">CAR</string>
+    <string name="sign_in_logo_image_description" translatable="false">CAR</string>
     <string name="inscription_under_sign_in_logo" translatable="false">Hello there Welcome back</string>
     <string name="sign_in_to_continue" translatable="false">Sign in to continue</string>
     <string name="email" translatable="false">E-mail</string>
@@ -19,6 +19,12 @@
     <string name="email_validate_error" translatable="false">Not valid e-mail address</string>
     <string name="password_is_too_weak" translatable="false">Password is too weak</string>
     <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
+
+    <!--FORGOT PASSWORD-->
+    <string name="forgot_password_reset_password" translatable="false">Reset password</string>
+    <string name="forgot_password_enter_email" translatable="false">Enter your e-mail address</string>
+    <string name="forgot_password_reset_button" translatable="false">Reset</string>
+    <string name="forgot_password_email_not_exist" translatable="false">There is no user with a given email address.</string>
 
     <!--SIGN UP-->
     <string name="inscription_under_logo_sign_up" translatable="false">Register</string>
@@ -37,5 +43,10 @@
     <string name="city" translatable="false">City</string>
     <string name="phone_number" translatable="false">Phone number</string>
     <string name="continue_button" translatable="false">Continue</string>
+
+    <!--BOTTOM NAVIGATION BAR-->
+    <string name="need_ride" translatable="false">I need ride</string>
+    <string name="offer_ride" translatable="false">I offer ride</string>
+    <string name="user_profile" translatable="false">Profile</string>
 
 </resources>

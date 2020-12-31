@@ -15,7 +15,7 @@
         android:layout_width="@dimen/login_logo_width_and_height"
         android:layout_height="@dimen/login_logo_width_and_height"
         android:layout_gravity="center"
-        android:contentDescription="@string/logo_image_content_description"
+        android:contentDescription="@string/sign_in_logo_image_description"
         android:src="@drawable/ic_car_logo" />
 
     <TextView

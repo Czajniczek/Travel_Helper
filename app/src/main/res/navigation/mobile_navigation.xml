@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/need_ride_fragment">
+
+    <fragment
+        android:id="@+id/need_ride_fragment"
+        android:name="com.example.travelhelper.NeedRideFragment"
+        android:label="need_ride_fragment"
+        tools:layout="@layout/fragment_need_ride" />
+
+    <fragment
+        android:id="@+id/offer_ride_fragment"
+        android:name="com.example.travelhelper.OfferRideFragment"
+        android:label="offer_ride_fragment"
+        tools:layout="@layout/fragment_offer_ride" />
+
+    <fragment
+        android:id="@+id/user_profile_fragment"
+        android:name="com.example.travelhelper.UserProfileFragment"
+        android:label="user_profile_fragment"
+        tools:layout="@layout/fragment_user_profile" />
+
+</navigation>
