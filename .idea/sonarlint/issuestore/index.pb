@@ -15,3 +15,11 @@ t
 Dapp/src/main/java/com/example/travelhelper/RegistrationActivity.java,c\4\c4e71628304e6f18fcae5040ec0e9841e60ac68e
 z
 Japp/src/main/java/com/example/travelhelper/NewUserInformationActivity.java,c\0\c0e59b74d9b12fdf996685491a25924f261f48fa
+p
+@app/src/main/java/com/example/travelhelper/NeedRideFragment.java,8\4\843929fcc801f1df88d7bd2eae9673cb5eb71727
+q
+Aapp/src/main/java/com/example/travelhelper/OfferRideFragment.java,3\0\3045361b24534d24236f049f434e00e3c3fea495
+s
+Capp/src/main/java/com/example/travelhelper/UserProfileFragment.java,9\a\9a23228d438a36897e1db03d262da94b2a6f3eef
+s
+Capp/src/main/java/com/example/travelhelper/ResetPasswordDialog.java,1\0\10518b06f2dd32532ed171ea8b7e66f67b0b2dee

@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button signInButton, signUpButton, forgotPassword;
     private TextView signInError;
     private LoadingDialog loadingDialog;
+    private ResetPasswordDialog resetPasswordDialog;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -51,10 +52,10 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         //Nie trzeba się logować za każdym razem
-        /*if (firebaseAuth.getCurrentUser() != null) {
+        if (firebaseAuth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
-        }*/
+        }
 
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
@@ -103,13 +104,19 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 } else {
-                    Toast.makeText(LoginActivity.this, "Error: " + task.getException(), Toast.LENGTH_LONG).show();
+                    /*Toast.makeText(LoginActivity.this, "Error: " + task.getException(), Toast.LENGTH_LONG).show();*/
+                    Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_LONG).show();
                     loadingDialog.DismissDialog();
                 }
             }).addOnFailureListener(e -> {
                 signInError.setVisibility(View.VISIBLE);
                 loadingDialog.DismissDialog();
             });
+        });
+
+        forgotPassword.setOnClickListener(v -> {
+            resetPasswordDialog = new ResetPasswordDialog(LoginActivity.this);
+            resetPasswordDialog.StartResetPasswordDialog();
         });
 
         signUpButton.setOnClickListener(v -> {
