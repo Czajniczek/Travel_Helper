@@ -8,7 +8,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelHelper">
-        <activity android:name=".RegistrationActivity"></activity>
+        <activity android:name=".NewUserInformationActivity"></activity>
+        <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

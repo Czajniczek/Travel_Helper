@@ -1,5 +1,6 @@
 package com.example.travelhelper;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,14 +10,21 @@ import android.text.TextWatcher;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private static final Pattern PAASSWORD_PATTERN =
+    private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +         //at least 1 digit
                     //"(?=.*[a-z])" +         //at least 1 lower case letter
@@ -29,6 +37,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private TextInputLayout mEmail, mPassword, mRepeatPassword;
     private Button signUpButton, signInButton;
+    private FirebaseAuth firebaseAuth;
+    private LoadingDialog loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +50,7 @@ public class RegistrationActivity extends AppCompatActivity {
         mRepeatPassword = findViewById(R.id.sign_up_repeat_password);
         signUpButton = findViewById(R.id.sign_up_button_in_sign_up);
         signInButton = findViewById(R.id.sign_in_button_in_sign_up);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
@@ -87,13 +98,37 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
         signUpButton.setOnClickListener(v -> {
-            if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword()) return;
+                    /*trim() usuwa zbędne odstępy (spacje)*/
+                    String email = mEmail.getEditText().getText().toString().trim();
+                    String password = mPassword.getEditText().getText().toString().trim();
+                    String repeatPassword = mRepeatPassword.getEditText().getText().toString().trim();
 
-            final LoadingDialog loadingDialog = new LoadingDialog(RegistrationActivity.this);
-            loadingDialog.StartLoadingDialog();
+                    if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword())
+                        return;
 
-            //TODO FIREBASE
-        });
+                    loadingDialog = new LoadingDialog(RegistrationActivity.this);
+                    loadingDialog.StartLoadingDialog();
+
+                    //Sprawdzamy, czy podany E-mail nie jest już zarejestrowany
+                    firebaseAuth.fetchSignInMethodsForEmail(email).addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            List<String> methods = task.getResult().getSignInMethods();
+
+                            if (!methods.isEmpty()) {
+                                mEmail.setError(getString(R.string.email_exist_error));
+                                mEmail.requestFocus();
+                            } else {
+                                Intent intent = new Intent(getApplicationContext(), NewUserInformationActivity.class);
+                                intent.putExtra("USER_EMAIL", email);
+                                intent.putExtra("USER_PASSWORD", password);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }
+                        loadingDialog.DismissDialog();
+                    });
+                }
+        );
 
         signInButton.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
@@ -102,11 +137,10 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private boolean ValidateEmail() {
-        /*trim() usuwa zbędne odstępy (spacje)*/
         String email = mEmail.getEditText().getText().toString().trim();
 
         if (email.isEmpty()) {
-            mEmail.setError(getString(R.string.empty_email_error));
+            mEmail.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             mEmail.setError(getString(R.string.email_validate_error));
@@ -118,13 +152,12 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private boolean ValidatePassword() {
-        /*trim() usuwa zbędne odstępy (spacje)*/
         String password = mPassword.getEditText().getText().toString().trim();
 
         if (password.isEmpty()) {
-            mPassword.setError(getString(R.string.empty_email_error));
+            mPassword.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
-        } else if (!PAASSWORD_PATTERN.matcher(password).matches()) {
+        } else if (!PASSWORD_PATTERN.matcher(password).matches()) {
             mPassword.setError(getString(R.string.password_is_too_weak));
             return false;
         } else {
@@ -138,7 +171,7 @@ public class RegistrationActivity extends AppCompatActivity {
         String repeatPassword = mRepeatPassword.getEditText().getText().toString().trim();
 
         if (repeatPassword.isEmpty()) {
-            mRepeatPassword.setError(getString(R.string.empty_email_error));
+            mRepeatPassword.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
         } else if (!repeatPassword.equals(password)) {
             mRepeatPassword.setError(getString(R.string.password_are_not_the_same));

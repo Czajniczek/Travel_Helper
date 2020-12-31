@@ -13,3 +13,5 @@ m
 =app/src/main/java/com/example/travelhelper/LoadingDialog.java,0\f\0f09d8e18f8d5a64777a2ebb6ecb0b834003e59c
 t
 Dapp/src/main/java/com/example/travelhelper/RegistrationActivity.java,c\4\c4e71628304e6f18fcae5040ec0e9841e60ac68e
+z
+Japp/src/main/java/com/example/travelhelper/NewUserInformationActivity.java,c\0\c0e59b74d9b12fdf996685491a25924f261f48fa

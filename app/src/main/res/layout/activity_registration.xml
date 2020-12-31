@@ -11,7 +11,7 @@
     tools:context=".RegistrationActivity">
 
     <ImageView
-        android:id="@+id/logo_image"
+        android:id="@+id/sign_up_logo_image"
         android:layout_width="@dimen/login_logo_width_and_height"
         android:layout_height="@dimen/login_logo_width_and_height"
         android:layout_gravity="center"

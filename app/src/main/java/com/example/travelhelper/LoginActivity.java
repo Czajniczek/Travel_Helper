@@ -7,17 +7,20 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private static final Pattern PAASSWORD_PATTERN =
+    private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +         //at least 1 digit
                     //"(?=.*[a-z])" +         //at least 1 lower case letter
@@ -31,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout mEmail, mPassword;
     private Button signInButton, signUpButton, forgotPassword;
     private TextView signInError;
+    private LoadingDialog loadingDialog;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,13 @@ public class LoginActivity extends AppCompatActivity {
         signInButton = findViewById(R.id.sign_in_button_in_sign_in);
         signInError = findViewById(R.id.sign_in_error);
         signUpButton = findViewById(R.id.sign_up_button_in_sign_in);
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //Nie trzeba się logować za każdym razem
+        /*if (firebaseAuth.getCurrentUser() != null) {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            finish();
+        }*/
 
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
@@ -52,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 ValidateEmail();
+                signInError.setVisibility(View.GONE);
             }
 
             @Override
@@ -67,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 ValidatePassword();
+                signInError.setVisibility(View.GONE);
             }
 
             @Override
@@ -75,12 +89,27 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         signInButton.setOnClickListener(v -> {
+            String email = mEmail.getEditText().getText().toString().trim();
+            String password = mPassword.getEditText().getText().toString().trim();
+
             if (!ValidateEmail() | !ValidatePassword()) return;
 
-            final LoadingDialog loadingDialog = new LoadingDialog(LoginActivity.this);
+            loadingDialog = new LoadingDialog(LoginActivity.this);
             loadingDialog.StartLoadingDialog();
 
-            //TODO FIREBASE
+            firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    finish();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Error: " + task.getException(), Toast.LENGTH_LONG).show();
+                    loadingDialog.DismissDialog();
+                }
+            }).addOnFailureListener(e -> {
+                signInError.setVisibility(View.VISIBLE);
+                loadingDialog.DismissDialog();
+            });
         });
 
         signUpButton.setOnClickListener(v -> {
@@ -90,11 +119,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean ValidateEmail() {
-        /*trim() usuwa zbędne odstępy (spacje)*/
         String email = mEmail.getEditText().getText().toString().trim();
 
         if (email.isEmpty()) {
-            mEmail.setError(getString(R.string.empty_email_error));
+            mEmail.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             mEmail.setError(getString(R.string.email_validate_error));
@@ -106,13 +134,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean ValidatePassword() {
-        /*trim() usuwa zbędne odstępy (spacje)*/
         String password = mPassword.getEditText().getText().toString().trim();
 
         if (password.isEmpty()) {
-            mPassword.setError(getString(R.string.empty_email_error));
+            mPassword.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
-        } else if (!PAASSWORD_PATTERN.matcher(password).matches()) {
+        } else if (!PASSWORD_PATTERN.matcher(password).matches()) {
             mPassword.setError(getString(R.string.password_is_too_weak));
             return false;
         } else {
