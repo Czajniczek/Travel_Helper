@@ -2,7 +2,7 @@
 <resources>
 
     <dimen name="login_logo_width_and_height">150dp</dimen>
-    <dimen name="logo_name_text_size">40sp</dimen>
+    <dimen name="inscription_under_the_logo">40sp</dimen>
     <dimen name="logo_slogan_text_size">18sp</dimen>
 
 

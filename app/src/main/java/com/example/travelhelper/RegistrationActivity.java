@@ -9,13 +9,12 @@ import android.text.TextWatcher;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity {
+public class RegistrationActivity extends AppCompatActivity {
 
     private static final Pattern PAASSWORD_PATTERN =
             Pattern.compile("^" +
@@ -28,21 +27,19 @@ public class LoginActivity extends AppCompatActivity {
                     ".{4,}" +               //at least 4 characters
                     "$");
 
-    private TextInputLayout mEmail, mPassword;
-    private Button signInButton, signUpButton, forgotPassword;
-    private TextView signInError;
+    private TextInputLayout mEmail, mPassword, mRepeatPassword;
+    private Button signUpButton, signInButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registration);
 
-        mEmail = findViewById(R.id.sign_in_e_mail);
-        mPassword = findViewById(R.id.sign_in_password);
-        forgotPassword = findViewById(R.id.forgot_password_button);
-        signInButton = findViewById(R.id.sign_in_button_in_sign_in);
-        signInError = findViewById(R.id.sign_in_error);
-        signUpButton = findViewById(R.id.sign_up_button_in_sign_in);
+        mEmail = findViewById(R.id.sign_up_e_mail);
+        mPassword = findViewById(R.id.sign_up_password);
+        mRepeatPassword = findViewById(R.id.sign_up_repeat_password);
+        signUpButton = findViewById(R.id.sign_up_button_in_sign_up);
+        signInButton = findViewById(R.id.sign_in_button_in_sign_up);
 
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
@@ -74,17 +71,32 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        signInButton.setOnClickListener(v -> {
-            if (!ValidateEmail() | !ValidatePassword()) return;
+        mRepeatPassword.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
-            final LoadingDialog loadingDialog = new LoadingDialog(LoginActivity.this);
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ValidateRepeatPassword();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        signUpButton.setOnClickListener(v -> {
+            if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword()) return;
+
+            final LoadingDialog loadingDialog = new LoadingDialog(RegistrationActivity.this);
             loadingDialog.StartLoadingDialog();
 
             //TODO FIREBASE
         });
 
-        signUpButton.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
+        signInButton.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             finish();
         });
     }
@@ -117,6 +129,22 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         } else {
             mPassword.setError(null);
+            return true;
+        }
+    }
+
+    private boolean ValidateRepeatPassword() {
+        String password = mPassword.getEditText().getText().toString().trim();
+        String repeatPassword = mRepeatPassword.getEditText().getText().toString().trim();
+
+        if (repeatPassword.isEmpty()) {
+            mRepeatPassword.setError(getString(R.string.empty_email_error));
+            return false;
+        } else if (!repeatPassword.equals(password)) {
+            mRepeatPassword.setError(getString(R.string.password_are_not_the_same));
+            return false;
+        } else {
+            mRepeatPassword.setError(null);
             return true;
         }
     }

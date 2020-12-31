@@ -1,15 +1,31 @@
 <resources>
     <string name="app_name">Travel Helper</string>
 
-    <!--LOGIN-->
+    <!--SIGN IN-->
     <string name="logo_image_content_description" translatable="false">CAR</string>
-    <string name="logo_name" translatable="false">Hello there Welcome back</string>
+    <string name="inscription_under_sign_in_logo" translatable="false">Hello there Welcome back</string>
     <string name="sign_in_to_continue" translatable="false">Sign in to continue</string>
     <string name="email" translatable="false">E-mail</string>
     <string name="password" translatable="false">Password</string>
+    <string name="sign_in_error" translatable="false">Invalid e-mail address or password</string>
     <string name="forgot_password" translatable="false">Forgot password?</string>
     <string name="sign_in" translatable="false">Sign in</string>
-    <string name="new_user" translatable="false">NEW USER?</string>
+    <string name="loading" translatable="false">Loading...</string>
+    <string name="new_user" translatable="false">New user?</string>
     <string name="sign_up" translatable="false">Sign up</string>
 
+    <!--SIGN IN VALIDATION-->
+    <string name="empty_email_error" translatable="false">The field can\'t be empty</string>
+    <string name="email_validate_error" translatable="false">Not valid e-mail address</string>
+    <string name="password_is_too_weak" translatable="false">Password is too weak</string>
+    <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
+
+    <!--SIGN UP-->
+    <string name="inscription_under_logo_sign_up" translatable="false">Register</string>
+    <string name="must_register" translatable="false">To use the application, you must register</string>
+    <string name="repeat_password" translatable="false">Repeat password</string>
+    <string name="have_account" translatable="false">Already have an account?</string>
+
+    <!--SIGN UP VALIDATION-->
+    <string name="password_are_not_the_same" translatable="false">The passwords are not the same</string>
 </resources>

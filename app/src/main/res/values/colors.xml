@@ -19,4 +19,7 @@
     <color name="blue_dark_secondary">#FF006DB3</color>
     <color name="blue_light_secondary">#FF63CCFF</color>
 
+    <!--ERRORS-->
+    <color name="red">#FFFF0000</color>
+
 </resources>
