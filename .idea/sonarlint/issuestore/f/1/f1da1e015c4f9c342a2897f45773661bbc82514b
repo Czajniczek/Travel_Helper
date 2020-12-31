@@ -1,2 +1,4 @@
 
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±
+}
+java:S1450"[Remove the "logoutButton" field and declare it as a local variable in the relevant methods.(Ã»üÕùÿÿÿÿ8áã©·ë.

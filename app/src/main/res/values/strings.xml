@@ -15,7 +15,7 @@
     <string name="sign_up" translatable="false">Sign up</string>
 
     <!--SIGN IN VALIDATION-->
-    <string name="empty_email_error" translatable="false">The field can\'t be empty</string>
+    <string name="field_can_not_be_empty_error" translatable="false">The field can\'t be empty</string>
     <string name="email_validate_error" translatable="false">Not valid e-mail address</string>
     <string name="password_is_too_weak" translatable="false">Password is too weak</string>
     <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
@@ -28,4 +28,14 @@
 
     <!--SIGN UP VALIDATION-->
     <string name="password_are_not_the_same" translatable="false">The passwords are not the same</string>
+    <string name="email_exist_error" translatable="false">The user with the given e-mail address exists</string>
+
+    <!--NEW USER INFORMATION-->
+    <string name="inscription_under_logo_new_user_information" translatable="false">Necessary data</string>
+    <string name="input_necessary_data" translatable="false">You must provide the necessary data</string>
+    <string name="user_name" translatable="false">User name</string>
+    <string name="city" translatable="false">City</string>
+    <string name="phone_number" translatable="false">Phone number</string>
+    <string name="continue_button" translatable="false">Continue</string>
+
 </resources>
