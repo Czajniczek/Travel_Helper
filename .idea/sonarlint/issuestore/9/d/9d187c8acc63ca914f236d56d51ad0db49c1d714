@@ -1,2 +1,38 @@
 
-V	java:S110"<This class has 9 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
+a
+java:S5840"?Remove this boundary that can never match or rewrite the regex.(Î‹¥Ÿıÿÿÿÿ8¾¬¿±ë.
+L
+java:S1659 "*Declare "signUpButton" on a separate line.(…«°©ûÿÿÿÿ8Ÿ²æ«ë.
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
+
+java:S1186I"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Ô‘ú±ë.
+N
+java:S1659 ",Declare "forgotPassword" on a separate line.(…«°©ûÿÿÿÿ8úÖ­ë.
+
+java:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8šâ÷±ë.
+D
+java:S1659"'Declare "mPassword" on a separate line.(ú¨Ê¿8ïéç«ë.
+Q
+java:S1128"4Remove this unused import 'android.widget.EditText'.(†Å›Ú8”ş‚±ë.
+
+java:S1450 "]Remove the "forgotPassword" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
+w
+java:S1450!"ZRemove the "signInError" field and declare it as a local variable in the relevant methods.(‡÷ş8Ğæ«°ë.
+}
+java:S1450 "[Remove the "signInButton" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
+ˆ
+java:S2178N"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ƒŒ¥÷ûÿÿÿÿ8ş©Ÿ±ë.
+O
+java:S1135S"2Complete the task associated to this TODO comment.(ä©€8§¤…²ë.
+o	java:S100l"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­„Ûüÿÿÿÿ8›Ñ›±ë.
+j	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8ŒËÓ¯ë.
+}
+java:S1450 "[Remove the "signUpButton" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
+T
+java:S1068 "2Remove this unused "forgotPassword" private field.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
+
+java:S1186:"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8šâ÷±ë.
+L
+java:S1068!"/Remove this unused "signInError" private field.(‡÷ş8Ğæ«°ë.
+
+java:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8Ô‘ú±ë.

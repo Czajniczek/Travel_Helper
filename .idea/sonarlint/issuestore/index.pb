@@ -7,3 +7,9 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+l
+<app/src/main/java/com/example/travelhelper/MainActivity.java,f\1\f1da1e015c4f9c342a2897f45773661bbc82514b
+m
+=app/src/main/java/com/example/travelhelper/LoadingDialog.java,0\f\0f09d8e18f8d5a64777a2ebb6ecb0b834003e59c
+t
+Dapp/src/main/java/com/example/travelhelper/RegistrationActivity.java,c\4\c4e71628304e6f18fcae5040ec0e9841e60ac68e
