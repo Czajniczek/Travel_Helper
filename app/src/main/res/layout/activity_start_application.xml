@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start_application"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".StartApplicationActivity">
+
+    <ImageView
+        android:id="@+id/activity_start_application_logo_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/car_logo"
+        android:transitionName="logo_image" />
+
+    <TextView
+        android:id="@+id/activity_start_application_logo_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:text="@string/activity_start_application_logo_text_view"
+        android:textAlignment="center"
+        android:textSize="70sp"
+        android:transitionName="logo_text" />
+
+    <TextView
+        android:id="@+id/activity_start_application_slogan_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/antic"
+        android:text="@string/activity_start_application_slogan_text_view"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+</LinearLayout>

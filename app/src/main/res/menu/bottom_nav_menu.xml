@@ -4,16 +4,16 @@
     <item
         android:id="@+id/need_ride_fragment"
         android:icon="@drawable/ic_people"
-        android:title="@string/need_ride" />
+        android:title="@string/bottom_navigation_need_ride" />
 
     <item
         android:id="@+id/offer_ride_fragment"
-        android:icon="@drawable/ic_car_logo"
-        android:title="@string/offer_ride" />
+        android:icon="@drawable/ic_car"
+        android:title="@string/bottom_navigation_offer_ride" />
 
     <item
         android:id="@+id/user_profile_fragment"
         android:icon="@drawable/ic_account"
-        android:title="@string/user_profile" />
+        android:title="@string/bottom_navigation_user_profile" />
 
 </menu>

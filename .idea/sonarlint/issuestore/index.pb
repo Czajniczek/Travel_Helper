@@ -23,3 +23,5 @@ s
 Capp/src/main/java/com/example/travelhelper/UserProfileFragment.java,9\a\9a23228d438a36897e1db03d262da94b2a6f3eef
 s
 Capp/src/main/java/com/example/travelhelper/ResetPasswordDialog.java,1\0\10518b06f2dd32532ed171ea8b7e66f67b0b2dee
+x
+Happ/src/main/java/com/example/travelhelper/StartApplicationActivity.java,b\d\bd7191eae2435ea2d3f0c68a34b8895bc88e3087
