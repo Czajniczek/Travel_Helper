@@ -3,13 +3,19 @@ package com.example.travelhelper;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Pair;
 import android.util.Patterns;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +30,7 @@ import java.util.regex.Pattern;
 
 public class RegistrationActivity extends AppCompatActivity {
 
+    //VARIABLES
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +         //at least 1 digit
@@ -36,15 +43,24 @@ public class RegistrationActivity extends AppCompatActivity {
                     "$");
 
     private TextInputLayout mEmail, mPassword, mRepeatPassword;
+    private ImageView image;
+    private TextView textLogo, slogan;
     private Button signUpButton, signInButton;
     private FirebaseAuth firebaseAuth;
     private LoadingDialog loadingDialog;
+    private Intent intent;
+    private Pair[] pairs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_registration);
 
+        //HOOKS
+        image = findViewById(R.id.sign_up_logo_image);
+        textLogo = findViewById(R.id.inscription_under_sign_up_logo);
+        slogan = findViewById(R.id.sign_up_slogan_name);
         mEmail = findViewById(R.id.sign_up_e_mail);
         mPassword = findViewById(R.id.sign_up_password);
         mRepeatPassword = findViewById(R.id.sign_up_repeat_password);
@@ -52,6 +68,7 @@ public class RegistrationActivity extends AppCompatActivity {
         signInButton = findViewById(R.id.sign_in_button_in_sign_up);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        //region TextChange LISTENERS
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -96,7 +113,9 @@ public class RegistrationActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
+        //endregion
 
+        //region OnClick LISTENERS
         signUpButton.setOnClickListener(v -> {
                     /*trim() usuwa zbędne odstępy (spacje)*/
                     String email = mEmail.getEditText().getText().toString().trim();
@@ -118,7 +137,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                 mEmail.setError(getString(R.string.email_exist_error));
                                 mEmail.requestFocus();
                             } else {
-                                Intent intent = new Intent(getApplicationContext(), NewUserInformationActivity.class);
+                                intent = new Intent(getApplicationContext(), NewUserInformationActivity.class);
                                 intent.putExtra("USER_EMAIL", email);
                                 intent.putExtra("USER_PASSWORD", password);
                                 startActivity(intent);
@@ -131,11 +150,25 @@ public class RegistrationActivity extends AppCompatActivity {
         );
 
         signInButton.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-            finish();
+            intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+
+            pairs = new Pair[7];
+
+            pairs[0] = new Pair<View, String>(image, "logo_image");
+            pairs[1] = new Pair<View, String>(textLogo, "logo_text");
+            pairs[2] = new Pair<View, String>(slogan, "logo_desc");
+            pairs[3] = new Pair<View, String>(mEmail, "email_tran");
+            pairs[4] = new Pair<View, String>(mPassword, "password_tran");
+            pairs[5] = new Pair<View, String>(signUpButton, "button_tran");
+            pairs[6] = new Pair<View, String>(signInButton, "sign_in_sign_up_tran");
+
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RegistrationActivity.this, pairs);
+            startActivity(intent, options.toBundle());
         });
+        //endregion
     }
 
+    //region VALIDATION
     private boolean ValidateEmail() {
         String email = mEmail.getEditText().getText().toString().trim();
 
@@ -181,4 +214,5 @@ public class RegistrationActivity extends AppCompatActivity {
             return true;
         }
     }
+    //endregion
 }

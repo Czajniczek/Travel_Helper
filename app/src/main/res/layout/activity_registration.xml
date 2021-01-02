@@ -14,29 +14,34 @@
         android:id="@+id/sign_up_logo_image"
         android:layout_width="@dimen/login_logo_width_and_height"
         android:layout_height="@dimen/login_logo_width_and_height"
-        android:layout_gravity="center"
-        android:contentDescription="@string/sign_in_logo_image_description"
-        android:src="@drawable/ic_car_logo" />
+        android:layout_marginTop="-10dp"
+        android:layout_gravity="left"
+        android:contentDescription="@string/activity_login_logo_image_description"
+        android:src="@drawable/car_logo"
+        android:transitionName="logo_image" />
 
     <TextView
         android:id="@+id/inscription_under_sign_up_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/inscription_under_logo_sign_up"
-        android:textAlignment="center"
+        android:layout_gravity="left"
+        android:layout_marginTop="-41dp"
+        android:fontFamily="@font/bungee"
+        android:text="@string/activity_registration_inscription_under_logo"
         android:textColor="@color/black"
         android:textSize="@dimen/inscription_under_the_logo"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:transitionName="logo_text" />
 
     <TextView
         android:id="@+id/sign_up_slogan_name"
         android:layout_width="wrap_content"
+        android:layout_marginTop="-10dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/must_register"
-        android:textAlignment="center"
-        android:textSize="@dimen/logo_slogan_text_size" />
+        android:layout_gravity="left"
+        android:text="@string/activity_registration_make_journey_easier"
+        android:textSize="@dimen/logo_slogan_text_size"
+        android:transitionName="logo_desc" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,6 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
+            android:transitionName="email_tran"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -67,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="@string/password"
+            android:transitionName="password_tran"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
 
@@ -100,9 +107,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:text="@string/sign_up" />
+            android:background="@drawable/round_background"
+            android:text="@string/sign_up"
+            android:transitionName="button_tran" />
 
     </LinearLayout>
 
@@ -115,29 +122,18 @@
             android:layout_height="1dp"
             android:layout_marginBottom="8dp"
             android:background="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/have_account_text_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/have_account_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:text="@string/have_account"
-            android:textColor="@color/black"
-            android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/sign_in_button_in_sign_up"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/sign_in_button_in_sign_up"
+            style="@style/transparent_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/sign_in"
+            android:text="@string/activity_registration_have_account_ask"
+            android:transitionName="sign_in_sign_up_tran"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

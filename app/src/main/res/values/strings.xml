@@ -1,52 +1,61 @@
 <resources>
     <string name="app_name">Travel Helper</string>
 
-    <!--SIGN IN-->
-    <string name="sign_in_logo_image_description" translatable="false">CAR</string>
-    <string name="inscription_under_sign_in_logo" translatable="false">Hello there Welcome back</string>
-    <string name="sign_in_to_continue" translatable="false">Sign in to continue</string>
+    <!--region START APPLICATION-->
+    <string name="activity_start_application_logo_text_view" translatable="false">Travel helper</string>
+    <string name="activity_start_application_slogan_text_view" translatable="false">Make your journey easier</string>
+    <!--endregion-->
+
+    <!--region SIGN IN-->
+    <string name="activity_login_logo_image_description" translatable="false">CAR</string>
+    <string name="activity_login_inscription_under_logo" translatable="false">Hello there Welcome back</string>
+    <string name="activity_login_sign_in_to_continue" translatable="false">Sign in to continue</string>
     <string name="email" translatable="false">E-mail</string>
     <string name="password" translatable="false">Password</string>
-    <string name="sign_in_error" translatable="false">Invalid e-mail address or password</string>
-    <string name="forgot_password" translatable="false">Forgot password?</string>
+    <string name="activity_login_sign_in_error" translatable="false">Invalid e-mail address or password</string>
+    <string name="activity_login_forgot_password" translatable="false">Forgot password?</string>
     <string name="sign_in" translatable="false">Sign in</string>
-    <string name="loading" translatable="false">Loading...</string>
-    <string name="new_user" translatable="false">New user?</string>
-    <string name="sign_up" translatable="false">Sign up</string>
+    <string name="activity_login_loading" translatable="false">Loading...</string>
+    <string name="activity_login_new_user_sign_up" translatable="false">New user? Sign up</string>
+    <!--endregion-->
 
-    <!--SIGN IN VALIDATION-->
+    <!--region SIGN UP-->
+    <string name="activity_registration_inscription_under_logo" translatable="false">Register before the start</string>
+    <string name="activity_registration_make_journey_easier" translatable="false">Sign up to make your journey easier</string>
+    <string name="repeat_password" translatable="false">Repeat password</string>
+    <string name="activity_registration_have_account_ask" translatable="false">Have an account? Sign in</string>
+    <string name="sign_up" translatable="false">Sign up</string>
+    <!--endregion-->
+
+    <!--region VALIDATION-->
     <string name="field_can_not_be_empty_error" translatable="false">The field can\'t be empty</string>
     <string name="email_validate_error" translatable="false">Not valid e-mail address</string>
     <string name="password_is_too_weak" translatable="false">Password is too weak</string>
     <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
-
-    <!--FORGOT PASSWORD-->
-    <string name="forgot_password_reset_password" translatable="false">Reset password</string>
-    <string name="forgot_password_enter_email" translatable="false">Enter your e-mail address</string>
-    <string name="forgot_password_reset_button" translatable="false">Reset</string>
-    <string name="forgot_password_email_not_exist" translatable="false">There is no user with a given email address.</string>
-
-    <!--SIGN UP-->
-    <string name="inscription_under_logo_sign_up" translatable="false">Register</string>
-    <string name="must_register" translatable="false">To use the application, you must register</string>
-    <string name="repeat_password" translatable="false">Repeat password</string>
-    <string name="have_account" translatable="false">Already have an account?</string>
-
-    <!--SIGN UP VALIDATION-->
     <string name="password_are_not_the_same" translatable="false">The passwords are not the same</string>
     <string name="email_exist_error" translatable="false">The user with the given e-mail address exists</string>
+    <!--endregion-->
 
-    <!--NEW USER INFORMATION-->
-    <string name="inscription_under_logo_new_user_information" translatable="false">Necessary data</string>
-    <string name="input_necessary_data" translatable="false">You must provide the necessary data</string>
+    <!--region RESET PASSWORD-->
+    <string name="reset_password" translatable="false">Reset password</string>
+    <string name="reset_password_enter_email" translatable="false">Enter your e-mail address</string>
+    <string name="reset_password_reset_button" translatable="false">Reset</string>
+    <string name="reset_password_email_not_exist" translatable="false">There is no user with a given email address.</string>
+    <!--endregion-->
+
+    <!--region NEW USER INFORMATION-->
+    <string name="activity_new_user_information_logo_image_description" translatable="false">Information</string>
+    <string name="activity_new_user_information_inscription_under_logo" translatable="false">Necessary data</string>
+    <string name="activity_new_user_information_input_necessary_data" translatable="false">You must provide the necessary data</string>
     <string name="user_name" translatable="false">User name</string>
     <string name="city" translatable="false">City</string>
     <string name="phone_number" translatable="false">Phone number</string>
     <string name="continue_button" translatable="false">Continue</string>
+    <!--endregion-->
 
-    <!--BOTTOM NAVIGATION BAR-->
-    <string name="need_ride" translatable="false">I need ride</string>
-    <string name="offer_ride" translatable="false">I offer ride</string>
-    <string name="user_profile" translatable="false">Profile</string>
-
+    <!--region BOTTOM NAVIGATION BAR-->
+    <string name="bottom_navigation_need_ride" translatable="false">I need ride</string>
+    <string name="bottom_navigation_offer_ride" translatable="false">I offer ride</string>
+    <string name="bottom_navigation_user_profile" translatable="false">Profile</string>
+    <!--endregion-->
 </resources>

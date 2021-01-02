@@ -66,7 +66,7 @@ public class ResetPasswordDialog {
                 if (task.isSuccessful()) {
                     List<String> methods = task.getResult().getSignInMethods();
                     if (methods.isEmpty()) {
-                        mEmail.setError(activity.getResources().getString(R.string.forgot_password_email_not_exist));
+                        mEmail.setError(activity.getResources().getString(R.string.reset_password_email_not_exist));
                         mEmail.requestFocus();
                     } else {
                         firebaseAuth.sendPasswordResetEmail(email).addOnSuccessListener(aVoid -> {
