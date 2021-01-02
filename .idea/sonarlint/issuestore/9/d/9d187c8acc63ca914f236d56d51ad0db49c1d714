@@ -1,50 +1,50 @@
 
-D
-java:S1659*"'Declare "mPassword" on a separate line.(ú¨Ê¿8ïéç«ë.
+
+java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8’Ûö‡ì.
+
+java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8’Ûö‡ì.
+L
+java:S1659+"*Declare "signUpButton" on a separate line.(…«°©ûÿÿÿÿ8Ÿ²æ«ë.
+k	java:S100©"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8’Ûö‡ì.
+^	java:S125†"<This block of commented-out lines of code should be removed.(¾ñİ®ıÿÿÿÿ8’Ûö‡ì.
+
+java:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8’Ûö‡ì.
+Q
+java:S10681"4Remove this unused "insetsController" private field.(”®ëŸ8ê±Âˆì.
+a
+java:S5840&"?Remove this boundary that can never match or rewrite the regex.(Î‹¥Ÿıÿÿÿÿ8¾¬¿±ë.
+
+java:S1450+"]Remove the "forgotPassword" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
+S
+java:S18749"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8óÂˆì.
+W	java:S125="<This block of commented-out lines of code should be removed.(Ë±±-8ê±Âˆì.
+C
+java:S1659-"&Declare "textLogo" on a separate line.(Ô—’·8×½İ‰ì.
+p	java:S100¸"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­„Ûüÿÿÿÿ8’Ûö‡ì.
 r
 java:S1450-"URemove the "slogan" field and declare it as a local variable in the relevant methods.(Ô—’·8¦½á‰ì.
 Q
 java:S1128"4Remove this unused import 'android.widget.EditText'.(†Å›Ú8”ş‚±ë.
-t
-java:S1450-"WRemove the "textLogo" field and declare it as a local variable in the relevant methods.(Ô—’·8ª­à‰ì.
-q
-java:S1450,"TRemove the "image" field and declare it as a local variable in the relevant methods.(İÈ½8ÉàŞ‰ì.
-V	java:S110"<This class has 9 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
-S
-java:S18749"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8óÂˆì.
-}
-java:S1450+"[Remove the "signUpButton" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
-
-java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8’Ûö‡ì.
-
-java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8’Ûö‡ì.
 N
 java:S1659+",Declare "forgotPassword" on a separate line.(…«°©ûÿÿÿÿ8úÖ­ë.
-
-java:S1450+"]Remove the "forgotPassword" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
-Q
-java:S10681"4Remove this unused "insetsController" private field.(”®ëŸ8ê±Âˆì.
-L
-java:S1659+"*Declare "signUpButton" on a separate line.(…«°©ûÿÿÿÿ8Ÿ²æ«ë.
-A
-java:S1659-"$Declare "slogan" on a separate line.(Ô—’·8óíÜ‰ì.
-a
-java:S5840&"?Remove this boundary that can never match or rewrite the regex.(Î‹¥Ÿıÿÿÿÿ8¾¬¿±ë.
-C
-java:S1659-"&Declare "textLogo" on a separate line.(Ô—’·8×½İ‰ì.
 }
 java:S1450+"[Remove the "signInButton" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
-^	java:S125†"<This block of commented-out lines of code should be removed.(¾ñİ®ıÿÿÿÿ8’Ûö‡ì.
-S
-java:S18749"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8óÂˆì.
-W	java:S125="<This block of commented-out lines of code should be removed.(Ë±±-8ê±Âˆì.
-ˆ
-java:S2178{"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ƒŒ¥÷ûÿÿÿÿ8’Ûö‡ì.
-k	java:S100©"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8’Ûö‡ì.
-
-java:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8’Ûö‡ì.
-
-java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8’Ûö‡ì.
-p	java:S100¸"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­„Ûüÿÿÿÿ8’Ûö‡ì.
+}
+java:S1450+"[Remove the "signUpButton" field and declare it as a local variable in the relevant methods.(…«°©ûÿÿÿÿ8ÙÍ«°ë.
 x
 java:S14500"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8Åíü¶ë.
+
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8’Ûö‡ì.
+A
+java:S1659-"$Declare "slogan" on a separate line.(Ô—’·8óíÜ‰ì.
+D
+java:S1659*"'Declare "mPassword" on a separate line.(ú¨Ê¿8ïéç«ë.
+S
+java:S18749"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8óÂˆì.
+q
+java:S1450,"TRemove the "image" field and declare it as a local variable in the relevant methods.(İÈ½8ÉàŞ‰ì.
+ˆ
+java:S2178{"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ƒŒ¥÷ûÿÿÿÿ8’Ûö‡ì.
+t
+java:S1450-"WRemove the "textLogo" field and declare it as a local variable in the relevant methods.(Ô—’·8ª­à‰ì.
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
