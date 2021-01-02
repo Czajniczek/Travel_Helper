@@ -58,4 +58,17 @@
     <string name="bottom_navigation_offer_ride" translatable="false">I offer ride</string>
     <string name="bottom_navigation_user_profile" translatable="false">Profile</string>
     <!--endregion-->
+
+    <!--region USER PROFILE-->
+    <string name="user_profile_user_name_placeholder" translatable="false">Gabriel Czajkowski</string>
+    <string name="user_profile_number_of_satisfied_customers" translatable="false">Satisfied customers</string>
+    <string name="user_profile_trips" translatable="false">Trips</string>
+    <string name="user_profile_city" translatable="false">City</string>
+    <string name="user_profile_city_placeholder" translatable="false">Białystok</string>
+    <string name="user_profile_phone_number" translatable="false">Phone number</string>
+    <string name="user_profile_phone_number_placeholder" translatable="false">123456789</string>
+    <string name="user_profile_save_button" translatable="false">Save</string>
+    <string name="user_profile_email_placeholder" translatable="false">Jak.Nowak@gmail.com</string>
+
+    <!--endregion-->
 </resources>
