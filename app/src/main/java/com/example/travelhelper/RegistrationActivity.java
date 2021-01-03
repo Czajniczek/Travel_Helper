@@ -117,13 +117,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
         //region OnClick LISTENERS
         signUpButton.setOnClickListener(v -> {
-                    /*trim() usuwa zbędne odstępy (spacje)*/
                     String email = mEmail.getEditText().getText().toString().trim();
                     String password = mPassword.getEditText().getText().toString().trim();
-                    String repeatPassword = mRepeatPassword.getEditText().getText().toString().trim();
 
-                    if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword())
-                        return;
+                    if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword()) return;
 
                     loadingDialog = new LoadingDialog(RegistrationActivity.this);
                     loadingDialog.StartLoadingDialog();

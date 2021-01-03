@@ -34,6 +34,7 @@
     <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
     <string name="password_are_not_the_same" translatable="false">The passwords are not the same</string>
     <string name="email_exist_error" translatable="false">The user with the given e-mail address exists</string>
+    <string name="wrong_phone_number" translatable="false">Wrong phone number</string>
     <!--endregion-->
 
     <!--region RESET PASSWORD-->
@@ -69,6 +70,11 @@
     <string name="user_profile_phone_number_placeholder" translatable="false">123456789</string>
     <string name="user_profile_save_button" translatable="false">Save</string>
     <string name="user_profile_email_placeholder" translatable="false">Jak.Nowak@gmail.com</string>
+    <string name="user_profile_logout_button" translatable="false">Logout</string>
+    <string name="user_profile_delete_account_button" translatable="false">Delete account</string>
+    <string name="user_profile_delete_account_question" translatable="false">Are you sure you want to delete your account?</string>
+    <string name="YES" translatable="false">YES</string>
+    <string name="NO" translatable="false">NO</string>
 
     <!--endregion-->
 </resources>

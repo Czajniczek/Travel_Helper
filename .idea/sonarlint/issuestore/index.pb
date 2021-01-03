@@ -25,3 +25,9 @@ s
 Capp/src/main/java/com/example/travelhelper/ResetPasswordDialog.java,1\0\10518b06f2dd32532ed171ea8b7e66f67b0b2dee
 x
 Happ/src/main/java/com/example/travelhelper/StartApplicationActivity.java,b\d\bd7191eae2435ea2d3f0c68a34b8895bc88e3087
+d
+4app/src/main/java/com/example/travelhelper/User.java,f\f\ff1398efb78a6ff71f18a99521edf40e7f96afa7
+l
+<app/src/main/java/com/example/travelhelper/UserDatabase.java,6\7\674b2fea987807f4db281c047710368107ae1e43
+s
+Capp/src/main/java/com/example/travelhelper/DeleteAccountDialog.java,c\0\c0daa68a57164b61626be2e7af0a469db3fe10c6

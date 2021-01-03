@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
                     "(?=\\S+$)" +             //no white spaces
                     ".{4,}" +                 //at least 4 characters
                     "$");
-
     private TextInputLayout mEmail, mPassword;
     private Button signInButton, signUpButton, forgotPassword;
     private ImageView image;
@@ -46,13 +45,13 @@ public class LoginActivity extends AppCompatActivity {
     private LoadingDialog loadingDialog;
     private ResetPasswordDialog resetPasswordDialog;
     private FirebaseAuth firebaseAuth;
-    private WindowInsetsController insetsController;
     private Intent intent;
     private Pair[] pairs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //TURN OFF THE STATUS BAR
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);

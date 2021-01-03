@@ -16,6 +16,7 @@ import java.util.List;
 
 public class ResetPasswordDialog {
 
+    //VARIABLES
     private final Activity activity;
     private AlertDialog alertDialog;
     private TextInputLayout mEmail;
@@ -38,10 +39,12 @@ public class ResetPasswordDialog {
 
         alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
+        //HOOKS
         mEmail = alertDialog.findViewById(R.id.forgot_password_e_mail);
         resetButton = alertDialog.findViewById(R.id.forgot_password_reset_button);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        //region TextChange LISTENERS
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -56,6 +59,7 @@ public class ResetPasswordDialog {
             public void afterTextChanged(Editable s) {
             }
         });
+        //endregion
 
         resetButton.setOnClickListener(v -> {
             String email = mEmail.getEditText().getText().toString().trim();
@@ -82,6 +86,7 @@ public class ResetPasswordDialog {
         });
     }
 
+    //region VALIDATION
     private boolean ValidateEmail() {
         String email = mEmail.getEditText().getText().toString().trim();
 
@@ -96,4 +101,5 @@ public class ResetPasswordDialog {
             return true;
         }
     }
+    //endregion
 }
