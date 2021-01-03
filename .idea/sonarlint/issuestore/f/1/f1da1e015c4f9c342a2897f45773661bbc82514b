@@ -1,10 +1,11 @@
 
-T
-java:S1128"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8ï‡ÊÉë.
-J
-java:S1068"-Remove this unused "myContext" private field.(’÷†å8âª•Éë.
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±
 d
 java:S1128"BRemove this unused import 'com.google.firebase.auth.FirebaseAuth'.(İÄğöûÿÿÿÿ8ûñÉÉë.
-P
-java:S1068".Remove this unused "myActivity" private field.(˜ìĞØøÿÿÿÿ8ºë´Êë.
+N
+java:S1128
+"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8®éÛ­ì.
+Q
+java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è8®éÛ­ì.
+T
+java:S1128"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8ï‡ÊÉë.
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±

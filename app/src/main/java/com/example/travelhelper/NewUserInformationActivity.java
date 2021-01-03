@@ -24,13 +24,13 @@ import java.util.Map;
 
 public class NewUserInformationActivity extends AppCompatActivity {
 
+    //VARIABLES
     private TextInputLayout mUserName, mCity, mPhoneNumber;
     private Button continueButton;
-
-    FirebaseFirestore firebaseFirestore;
-    FirebaseAuth firebaseAuth;
-
-    LoadingDialog loadingDialog;
+    private FirebaseFirestore firebaseFirestore;
+    private FirebaseAuth firebaseAuth;
+    private LoadingDialog loadingDialog;
+    private String userId, email, password, name, phoneNumber, city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,17 +38,19 @@ public class NewUserInformationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_user_information);
 
         Bundle extras = getIntent().getExtras();
-        final String email = extras.getString("USER_EMAIL");
-        final String password = extras.getString("USER_PASSWORD");
+        email = extras.getString("USER_EMAIL");
+        password = extras.getString("USER_PASSWORD");
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
+        //HOOKS
         mUserName = findViewById(R.id.necessary_data_user_name);
         mCity = findViewById(R.id.necessary_data_city);
         mPhoneNumber = findViewById(R.id.necessary_data_phone_number);
         continueButton = findViewById(R.id.necessary_data_continue_button);
 
+        //region TextChange LISTENERS
         mUserName.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -57,6 +59,21 @@ public class NewUserInformationActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 ValidateUserName();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        mPhoneNumber.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ValidatePhoneNumber();
             }
 
             @Override
@@ -78,6 +95,7 @@ public class NewUserInformationActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
+        //endregion
 
         continueButton.setOnClickListener(v -> {
             Registration(email, password);
@@ -85,11 +103,11 @@ public class NewUserInformationActivity extends AppCompatActivity {
     }
 
     private void Registration(String email, String password) {
-        final String name = mUserName.getEditText().getText().toString().trim();
-        final String phoneNumber = mPhoneNumber.getEditText().getText().toString().trim();
-        final String city = mCity.getEditText().getText().toString().trim();
+        name = mUserName.getEditText().getText().toString().trim();
+        phoneNumber = mPhoneNumber.getEditText().getText().toString().trim();
+        city = mCity.getEditText().getText().toString().trim();
 
-        if (!ValidateUserName() | !ValidateCity()) return;
+        if (!ValidateUserName() | !ValidatePhoneNumber() | !ValidateCity()) return;
 
         loadingDialog = new LoadingDialog(this);
         loadingDialog.StartLoadingDialog();
@@ -98,7 +116,7 @@ public class NewUserInformationActivity extends AppCompatActivity {
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(NewUserInformationActivity.this, "User created", Toast.LENGTH_SHORT).show();
-                SaveUserData(name, phoneNumber, city);
+                SaveUserData(name, email, phoneNumber, city);
             } else {
                 /*Toast.makeText(NewUserInformationActivity.this, "Error: " + task.getException(), Toast.LENGTH_SHORT).show();*/
                 Toast.makeText(NewUserInformationActivity.this, "Error", Toast.LENGTH_SHORT).show();
@@ -111,12 +129,13 @@ public class NewUserInformationActivity extends AppCompatActivity {
         });
     }
 
-    private void SaveUserData(String name, String phoneNumber, String city) {
-        String userId = firebaseAuth.getUid();
+    private void SaveUserData(String name, String email, String phoneNumber, String city) {
+        userId = firebaseAuth.getCurrentUser().getUid();
         DocumentReference documentReference = firebaseFirestore.collection("users").document(userId);
 
         Map<String, Object> userMap = new HashMap<>();
-        userMap.put("Name", name);
+        userMap.put("Username", name);
+        userMap.put("E-mail", email);
         userMap.put("City", city);
         userMap.put("Phone number", phoneNumber);
 
@@ -127,6 +146,7 @@ public class NewUserInformationActivity extends AppCompatActivity {
         }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show());
     }
 
+    //region VALIDATION
     private boolean ValidateUserName() {
         String user = mUserName.getEditText().getText().toString().trim();
 
@@ -135,6 +155,21 @@ public class NewUserInformationActivity extends AppCompatActivity {
             return false;
         } else {
             mUserName.setError(null);
+            return true;
+        }
+    }
+
+    private boolean ValidatePhoneNumber() {
+        String phone = mPhoneNumber.getEditText().getText().toString().trim();
+
+        if (phone.isEmpty()) {
+            mPhoneNumber.setError(getString(R.string.field_can_not_be_empty_error));
+            return false;
+        } else if (phone.length() > 9 || phone.length() < 9) {
+            mPhoneNumber.setError(getString(R.string.wrong_phone_number));
+            return false;
+        } else {
+            mPhoneNumber.setError(null);
             return true;
         }
     }
@@ -150,4 +185,5 @@ public class NewUserInformationActivity extends AppCompatActivity {
             return true;
         }
     }
+    //endregion
 }

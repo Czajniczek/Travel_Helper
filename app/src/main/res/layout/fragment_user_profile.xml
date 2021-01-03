@@ -18,13 +18,22 @@
             android:background="@color/background_color"
             android:padding="20dp">
 
-            <Button
-                android:id="@+id/logout_button"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/my_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:menu="@menu/user_profile_logout"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <!--<Button
+                android:id="@+id/logout_button1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/logout" />
+                android:background="@drawable/logout" />-->
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_profile_user_image"
@@ -164,8 +173,10 @@
             android:padding="20dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_profile_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:hint="@string/email"
                 app:boxBackgroundColor="@color/white"
                 app:errorEnabled="true">
@@ -173,15 +184,19 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@null"
                     android:drawableStart="@drawable/ic_email"
                     android:drawablePadding="10dp"
+                    android:inputType="textNoSuggestions"
                     android:text="@string/user_profile_email_placeholder" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_profile_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@null"
                 android:hint="@string/user_profile_city"
                 app:boxBackgroundColor="@color/white"
                 app:errorEnabled="true">
@@ -189,16 +204,20 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@null"
                     android:drawableStart="@drawable/ic_city"
                     android:drawablePadding="10dp"
+                    android:inputType="textNoSuggestions"
                     android:text="@string/user_profile_city_placeholder" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_profile_phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@null"
                 android:hint="@string/user_profile_phone_number"
                 app:boxBackgroundColor="@color/white"
                 app:counterEnabled="true"
@@ -208,14 +227,16 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@null"
                     android:drawableStart="@drawable/ic_phone"
                     android:drawablePadding="10dp"
-                    android:inputType="number"
+                    android:inputType="number|textNoSuggestions"
                     android:text="@string/user_profile_phone_number_placeholder" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
+                android:id="@+id/user_profile_save_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
