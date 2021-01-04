@@ -11,6 +11,14 @@ public class User {
         this.Id = Id;
     }
 
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
+
     public Uri getProfileImage() {
         return ProfileImage;
     }
@@ -27,12 +35,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setEmail(String eMail) {
+        this.email = eMail;
     }
 
     public String getCity() {
@@ -43,19 +51,11 @@ public class User {
         this.city = city;
     }
 
-    public String getId() {
-        return Id;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setId(String id) {
-        Id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String eMail) {
-        this.email = eMail;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

@@ -27,9 +27,9 @@ public class StartApplicationActivity extends AppCompatActivity {
     private ImageView image;
     private TextView textLogo, slogan;
     private View startApplication;
-    private WindowInsetsController insetsController;
     private Intent intent;
     private Pair[] pairs;
+    private ActivityOptions options;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class StartApplicationActivity extends AppCompatActivity {
         image = findViewById(R.id.activity_start_application_logo_image);
         textLogo = findViewById(R.id.activity_start_application_logo_text_view);
         slogan = findViewById(R.id.activity_start_application_slogan_text_view);
-        startApplication = findViewById(R.id.activity_start_application);
+        //startApplication = findViewById(R.id.activity_start_application);
 
         //ANIMATIONS
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
@@ -62,13 +62,14 @@ public class StartApplicationActivity extends AppCompatActivity {
 
         //DELAY METHOD
         new Handler(Looper.myLooper()).postDelayed(() -> {
+
             intent = new Intent(StartApplicationActivity.this, LoginActivity.class);
 
             pairs = new Pair[2];
             pairs[0] = new Pair<View, String>(image, "logo_image");
             pairs[1] = new Pair<View, String>(textLogo, "logo_text");
 
-            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs);
+            options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs);
             startActivity(intent, options.toBundle());
         }, SPLASH_SCREEN);
 

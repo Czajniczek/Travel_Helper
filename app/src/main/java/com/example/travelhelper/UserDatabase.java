@@ -32,29 +32,16 @@ public class UserDatabase {
     private Context context;
     public static UserDatabase instance;
 
+    //CONSTRUCTOR
     private UserDatabase(Activity myActivity, String userId) {
         this.context = myActivity.getApplicationContext();
+        this.userId = userId;
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
-        this.userId = userId;
     }
 
-    public void SetUserProfileImage(Uri imageUri) {
-        user.setProfileImage(imageUri);
-        LoadUserProfileImageToFirebase();
-    }
-
-    private void LoadUserProfileImageToFirebase() {
-
-        StorageReference fileRef = storageReference.child("users/" + userId + "/profile.jpg");
-        fileRef.putFile(user.getProfileImage()).addOnSuccessListener(taskSnapshot -> {
-            Toast.makeText(context, "Photo has been loaded", Toast.LENGTH_SHORT).show();
-        }).addOnFailureListener(e -> {
-            Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-        });
-    }
-
+    //SINGLETON
     public static UserDatabase getInstance(Activity activity, String userId) {
         if (instance == null) instance = new UserDatabase(activity, userId);
         return instance;
@@ -86,6 +73,21 @@ public class UserDatabase {
         }).addOnFailureListener(e -> {
             user.setProfileImage(Uri.parse("android.resource://" + context.getPackageName() + "/drawable/default_user_image"));
             if (profileImageLoaded != null) profileImageLoaded.ProfileImageLoaded(user.getProfileImage());
+            Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+        });
+    }
+
+    public void SetUserProfileImage(Uri imageUri) {
+        user.setProfileImage(imageUri);
+        LoadUserProfileImageToFirebase();
+    }
+
+    private void LoadUserProfileImageToFirebase() {
+
+        StorageReference fileRef = storageReference.child("users/" + userId + "/profile.jpg");
+        fileRef.putFile(user.getProfileImage()).addOnSuccessListener(taskSnapshot -> {
+            Toast.makeText(context, "The profile photo has been changed", Toast.LENGTH_SHORT).show();
+        }).addOnFailureListener(e -> {
             Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         });
     }

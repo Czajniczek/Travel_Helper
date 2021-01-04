@@ -55,8 +55,8 @@
     <!--endregion-->
 
     <!--region BOTTOM NAVIGATION BAR-->
-    <string name="bottom_navigation_need_ride" translatable="false">I need ride</string>
-    <string name="bottom_navigation_offer_ride" translatable="false">I offer ride</string>
+    <string name="bottom_navigation_need_ride" translatable="false">Need ride</string>
+    <string name="bottom_navigation_offer_ride" translatable="false">Offer ride</string>
     <string name="bottom_navigation_user_profile" translatable="false">Profile</string>
     <!--endregion-->
 
@@ -65,16 +65,34 @@
     <string name="user_profile_number_of_satisfied_customers" translatable="false">Satisfied customers</string>
     <string name="user_profile_trips" translatable="false">Trips</string>
     <string name="user_profile_city" translatable="false">City</string>
-    <string name="user_profile_city_placeholder" translatable="false">Białystok</string>
+    <string name="user_profile_city_placeholder" translatable="false">Warsaw</string>
     <string name="user_profile_phone_number" translatable="false">Phone number</string>
     <string name="user_profile_phone_number_placeholder" translatable="false">123456789</string>
     <string name="user_profile_save_button" translatable="false">Save</string>
-    <string name="user_profile_email_placeholder" translatable="false">Jak.Nowak@gmail.com</string>
+    <string name="user_profile_email_placeholder" translatable="false">Gabriel.Czajkowski@gmail.com</string>
     <string name="user_profile_logout_button" translatable="false">Logout</string>
     <string name="user_profile_delete_account_button" translatable="false">Delete account</string>
-    <string name="user_profile_delete_account_question" translatable="false">Are you sure you want to delete your account?</string>
-    <string name="YES" translatable="false">YES</string>
-    <string name="NO" translatable="false">NO</string>
+    <string name="user_profile_delete_account_question" translatable="false">Are you sure?</string>
+    <string name="user_profile_delete_account_results" translatable="false">By deleting your account you will lose access to the application.</string>
+    <string name="YES" translatable="false">DELETE</string>
+    <string name="NO" translatable="false">DISMISS</string>
+    <!--endregion-->
 
+    <!--region ADD NEW RIDE-->
+    <string name="activity_add_need_ride_inscription_under_logo" translatable="false">Where and when you want to go?</string>
+    <string name="activity_add_need_ride_from" translatable="false">From:</string>
+    <string name="activity_add_need_ride_city" translatable="false">City</string>
+    <string name="activity_add_need_ride_street" translatable="false">Street</string>
+    <string name="activity_add_need_ride_to" translatable="false">To:</string>
+    <string name="activity_add_need_ride_date" translatable="false">Date:</string>
+    <string name="activity_add_need_ride_day" translatable="false">Day</string>
+    <string name="activity_add_need_ride_month" translatable="false">Month</string>
+    <string name="activity_add_need_ride_year" translatable="false">Year</string>
+    <string name="activity_add_need_ride_hour" translatable="false">Hour</string>
+    <string name="activity_add_need_ride_minute" translatable="false">Minute</string>
+    <string name="activity_add_need_ride_add_button" translatable="false">Add</string>
+    <string name="dash" translatable="false">-</string>
+    <string name="colon_dot" translatable="false">:</string>
+    
     <!--endregion-->
 </resources>

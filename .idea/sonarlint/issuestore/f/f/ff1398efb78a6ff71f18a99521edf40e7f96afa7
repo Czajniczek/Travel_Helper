@@ -1,13 +1,13 @@
 
-?
-java:S1659"#Declare "email" on a separate line.(û$8ş Ğ«ì.
 >
 java:S1659""Declare "city" on a separate line.(û$8š­µ«ì.
-h	java:S116"MRename this field "Id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û$8³Ìµ«ì.
-<
-java:S1659" Declare "Id" on a separate line.(û$8³Ìµ«ì.
-r	java:S117
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¾ã®úÿÿÿÿ8š­µ«ì.
-x	java:S116"WRename this field "ProfileImage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÛ—ùÿÿÿÿ8Øü”°ì.
 E
 java:S1659")Declare "phoneNumber" on a separate line.(û$8š­µ«ì.
+h	java:S116"MRename this field "Id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û$8³Ìµ«ì.
+?
+java:S1659"#Declare "email" on a separate line.(û$8ş Ğ«ì.
+r	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¾ã®úÿÿÿÿ8š­µ«ì.
+<
+java:S1659" Declare "Id" on a separate line.(û$8³Ìµ«ì.
+x	java:S116"WRename this field "ProfileImage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÛ—ùÿÿÿÿ8Øü”°ì.

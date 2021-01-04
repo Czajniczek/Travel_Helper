@@ -165,7 +165,7 @@ public class NewUserInformationActivity extends AppCompatActivity {
         if (phone.isEmpty()) {
             mPhoneNumber.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
-        } else if (phone.length() > 9 || phone.length() < 9) {
+        } else if (phone.length() != 9) {
             mPhoneNumber.setError(getString(R.string.wrong_phone_number));
             return false;
         } else {
