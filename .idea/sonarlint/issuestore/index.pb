@@ -31,3 +31,7 @@ l
 <app/src/main/java/com/example/travelhelper/UserDatabase.java,6\7\674b2fea987807f4db281c047710368107ae1e43
 s
 Capp/src/main/java/com/example/travelhelper/DeleteAccountDialog.java,c\0\c0daa68a57164b61626be2e7af0a469db3fe10c6
+s
+Capp/src/main/java/com/example/travelhelper/AddNeedRideActivity.java,7\f\7fa188bbfa6ac61a621ad92546f8021f3ce85d42
+h
+8app/src/main/java/com/example/travelhelper/NeedRide.java,6\0\601e1c3ecebb2a93e8a119249e1784da5bb6a6e7

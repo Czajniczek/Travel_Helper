@@ -21,9 +21,8 @@ public class LoadingDialog {
         builder.setCancelable(false);
 
         alertDialog = builder.create();
-        alertDialog.show();
-
         alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        alertDialog.show();
     }
 
     public void DismissDialog() {

@@ -13,6 +13,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ResetPasswordDialog {
 
@@ -35,9 +36,8 @@ public class ResetPasswordDialog {
         builder.setCancelable(true);
 
         alertDialog = builder.create();
-        alertDialog.show();
-
         alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        alertDialog.show();
 
         //HOOKS
         mEmail = alertDialog.findViewById(R.id.forgot_password_e_mail);
@@ -65,10 +65,11 @@ public class ResetPasswordDialog {
             String email = mEmail.getEditText().getText().toString().trim();
 
             if (!ValidateEmail()) return;
+
             //Sprawdzenie, czy podany adres e-mail istnieje
             firebaseAuth.fetchSignInMethodsForEmail(email).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
-                    List<String> methods = task.getResult().getSignInMethods();
+                    List<String> methods = Objects.requireNonNull(task.getResult()).getSignInMethods();
                     if (methods.isEmpty()) {
                         mEmail.setError(activity.getResources().getString(R.string.reset_password_email_not_exist));
                         mEmail.requestFocus();

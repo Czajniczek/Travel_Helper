@@ -19,7 +19,17 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="30sp"
+            android:layout_marginBottom="10dp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/user_profile_delete_account_results"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

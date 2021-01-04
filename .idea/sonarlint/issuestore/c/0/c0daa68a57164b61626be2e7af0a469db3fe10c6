@@ -1,3 +1,17 @@
 
-]
-java:S2094"BRemove this empty class, write its code or make it an "interface".(É”•üÿÿÿÿ
+N
+java:S16026",Remove useless curly braces around statement(œÆäğøÿÿÿÿ8í£…Ğì.
+R
+java:S1068"0Remove this unused "userDatabase" private field.(ÂØêÿÿÿÿÿ8ÅÎÁĞì.
+z
+java:S1450"XRemove the "yesButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
+g
+java:S1128"KRemove this unused import 'com.google.firebase.database.DatabaseReference'.(ÉÓ¹8ÎßÀĞì.
+o	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ˆ­üÿÿÿÿ8¹åîÏì.
+H
+java:S1659"&Declare "noButton" on a separate line.(ú‡¯ëÿÿÿÿÿ8ÿËøÏì.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ïğ¦8ıÁéÍì.
+u
+java:S1450"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8Õ®­Ğì.
+y
+java:S1450"WRemove the "noButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.

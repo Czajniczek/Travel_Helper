@@ -21,8 +21,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/my_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:elevation="4dp"
+                android:layout_height="wrap_content"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
                 app:menu="@menu/user_profile_logout"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
@@ -41,17 +40,20 @@
                 android:layout_height="130dp"
                 android:layout_centerVertical="false"
                 android:layout_marginTop="40dp"
-                android:src="@drawable/taxi_driver2" />
+                android:src="@drawable/ic_account" />
 
-            <TextView
+            <EditText
                 android:id="@+id/user_profile_user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="230dp"
+                android:layout_height="100dp"
                 android:layout_centerVertical="false"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="50dp"
                 android:layout_toEndOf="@+id/user_profile_user_image"
+                android:background="@null"
                 android:fontFamily="@font/bungee"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:maxLength="20"
                 android:text="@string/user_profile_user_name_placeholder"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
@@ -168,7 +170,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
             android:orientation="vertical"
             android:padding="20dp">
 
