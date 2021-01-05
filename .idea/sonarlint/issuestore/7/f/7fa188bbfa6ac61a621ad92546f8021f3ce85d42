@@ -1,143 +1,143 @@
 
-u
-java:S1450-"XRemove the "sFromCity" field and declare it as a local variable in the relevant methods.(Ï¤ê8‚µËşì.
-w
-java:S1450-"ZRemove the "sFromStreet" field and declare it as a local variable in the relevant methods.(Ï¤ê8‘«¤Õì.
-=
-java:S1659)"!Declare "day" on a separate line.(şêØ
-8……Öì.
->
-java:S1659)""Declare "hour" on a separate line.(şêØ
-8Ÿ±Öì.
-s	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌµüÿÿÿÿ8¿¾§€í.
-@
-java:S1659)"$Declare "minute" on a separate line.(şêØ
-8Ÿ±Öì.
-
-java:S1186p"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8½§’€í.
-p	java:S100ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òªùÿÿÿÿ8ÚÆìÿì.
-p	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²Û©Éûÿÿÿÿ8ÚÆìÿì.
-p	java:S100ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿì˜±şÿÿÿÿ8¿¾§€í.
-s	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÇ˜Ÿıÿÿÿÿ8¿¾§€í.
-s	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞŸÈ­úÿÿÿÿ8¿¾§€í.
-u
-java:S1450-"XRemove the "sToStreet" field and declare it as a local variable in the relevant methods.(Ï¤ê8”¸¥Õì.
-
-java:S1186_"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ì“¼ÿì.
-q
-java:S1450-"TRemove the "sHour" field and declare it as a local variable in the relevant methods.(Ï¤ê8š™Öì.
 Ÿ
-java:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ó¢ìÿì.
+java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8Ğí¾ÿì.
+s	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÇ˜Ÿıÿÿÿÿ8¿¾§€í.
+Ÿ
+java:S1186á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8­îÿì.
+s
+java:S1450-"VRemove the "sToCity" field and declare it as a local variable in the relevant methods.(Ï¤ê8½ñ¤Õì.
+„
+java:S2178é"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ÆˆŒ÷8ÚÆìÿì.
+n	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¿î8¿¾§€í.
 @
 java:S1659)"$Declare "toCity" on a separate line.(şêØ
 8ÛôÔì.
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ì“¼ÿì.
-k	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾îõ²8ÚÆìÿì.
-„
-java:S2178é"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ÆˆŒ÷8ÚÆìÿì.
-i
-java:S1128"LRemove this unused import 'com.google.firebase.firestore.DocumentReference'.(«Ë8â³Õì.
 q
 java:S1450-"TRemove the "sYear" field and declare it as a local variable in the relevant methods.(Ï¤ê8à°˜Öì.
-n	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¿î8¿¾§€í.
+
+java:S1186x"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8½§’€í.
+=
+java:S1659)"!Declare "day" on a separate line.(şêØ
+8……Öì.
 Ÿ
-java:S1186Ä"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8àø¿ÿì.
-Ÿ
-java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ö·”€í.
-Ÿ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ƒƒ½ÿì.
-m
-java:S13017"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Á¸ö…í.
-Ÿ
-java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8­îÿì.
-r
-java:S1450-"URemove the "sMonth" field and declare it as a local variable in the relevant methods.(Ï¤ê8ğÒ—Öì.
-„
-java:S2178ê"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(‘­ì®8ÄÁ·€í.
-„
-java:S2178ê"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(‘­ì®8Â¸›€í.
-Ÿ
-java:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Ğí¾ÿì.
+java:S1186º"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8àø¿ÿì.
 „
 java:S2178é"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ÆˆŒ÷8ÄÁ·€í.
-V	java:S110"<This class has 9 parents which is greater than 5 authorized.(Ñ¨Ñ‘úÿÿÿÿ
+A
+java:S1659-"$Declare "sMonth" on a separate line.(Ï¤ê8ëÔÖì.
+p	java:S100å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂ¯²üÿÿÿÿ8¿¾§€í.
+s	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞŸÈ­úÿÿÿÿ8¿¾§€í.
+p
+java:S1450-"SRemove the "sDay" field and declare it as a local variable in the relevant methods.(Ï¤ê8ä´–Öì.
+‰
+java:S2178è"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(’…÷ªüÿÿÿÿ8ÄÁ·€í.
+k	java:S100»"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹öĞ8­Ş˜€í.
 Ÿ
-java:S1186»"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8àø¿ÿì.
+java:S1186Ò"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ó¢ìÿì.
+z
+java:S1450*"XRemove the "addButton" field and declare it as a local variable in the relevant methods.(™õù»ÿÿÿÿÿ8Òãîôì.
+‰
+java:S2178è"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(’…÷ªüÿÿÿÿ8ÄÁ·€í.
+i
+java:S1128"LRemove this unused import 'com.google.firebase.firestore.DocumentReference'.(«Ë8â³Õì.
+„
+java:S2178ê"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(‘­ì®8ÄÁ·€í.
 D
 java:S1659-"'Declare "sToStreet" on a separate line.(Ï¤ê8Ôâ¡Õì.
-Ÿ
-java:S1186¦"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ƒƒ½ÿì.
-‰
-java:S2178è"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(’…÷ªüÿÿÿÿ8ÄÁ·€í.
-?
-java:S1659-""Declare "sDay" on a separate line.(Ï¤ê8£¡Öì.
-Ÿ
-java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8Ğí¾ÿì.
-]	java:S1250"<This block of commented-out lines of code should be removed.(°Åğúÿÿÿÿ8ƒÃï÷ì.
-D
-java:S1659)"(Declare "fromStreet" on a separate line.(şêØ
-8ÛôÔì.
-s
-java:S1450-"VRemove the "sMinute" field and declare it as a local variable in the relevant methods.(Ï¤ê8†ŠšÖì.
-n	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Æ”®8¿¾§€í.
-
-java:S1186i"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ì“¼ÿì.
-?
-java:S1659)"#Declare "month" on a separate line.(şêØ
-8……Öì.
-‰
-java:S2178è"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(’…÷ªüÿÿÿÿ8ÄÁ·€í.
+@
+java:S1659-"#Declare "sYear" on a separate line.(Ï¤ê8Í÷Öì.
+B
+java:S1659-"%Declare "sToCity" on a separate line.(Ï¤ê8Ôâ¡Õì.
+u
+java:S1450-"XRemove the "sToStreet" field and declare it as a local variable in the relevant methods.(Ï¤ê8”¸¥Õì.
 B
 java:S1659-"%Declare "sMinute" on a separate line.(Ï¤ê8¼şÖì.
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(Ñ¨Ñ‘úÿÿÿÿ
+Ÿ
+java:S1186´"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Ğí¾ÿì.
+]	java:S1250"<This block of commented-out lines of code should be removed.(°Åğúÿÿÿÿ8ƒÃï÷ì.
+Ÿ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ö·”€í.
 „
 java:S2178é"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ÆˆŒ÷8Â¸›€í.
 Ÿ
-java:S1186ˆ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ì“¼ÿì.
-p	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç˜Ğıÿÿÿÿ8¿¾§€í.
-B
-java:S1659-"%Declare "sToCity" on a separate line.(Ï¤ê8Ôâ¡Õì.
-p	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¨„øıÿÿÿÿ8¿¾§€í.
-A
-java:S1659-"$Declare "sMonth" on a separate line.(Ï¤ê8ëÔÖì.
-Ÿ
-java:S1186Ó"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ó¢ìÿì.
-s
-java:S1450-"VRemove the "sToCity" field and declare it as a local variable in the relevant methods.(Ï¤ê8½ñ¤Õì.
-c
-java:S1192%"FDefine a constant instead of duplicating this literal ".{3,}" 3 times.(ÕÍ‘Ø8ğ´¶ÿì.
-p
-java:S1450-"SRemove the "sDay" field and declare it as a local variable in the relevant methods.(Ï¤ê8ä´–Öì.
-@
-java:S1659-"#Declare "sYear" on a separate line.(Ï¤ê8Í÷Öì.
-p	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¯úÉşÿÿÿÿ8û•€í.
->
-java:S1659)""Declare "year" on a separate line.(şêØ
-8……Öì.
+java:S1186–"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ö·”€í.
 
-java:S1186y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8½§’€í.
-M
-java:S1068"0Remove this unused "CITY_PATTERN" private field.(°å°Œ8ıŠ°ÿì.
-k	java:S100»"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹öĞ8­Ş˜€í.
+java:S1186^"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ì“¼ÿì.
+q
+java:S1450-"TRemove the "sHour" field and declare it as a local variable in the relevant methods.(Ï¤ê8š™Öì.
+D
+java:S1659)"(Declare "fromStreet" on a separate line.(şêØ
+8ÛôÔì.
+?
+java:S1659-""Declare "sDay" on a separate line.(Ï¤ê8£¡Öì.
 B
 java:S1659)"&Declare "toStreet" on a separate line.(şêØ
 8ÛôÔì.
-p	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÀÆ–şÿÿÿÿ8¿¾§€í.
-z
-java:S1450*"XRemove the "addButton" field and declare it as a local variable in the relevant methods.(™õù»ÿÿÿÿÿ8Òãîôì.
 Ÿ
-java:S1186Ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8­îÿì.
+java:S1186Ø"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8­îÿì.
+
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ì“¼ÿì.
+u
+java:S1450-"XRemove the "sFromCity" field and declare it as a local variable in the relevant methods.(Ï¤ê8‚µËşì.
+Ÿ
+java:S1186Ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8àø¿ÿì.
+>
+java:S1659)""Declare "hour" on a separate line.(şêØ
+8Ÿ±Öì.
+@
+java:S1659-"#Declare "sHour" on a separate line.(Ï¤ê8¼şÖì.
+p	java:S100ƒ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÀÆ–şÿÿÿÿ8¿¾§€í.
+
+java:S1186~"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ì“¼ÿì.
+p	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¯úÉşÿÿÿÿ8û•€í.
+p	java:S100ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿì˜±şÿÿÿÿ8¿¾§€í.
+w
+java:S1450-"ZRemove the "sFromStreet" field and declare it as a local variable in the relevant methods.(Ï¤ê8‘«¤Õì.
+X	java:S125I"<This block of commented-out lines of code should be removed.(ƒÛ’¦8½„ú…í.
+n	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Æ”®8¿¾§€í.
 ‰
 java:S2178è"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(’…÷ªüÿÿÿÿ8ÄÁ·€í.
 A
 java:S1659-"$Declare "userId" on a separate line.(Ï¤ê8¢–í×ì.
-@
-java:S1659-"#Declare "sHour" on a separate line.(Ï¤ê8¼şÖì.
+Ÿ
+java:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ì“¼ÿì.
+>
+java:S1659)""Declare "year" on a separate line.(şêØ
+8……Öì.
+Ÿ
+java:S1186É"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ó¢ìÿì.
+p	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò¨„øıÿÿÿÿ8¿¾§€í.
+s	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌµüÿÿÿÿ8¿¾§€í.
+Ÿ
+java:S1186œ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ƒƒ½ÿì.
+„
+java:S2178ê"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(‘­ì®8Â¸›€í.
+k	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾îõ²8ÚÆìÿì.
+c
+java:S1192%"FDefine a constant instead of duplicating this literal ".{3,}" 3 times.(ÕÍ‘Ø8ğ´¶ÿì.
 F
 java:S1659-")Declare "sFromStreet" on a separate line.(Ï¤ê8Ôâ¡Õì.
-p	java:S100å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂ¯²üÿÿÿÿ8¿¾§€í.
+p	java:S100ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òªùÿÿÿÿ8ÚÆìÿì.
+p	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆç˜Ğıÿÿÿÿ8¿¾§€í.
 x
 java:S1450/"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8¨—ûì.
+s
+java:S1450-"VRemove the "sMinute" field and declare it as a local variable in the relevant methods.(Ï¤ê8†ŠšÖì.
+
+java:S1186o"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8½§’€í.
+?
+java:S1659)"#Declare "month" on a separate line.(şêØ
+8……Öì.
+@
+java:S1659)"$Declare "minute" on a separate line.(şêØ
+8Ÿ±Öì.
 Ÿ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8ö·”€í.
-X	java:S125I"<This block of commented-out lines of code should be removed.(ƒÛ’¦8½„ú…í.
+java:S1186¥"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ƒƒ½ÿì.
+p	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²Û©Éûÿÿÿÿ8ÚÆìÿì.
+M
+java:S1068"0Remove this unused "CITY_PATTERN" private field.(°å°Œ8ıŠ°ÿì.
+r
+java:S1450-"URemove the "sMonth" field and declare it as a local variable in the relevant methods.(Ï¤ê8ğÒ—Öì.
+m
+java:S13017"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8Á¸ö…í.

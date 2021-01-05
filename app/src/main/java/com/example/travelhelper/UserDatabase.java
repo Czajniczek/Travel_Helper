@@ -83,7 +83,7 @@ public class UserDatabase {
         }).addOnFailureListener(e -> {
             user.setProfileImage(Uri.parse("android.resource://" + context.getPackageName() + "/drawable/default_user_image"));
             if (profileImageLoaded != null) profileImageLoaded.ProfileImageLoaded(user.getProfileImage());
-            Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         });
     }
 

@@ -1,52 +1,52 @@
 
-r
-java:S1128$"URemove this unused import 'com.google.firebase.firestore.FirebaseFirestoreException'.(Å˜šÅ8Ï¡«ì.
-M
-java:S5411À"*Use the primitive boolean expression here.(ÁÓ¥éúÿÿÿÿ8Ã«¥Îì.
-
-java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8²¢†ûì.
-k	java:S100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ö»À8²¢†ûì.
 u
 java:S14508"XRemove the "myToolbar" field and declare it as a local variable in the relevant methods.(¼‚Ü€8Ñ˜™öì.
-L
-java:S16595"*Declare "mPhoneNumber" on a separate line.(¦ùãĞıÿÿÿÿ8Ô¦ä±ì.
-p	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ8²¢†ûì.
-^	java:S125ç"<This block of commented-out lines of code should be removed.(×ç˜Óùÿÿÿÿ8²¢†ûì.
-k
-java:S1192é"HDefine a constant instead of duplicating this literal "Error: " 3 times.(íÒ¹üüÿÿÿÿ8ù¼’÷ì.
-x
-java:S1450A"VRemove the "fileRef" field and declare it as a local variable in the relevant methods.(êÈıüÿÿÿÿ8ù¼’÷ì.
-\
-java:S1128,":Remove this unused import 'java.util.concurrent.Executor'.(÷ı¶Œúÿÿÿÿ8ûœ‰¬ì.
-p	java:S100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÄÌóüÿÿÿÿ8²¢†ûì.
 {
 java:S14506"YRemove the "saveButton" field and declare it as a local variable in the relevant methods.(Éÿ¤ûÿÿÿÿ8Ä‡±ì.
+x
+java:S1450A"VRemove the "fileRef" field and declare it as a local variable in the relevant methods.(êÈıüÿÿÿÿ8ù¼’÷ì.
+L
+java:S16595"*Declare "mPhoneNumber" on a separate line.(¦ùãĞıÿÿÿÿ8Ô¦ä±ì.
 
-java:S1186t"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8²¢†ûì.
-J
-java:S1602ó",Remove useless curly braces around statement(úÌä 8²¢†ûì.
-D
-java:S16595""Declare "city" on a separate line.(¦ùãĞıÿÿÿÿ8¢Î•ªì.
-O
-java:S1602ñ",Remove useless curly braces around statement(˜•–íÿÿÿÿÿ8²¢†ûì.
-p	java:S100ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ìšûÿÿÿÿ8²¢†ûì.
-
-java:S1450="bRemove the "deleteAccountDialog" field and declare it as a local variable in the relevant methods.(ø¡–è8ÔË’öì.
-
-java:S1186e"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8²¢†ûì.
-„
-java:S2178ˆ"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ïßãé8²¢†ûì.
-J
-java:S1602ƒ",Remove useless curly braces around statement(ŠèŒĞ8²¢†ûì.
+java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8²¢†ûì.
+k	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8²¢†ûì.
 m
 java:S1128!"KRemove this unused import 'com.google.firebase.firestore.DocumentSnapshot'.(´Ëá¿ÿÿÿÿÿ8‹“×«ì.
-
-java:S1186}"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8²¢†ûì.
 e
 java:S1128""HRemove this unused import 'com.google.firebase.firestore.EventListener'.(˜¥¨Õ8‹“×«ì.
-k	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8²¢†ûì.
-k	java:S100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÃÈ8²¢†ûì.
-z
-java:S1450C"XRemove the "resultUri" field and declare it as a local variable in the relevant methods.(ÕŠÁùûÿÿÿÿ8ÄÒùöì.
+
+java:S1186}"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8²¢†ûì.
+^	java:S125ç"<This block of commented-out lines of code should be removed.(×ç˜Óùÿÿÿÿ8²¢†ûì.
 X
 java:S2209¢"5Change this instance-reference to a static reference.(™ú¹úÿÿÿÿ8²¢†ûì.
+D
+java:S16595""Declare "city" on a separate line.(¦ùãĞıÿÿÿÿ8¢Î•ªì.
+
+java:S1450="bRemove the "deleteAccountDialog" field and declare it as a local variable in the relevant methods.(ø¡–è8ÔË’öì.
+\
+java:S1128,":Remove this unused import 'java.util.concurrent.Executor'.(÷ı¶Œúÿÿÿÿ8ûœ‰¬ì.
+k
+java:S1192é"HDefine a constant instead of duplicating this literal "Error: " 3 times.(íÒ¹üüÿÿÿÿ8ù¼’÷ì.
+J
+java:S1602ƒ",Remove useless curly braces around statement(ŠèŒĞ8²¢†ûì.
+z
+java:S1450C"XRemove the "resultUri" field and declare it as a local variable in the relevant methods.(ÕŠÁùûÿÿÿÿ8ÄÒùöì.
+M
+java:S5411À"*Use the primitive boolean expression here.(ÁÓ¥éúÿÿÿÿ8Ã«¥Îì.
+k	java:S100î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ö»À8²¢†ûì.
+p	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ8²¢†ûì.
+„
+java:S2178ˆ"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ïßãé8²¢†ûì.
+
+java:S1186e"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8²¢†ûì.
+
+java:S1186t"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8²¢†ûì.
+p	java:S100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÄÌóüÿÿÿÿ8²¢†ûì.
+r
+java:S1128$"URemove this unused import 'com.google.firebase.firestore.FirebaseFirestoreException'.(Å˜šÅ8Ï¡«ì.
+J
+java:S1602ó",Remove useless curly braces around statement(úÌä 8²¢†ûì.
+p	java:S100ù"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ìšûÿÿÿÿ8²¢†ûì.
+k	java:S100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÃÈ8²¢†ûì.
+O
+java:S1602ñ",Remove useless curly braces around statement(˜•–íÿÿÿÿÿ8²¢†ûì.

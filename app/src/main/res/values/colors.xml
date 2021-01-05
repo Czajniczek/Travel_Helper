@@ -28,4 +28,8 @@
     <color name="user_profile_background_color">#FECE2F</color>
     <color name="gold">#FFD700</color>
 
+    <!--ITEM NEED RIDE-->
+    <color name="item_need_ride_background_1">#F0F0F0</color>
+    <color name="item_need_ride_background_2">#F5F5F5</color>
+
 </resources>

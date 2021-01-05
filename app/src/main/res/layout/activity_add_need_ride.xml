@@ -189,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_day"
-                android:minWidth="105dp"
+                android:minWidth="103dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -217,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_month"
-                android:minWidth="105dp"
+                android:minWidth="103dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -245,7 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_year"
-                android:minWidth="105dp"
+                android:minWidth="103dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
