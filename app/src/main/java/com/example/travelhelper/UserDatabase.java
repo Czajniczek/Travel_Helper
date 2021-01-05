@@ -13,6 +13,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class UserDatabase {
 
+    //region INTERFACES
     public interface ProfileDataLoaded {
         void ProfileDataLoaded();
     }
@@ -20,23 +21,31 @@ public class UserDatabase {
     public interface ProfileImageLoaded {
         void ProfileImageLoaded(Uri uri);
     }
+    //endregion
 
+    //region VARIABLES
+    //INTERFACES
     public ProfileDataLoaded profileDataLoaded;
     public ProfileImageLoaded profileImageLoaded;
 
-    private String userId;
+    //FIREBASE
     private User user;
     private FirebaseFirestore firebaseFirestore;
     private StorageReference storageReference;
-    private FirebaseAuth firebaseAuth;
+    //private FirebaseAuth firebaseAuth;
+
+    //OTHERS
+    //private String userId;
     private Context context;
     public static UserDatabase instance;
+    //endregion
 
     //CONSTRUCTOR
     private UserDatabase(Activity myActivity, String userId) {
         this.context = myActivity.getApplicationContext();
-        this.userId = userId;
-        firebaseAuth = FirebaseAuth.getInstance();
+
+        //this.userId = userId;
+        //firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
     }
@@ -61,6 +70,7 @@ public class UserDatabase {
                 user.setEmail(documentSnapshot.getString("E-mail"));
                 user.setCity(documentSnapshot.getString("City"));
                 user.setPhoneNumber(documentSnapshot.getString("Phone number"));
+                user.setAccCreation(documentSnapshot.getString("Date of account creation"));
                 if (profileDataLoaded != null) profileDataLoaded.ProfileDataLoaded();
             }
         });
@@ -77,7 +87,7 @@ public class UserDatabase {
         });
     }
 
-    public void SetUserProfileImage(Uri imageUri) {
+   /* public void SetUserProfileImage(Uri imageUri) {
         user.setProfileImage(imageUri);
         LoadUserProfileImageToFirebase();
     }
@@ -90,7 +100,7 @@ public class UserDatabase {
         }).addOnFailureListener(e -> {
             Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         });
-    }
+    }*/
 
     public User getUser() {
         return user;

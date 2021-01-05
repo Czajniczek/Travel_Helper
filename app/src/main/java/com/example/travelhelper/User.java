@@ -4,11 +4,21 @@ import android.net.Uri;
 
 public class User {
 
-    private String userName, phoneNumber, city, Id, email;
+    //region VARIABLES
+    private String userName, phoneNumber, city, Id, email, accCreation;
     private Uri ProfileImage;
+    //endregion
 
     public User(String Id) {
         this.Id = Id;
+    }
+
+    public String getAccCreation() {
+        return accCreation;
+    }
+
+    public void setAccCreation(String accCreation) {
+        this.accCreation = accCreation;
     }
 
     public String getId() {

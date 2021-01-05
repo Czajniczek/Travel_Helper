@@ -1,21 +1,21 @@
 
-u
-java:S1450"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8ı·ìÒì.
 ‚
 java:S1450"`Remove the "addFloatingButton" field and declare it as a local variable in the relevant methods.(ï‰®¾ûÿÿÿÿ8©ÊğÒì.
-b
-java:S1128"ERemove this unused import 'androidx.appcompat.app.AppCompatActivity'.(€¶£î8¾Éë.
-R
-java:S1068"5Remove this unused "firebaseFirestore" private field.(Ã›õŒ8ğ‡èÒì.
-J
-java:S1068"-Remove this unused "myContext" private field.(’÷†å8ûÑêÒì.
-|
-java:S1450"_Remove the "storageReference" field and declare it as a local variable in the relevant methods.(Ş‚‡ç8¶ÙèÒì.
-W
-java:S1068"5Remove this unused "addFloatingButton" private field.(ï‰®¾ûÿÿÿÿ8ğÌîÒì.
 }
 java:S1450"`Remove the "firebaseFirestore" field and declare it as a local variable in the relevant methods.(Ã›õŒ8¶ÙèÒì.
-Q
-java:S1068"4Remove this unused "storageReference" private field.(Ş‚‡ç8ğ‡èÒì.
 {
 java:S1450"YRemove the "myActivity" field and declare it as a local variable in the relevant methods.(˜ìĞØøÿÿÿÿ8ı·ìÒì.
+Q
+java:S1068"4Remove this unused "storageReference" private field.(Ş‚‡ç8ğ‡èÒì.
+J
+java:S1068"-Remove this unused "myContext" private field.(’÷†å8ûÑêÒì.
+u
+java:S1450"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8ı·ìÒì.
+b
+java:S1128"ERemove this unused import 'androidx.appcompat.app.AppCompatActivity'.(€¶£î8¾Éë.
+W
+java:S1068"5Remove this unused "addFloatingButton" private field.(ï‰®¾ûÿÿÿÿ8ğÌîÒì.
+|
+java:S1450"_Remove the "storageReference" field and declare it as a local variable in the relevant methods.(Ş‚‡ç8¶ÙèÒì.
+R
+java:S1068"5Remove this unused "firebaseFirestore" private field.(Ã›õŒ8ğ‡èÒì.

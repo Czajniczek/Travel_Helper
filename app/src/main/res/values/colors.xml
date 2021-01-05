@@ -25,7 +25,7 @@
     <color name="transparent">#00000000</color>
 
     <color name="car_logo_color">#FBD362</color>
-    <color name="background_color">#FECE2F</color>
+    <color name="user_profile_background_color">#FECE2F</color>
     <color name="gold">#FFD700</color>
 
 </resources>

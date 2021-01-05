@@ -34,6 +34,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -45,25 +47,36 @@ import static android.app.Activity.RESULT_OK;
 
 public class UserProfileFragment extends Fragment {
 
-    //VARIABLES
+    //region VARIABLES
+    //LAYOUT
     private EditText userName;
     private TextInputLayout mUserEmail, city, mPhoneNumber;
     private Button saveButton;
     private ImageView profileImage;
-    private Activity myActivity;
-    private Context myContext;
+    private Toolbar myToolbar;
+    private TextView accCreate;
+
+    //FIREBASE
     private User user;
     private DeleteAccountDialog deleteAccountDialog;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseStorage firebaseStorage;
     private UserDatabase userDatabase;
-    private Toolbar myToolbar;
+    private StorageReference fileRef;
     private Boolean dataLoadedFlag = false;
+    private Uri resultUri;
+
+    //OTHERS
+    private Activity myActivity;
+    private Context myContext;
+    //endregion
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        myActivity = getActivity();
-        myContext = myActivity.getApplicationContext();
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseStorage = FirebaseStorage.getInstance();
     }
 
     @Nullable
@@ -78,6 +91,7 @@ public class UserProfileFragment extends Fragment {
         mPhoneNumber = view.findViewById(R.id.user_profile_phone_number);
         profileImage = view.findViewById(R.id.user_profile_user_image);
         saveButton = view.findViewById(R.id.user_profile_save_button);
+        accCreate = view.findViewById(R.id.user_profile_date_of_account_create);
 
         setHasOptionsMenu(true);
 
@@ -121,8 +135,6 @@ public class UserProfileFragment extends Fragment {
         saveButton.setOnClickListener(v -> {
             if (!ValidateEmail() | !ValidatePhoneNumber()) return;
 
-            user = userDatabase.getUser();
-
             user.setUserName(userName.getText().toString());
             user.setEmail(mUserEmail.getEditText().getText().toString());
             user.setCity(city.getEditText().getText().toString());
@@ -146,8 +158,8 @@ public class UserProfileFragment extends Fragment {
         int id = item.getItemId();
 
         if (id == R.id.user_menu_logout) {
-            FirebaseAuth.getInstance().signOut();
-            UserDatabase.ClearInstance();
+            firebaseAuth.signOut();
+            userDatabase.ClearInstance();
             startActivity(new Intent(myContext, LoginActivity.class));
             myActivity.finish();
             return true;
@@ -164,6 +176,9 @@ public class UserProfileFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        myActivity = getActivity();
+        myContext = myActivity.getApplicationContext();
+
         myToolbar = myActivity.findViewById(R.id.my_toolbar);
         ((AppCompatActivity) myActivity).setSupportActionBar(myToolbar);
         ((AppCompatActivity) myActivity).getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -175,15 +190,14 @@ public class UserProfileFragment extends Fragment {
 
         //Utworzenie usera - singleton
         if (!dataLoadedFlag) {
-            userDatabase = UserDatabase.getInstance(myActivity, FirebaseAuth.getInstance().getUid());
-            userDatabase.getUserFromFirebase(FirebaseAuth.getInstance().getUid());
+            userDatabase = UserDatabase.getInstance(myActivity, firebaseAuth.getUid());
+            userDatabase.getUserFromFirebase(firebaseAuth.getUid());
             userDatabase.profileDataLoaded = this::GetUserInformation;
             userDatabase.profileImageLoaded = this::SetProfileImage;
-        }
-        dataLoadedFlag = false;
+        } else dataLoadedFlag = false;
     }
 
-    //Pobiera informacje o userze na starcie i potem je zmienia jeżeli zajdzie zmiana
+    //Ustawia informacje o userze na starcie i potem po naciśnięciu przycisku
     private void GetUserInformation() {
 
         user = userDatabase.getUser();
@@ -192,6 +206,43 @@ public class UserProfileFragment extends Fragment {
         mUserEmail.getEditText().setText(user.getEmail());
         mPhoneNumber.getEditText().setText(user.getPhoneNumber());
         city.getEditText().setText(user.getCity());
+        accCreate.setText(user.getAccCreation());
+    }
+
+    //Ustawienie zdjęcia
+    private void SetProfileImage(Uri imageUri) {
+        if (getActivity() == null) return;
+        Glide.with(getActivity()).load(imageUri).placeholder(R.drawable.ic_account).error(R.drawable.ic_account).into(profileImage);
+    }
+
+    //Do zdjęcia (wywołuje się pierwsze)
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+            if (resultCode == RESULT_OK) {
+                resultUri = result.getUri();
+                dataLoadedFlag = true;
+                SetProfileImage(resultUri);
+                user.setProfileImage(resultUri);
+                LoadUserProfileImageToFirebase();
+                //userDatabase.SetUserProfileImage(resultUri);
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Toast.makeText(getContext(), "Error: " + result.getError(), Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    private void LoadUserProfileImageToFirebase() {
+
+        fileRef = firebaseStorage.getReference().child("users/" + firebaseAuth.getUid() + "/profile.jpg");
+        fileRef.putFile(user.getProfileImage()).addOnSuccessListener(taskSnapshot -> {
+            Toast.makeText(myContext, "The profile photo has been changed", Toast.LENGTH_SHORT).show();
+        }).addOnFailureListener(e -> {
+            Toast.makeText(myContext, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+        });
     }
 
     //Po naciśnięciu przycisku Zapisz
@@ -208,30 +259,6 @@ public class UserProfileFragment extends Fragment {
         documentReference.update(userMap).addOnCompleteListener(task -> {
             Toast.makeText(getContext(), "Data has been updated", Toast.LENGTH_SHORT).show();
         }).addOnFailureListener(e -> Toast.makeText(getContext(), "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show());
-    }
-
-    //Do zdjęcia (wywołuje się pierwsze)
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-            CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == RESULT_OK) {
-                Uri resultUri = result.getUri();
-                dataLoadedFlag = true;
-                SetProfileImage(resultUri);
-                userDatabase.SetUserProfileImage(resultUri);
-            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-                Toast.makeText(getContext(), "Error: " + result.getError(), Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    //Ustawienie zdjęcia
-    private void SetProfileImage(Uri imageUri) {
-        if (getActivity() == null) return;
-        Glide.with(getActivity()).load(imageUri).placeholder(R.drawable.ic_account).error(R.drawable.ic_account).into(profileImage);
     }
 
     //region VALIDATION

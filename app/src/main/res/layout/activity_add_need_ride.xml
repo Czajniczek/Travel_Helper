@@ -7,14 +7,24 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:paddingBottom="20dp"
     tools:context=".AddNeedRideActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
         android:id="@+id/need_ride_logo_image"
         android:layout_width="@dimen/login_logo_width_and_height"
         android:layout_height="@dimen/login_logo_width_and_height"
         android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
         android:contentDescription="@string/activity_login_logo_image_description"
         android:src="@drawable/car_logo"
         android:transitionName="logo_image" />
@@ -24,8 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-40dp"
         android:fontFamily="@font/bungee"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:text="@string/activity_add_need_ride_inscription_under_logo"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -36,18 +48,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="-10dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="21dp"
             android:layout_marginBottom="10dp"
             android:text="@string/activity_add_need_ride_from"
             android:textAllCaps="true"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -63,12 +78,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:hint="@string/activity_add_need_ride_city"
-                android:minWidth="170dp">
+                android:minWidth="170dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:maxLength="15" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,12 +95,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_street"
-                android:minWidth="170dp">
+                android:minWidth="170dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:maxLength="15" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,13 +112,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="21dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/activity_add_need_ride_to"
             android:textAllCaps="true"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -115,12 +134,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:hint="@string/activity_add_need_ride_city"
-                android:minWidth="170dp">
+                android:minWidth="170dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:maxLength="15" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,12 +151,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_street"
-                android:minWidth="170dp">
+                android:minWidth="170dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:maxLength="15" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,13 +168,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="21dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/activity_add_need_ride_date"
+            android:text="@string/activity_add_need_ride_time"
             android:textAllCaps="true"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -166,7 +189,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_day"
-                android:minWidth="100dp">
+                android:minWidth="105dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -181,6 +205,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/dash"
                 android:textColor="@color/black"
                 android:textSize="40sp"
@@ -192,7 +217,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_month"
-                android:minWidth="100dp">
+                android:minWidth="105dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -207,6 +233,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/dash"
                 android:textColor="@color/black"
                 android:textSize="40sp"
@@ -218,7 +245,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_year"
-                android:minWidth="100dp">
+                android:minWidth="105dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -243,7 +271,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_hour"
-                android:minWidth="100dp">
+                android:minWidth="100dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -258,6 +287,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/colon_dot"
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -269,7 +299,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_minute"
-                android:minWidth="100dp">
+                android:minWidth="100dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -283,21 +314,14 @@
 
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <Button
+        android:id="@+id/need_ride_button_add"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/need_ride_button_add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_background"
-            android:text="@string/activity_add_need_ride_add_button"
-            android:transitionName="button_tran"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/round_background"
+        android:text="@string/activity_add_need_ride_add_button" />
 
 </LinearLayout>

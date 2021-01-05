@@ -13,12 +13,20 @@ import com.google.firebase.database.DatabaseReference;
 
 public class DeleteAccountDialog {
 
+    //region VARIABLES
+    //LAYOUT
+    private Button yesButton, noButton;
+
+    //FIREBASE
+    private UserDatabase userDatabase;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser user;
+
+    //OTHERS
     private final Activity myActivity;
     private Context myContext;
     private AlertDialog alertDialog;
-    private Button yesButton, noButton;
-    private UserDatabase userDatabase;
-    final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    //endregion
 
     DeleteAccountDialog(Activity myActivity, UserDatabase userDatabase) {
         this.myActivity = myActivity;
@@ -41,12 +49,14 @@ public class DeleteAccountDialog {
         //HOOKS
         yesButton = alertDialog.findViewById(R.id.delete_account_YES);
         noButton = alertDialog.findViewById(R.id.delete_account_NO);
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
 
         yesButton.setOnClickListener(v -> {
             alertDialog.dismiss();
             user.delete();
-            FirebaseAuth.getInstance().signOut();
-            UserDatabase.ClearInstance();
+            firebaseAuth.signOut();
+            userDatabase.ClearInstance();
             myActivity.startActivity(new Intent(myContext, LoginActivity.class));
             myActivity.finish();
         });

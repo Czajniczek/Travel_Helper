@@ -28,13 +28,16 @@
     <!--endregion-->
 
     <!--region VALIDATION-->
-    <string name="field_can_not_be_empty_error" translatable="false">The field can\'t be empty</string>
+    <string name="field_can_not_be_empty_error" translatable="false">Field can\'t be empty</string>
     <string name="email_validate_error" translatable="false">Not valid e-mail address</string>
     <string name="password_is_too_weak" translatable="false">Password is too weak</string>
     <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
     <string name="password_are_not_the_same" translatable="false">The passwords are not the same</string>
     <string name="email_exist_error" translatable="false">The user with the given e-mail address exists</string>
     <string name="wrong_phone_number" translatable="false">Wrong phone number</string>
+    <string name="wrong_city_name" translatable="false">Wrong city name</string>
+    <string name="wrong_value" translatable="false">Wrong value</string>
+    <string name="empty_field" translatable="false">Empty field</string>
     <!--endregion-->
 
     <!--region RESET PASSWORD-->
@@ -62,8 +65,10 @@
 
     <!--region USER PROFILE-->
     <string name="user_profile_user_name_placeholder" translatable="false">Gabriel Czajkowski</string>
-    <string name="user_profile_number_of_satisfied_customers" translatable="false">Satisfied customers</string>
-    <string name="user_profile_trips" translatable="false">Trips</string>
+    <string name="user_profile_in_application_from" translatable="false">Date of account creation</string>
+    <string name="user_profile_number_of_happy_journeys" translatable="false">15</string>
+    <string name="user_profile_date_placeholder" translatable="false">12.12.2020</string>
+    <string name="user_profile_trips" translatable="false">Number of happy trips</string>
     <string name="user_profile_city" translatable="false">City</string>
     <string name="user_profile_city_placeholder" translatable="false">Warsaw</string>
     <string name="user_profile_phone_number" translatable="false">Phone number</string>
@@ -84,7 +89,7 @@
     <string name="activity_add_need_ride_city" translatable="false">City</string>
     <string name="activity_add_need_ride_street" translatable="false">Street</string>
     <string name="activity_add_need_ride_to" translatable="false">To:</string>
-    <string name="activity_add_need_ride_date" translatable="false">Date:</string>
+    <string name="activity_add_need_ride_time" translatable="false">Time:</string>
     <string name="activity_add_need_ride_day" translatable="false">Day</string>
     <string name="activity_add_need_ride_month" translatable="false">Month</string>
     <string name="activity_add_need_ride_year" translatable="false">Year</string>
@@ -93,6 +98,10 @@
     <string name="activity_add_need_ride_add_button" translatable="false">Add</string>
     <string name="dash" translatable="false">-</string>
     <string name="colon_dot" translatable="false">:</string>
-    
     <!--endregion-->
+
+    <!--ITEM NEED RIDE-->
+    <string name="item_need_ride_street_acronym" translatable="false">st.</string>
+    <string name="item_need_ride_date" translatable="false">Date</string>
+    <string name="item_need_ride_time" translatable="false">Time</string>
 </resources>
