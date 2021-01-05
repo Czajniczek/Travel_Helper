@@ -19,14 +19,20 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
+    //region VARIABLES
+    private BottomNavigationView navView;
+    private NavController navController;
+    private Fragment fragment;
+    //endregion
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView navView = findViewById(R.id.navigation_view);
-        NavController navController = Navigation.findNavController(this, R.id.navigation_host_fragment);
+        navView = findViewById(R.id.navigation_view);
+        navController = Navigation.findNavController(this, R.id.navigation_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
     }
 
@@ -34,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.navigation_host_fragment);
+        fragment = getSupportFragmentManager().findFragmentById(R.id.navigation_host_fragment);
         fragment.getChildFragmentManager().getFragments().get(0).onActivityResult(requestCode, resultCode, data);
     }
 }

@@ -27,7 +27,8 @@ import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //VARIABLES
+    //region VARIABLES
+    //VALIDATION
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +         //at least 1 digit
@@ -38,15 +39,26 @@ public class LoginActivity extends AppCompatActivity {
                     "(?=\\S+$)" +             //no white spaces
                     ".{4,}" +                 //at least 4 characters
                     "$");
+
+    //LAYOUT
     private TextInputLayout mEmail, mPassword;
     private Button signInButton, signUpButton, forgotPassword;
-    private ImageView image;
-    private TextView signInError, textLogo, slogan;
+    //private ImageView image;
+    private TextView signInError;
+    private Intent intent;
+
+    //DIALOGUES
     private LoadingDialog loadingDialog;
     private ResetPasswordDialog resetPasswordDialog;
+
+    //FIREBASE
     private FirebaseAuth firebaseAuth;
-    private Intent intent;
-    private Pair[] pairs;
+
+    //ANIMATIONS
+    //private ImageView image;
+    //private TextView textLogo, slogan;
+    //private Pair[] pairs;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +75,9 @@ public class LoginActivity extends AppCompatActivity {
         } else getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
 
         //HOOKS
-        image = findViewById(R.id.sign_in_logo_image);
-        textLogo = findViewById(R.id.activity_login_inscription_under_logo);
-        slogan = findViewById(R.id.sign_in_slogan_name);
+        //image = findViewById(R.id.sign_in_logo_image);
+        //textLogo = findViewById(R.id.activity_login_inscription_under_logo);
+        //slogan = findViewById(R.id.sign_in_slogan_name);
         mEmail = findViewById(R.id.sign_in_e_mail);
         mPassword = findViewById(R.id.sign_in_password);
         forgotPassword = findViewById(R.id.forgot_password_button);
@@ -74,13 +86,12 @@ public class LoginActivity extends AppCompatActivity {
         signUpButton = findViewById(R.id.sign_up_button_in_sign_in);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //It is not necessary to log in every time
         if (firebaseAuth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }
 
-        //region TextChange LISTENERS
+        //region TEXT CHANGE LISTENERS
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -114,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
         });
         //endregion
 
-        //region OnClick LISTENERS
+        //region ON CLICK LISTENERS
         signInButton.setOnClickListener(v -> {
             String email = mEmail.getEditText().getText().toString().trim();
             String password = mPassword.getEditText().getText().toString().trim();
@@ -127,16 +138,17 @@ public class LoginActivity extends AppCompatActivity {
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     Toast.makeText(LoginActivity.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
+                    loadingDialog.DismissDialog();
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 } else {
                     /*Toast.makeText(LoginActivity.this, "Error: " + task.getException(), Toast.LENGTH_LONG).show();*/
-                    Toast.makeText(LoginActivity.this, "Error during login", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Login error", Toast.LENGTH_LONG).show();
                     loadingDialog.DismissDialog();
                 }
             }).addOnFailureListener(e -> {
-                loadingDialog.DismissDialog();
                 signInError.setVisibility(View.VISIBLE);
+                loadingDialog.DismissDialog();
             });
         });
 
@@ -148,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(v -> {
             intent = new Intent(LoginActivity.this, RegistrationActivity.class);
 
-            pairs = new Pair[7];
+            /*pairs = new Pair[7];
 
             pairs[0] = new Pair<View, String>(image, "logo_image");
             pairs[1] = new Pair<View, String>(textLogo, "logo_text");
@@ -159,7 +171,11 @@ public class LoginActivity extends AppCompatActivity {
             pairs[6] = new Pair<View, String>(signUpButton, "sign_in_sign_up_tran");
 
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, pairs);
-            startActivity(intent, options.toBundle());
+            startActivity(intent, options.toBundle());*/
+            startActivity(intent);
+
+            //SLIDE IN
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
         //endregion
     }

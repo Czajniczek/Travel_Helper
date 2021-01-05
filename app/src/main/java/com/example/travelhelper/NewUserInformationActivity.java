@@ -19,18 +19,28 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class NewUserInformationActivity extends AppCompatActivity {
 
-    //VARIABLES
+    //region VARIABLES
+    //LAYOUT
     private TextInputLayout mUserName, mCity, mPhoneNumber;
     private Button continueButton;
+
+    //FIREBASE
     private FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
-    private LoadingDialog loadingDialog;
+    private DocumentReference documentReference;
     private String userId, email, password, name, phoneNumber, city;
+
+    //DIALOGUES
+    private LoadingDialog loadingDialog;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +51,13 @@ public class NewUserInformationActivity extends AppCompatActivity {
         email = extras.getString("USER_EMAIL");
         password = extras.getString("USER_PASSWORD");
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseFirestore = FirebaseFirestore.getInstance();
-
         //HOOKS
         mUserName = findViewById(R.id.necessary_data_user_name);
         mCity = findViewById(R.id.necessary_data_city);
         mPhoneNumber = findViewById(R.id.necessary_data_phone_number);
         continueButton = findViewById(R.id.necessary_data_continue_button);
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
 
         //region TextChange LISTENERS
         mUserName.getEditText().addTextChangedListener(new TextWatcher() {
@@ -130,17 +139,23 @@ public class NewUserInformationActivity extends AppCompatActivity {
     }
 
     private void SaveUserData(String name, String email, String phoneNumber, String city) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String currentTime = sdf.format(new Date());
+        //String currentTime = Calendar.getInstance().getTime().toString();
+
         userId = firebaseAuth.getCurrentUser().getUid();
-        DocumentReference documentReference = firebaseFirestore.collection("users").document(userId);
+        documentReference = firebaseFirestore.collection("users").document(userId);
 
         Map<String, Object> userMap = new HashMap<>();
         userMap.put("Username", name);
         userMap.put("E-mail", email);
         userMap.put("City", city);
         userMap.put("Phone number", phoneNumber);
+        userMap.put("Date of account creation", currentTime);
 
         documentReference.set(userMap).addOnSuccessListener(aVoid -> {
-            Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+            loadingDialog.DismissDialog();
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
         }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show());

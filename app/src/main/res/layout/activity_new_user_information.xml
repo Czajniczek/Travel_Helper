@@ -16,7 +16,7 @@
         android:layout_height="@dimen/login_logo_width_and_height"
         android:layout_gravity="center"
         android:contentDescription="@string/activity_new_user_information_logo_image_description"
-        android:src="@drawable/ic_information" />
+        android:src="@drawable/information" />
 
     <TextView
         android:id="@+id/inscription_under_sign_up_logo"

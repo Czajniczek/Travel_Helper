@@ -2,7 +2,9 @@ package com.example.travelhelper;
 
 public class NeedRide {
 
-    private String id, sFromCity, sFromStreet, sToCity, sToStreet, sDay, sMonth, sYear, sHour, sMinute, userId;
+    //region VARIABLES
+    private String id, sFromCity, sFromStreet, sToCity, sToStreet, sDay, sMonth, sYear, sHour, sMinute, userId, sUserName, sPhoneNumber;
+    //endregion
 
     public NeedRide() {
     }
@@ -11,7 +13,7 @@ public class NeedRide {
         return id;
     }
 
-    public void setId(String userId) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -73,6 +75,22 @@ public class NeedRide {
 
     public String getsHour() {
         return sHour;
+    }
+
+    public String getsUserName() {
+        return sUserName;
+    }
+
+    public void setsUserName(String sUserName) {
+        this.sUserName = sUserName;
+    }
+
+    public String getsPhoneNumber() {
+        return sPhoneNumber;
+    }
+
+    public void setsPhoneNumber(String sPhoneNumber) {
+        this.sPhoneNumber = sPhoneNumber;
     }
 
     public void setsHour(String sHour) {

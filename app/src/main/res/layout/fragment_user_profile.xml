@@ -15,24 +15,20 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:background="@color/background_color"
-            android:padding="20dp">
+            android:background="@color/user_profile_background_color"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/my_toolbar"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="-10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
                 app:menu="@menu/user_profile_logout"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-            <!--<Button
-                android:id="@+id/logout_button1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/logout" />-->
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_profile_user_image"
@@ -84,19 +80,20 @@
                         android:layout_width="45dp"
                         android:layout_height="45dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/smile" />
+                        android:src="@drawable/calendar" />
 
                     <TextView
-                        android:id="@+id/user_profile_happy_customers"
+                        android:id="@+id/user_profile_date_of_account_create"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/card1_image"
                         android:layout_centerInParent="false"
                         android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/bungee"
                         android:includeFontPadding="false"
-                        android:text="10"
+                        android:text="@string/user_profile_date_placeholder"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
@@ -104,11 +101,11 @@
                         android:id="@+id/card1_small_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/user_profile_happy_customers"
+                        android:layout_below="@+id/user_profile_date_of_account_create"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
                         android:includeFontPadding="false"
-                        android:text="@string/user_profile_number_of_satisfied_customers"
+                        android:text="@string/user_profile_in_application_from"
                         android:textAlignment="center"
                         android:textSize="20sp" />
 
@@ -134,7 +131,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/trip" />
+                        android:src="@drawable/destination" />
 
                     <TextView
                         android:id="@+id/user_profile_rides"
@@ -146,7 +143,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/bungee"
                         android:includeFontPadding="false"
-                        android:text="14"
+                        android:text="@string/user_profile_number_of_happy_journeys"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
@@ -156,9 +153,10 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/user_profile_rides"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="5dp"
                         android:includeFontPadding="false"
                         android:text="@string/user_profile_trips"
+                        android:textAlignment="center"
                         android:textSize="20sp" />
 
                 </RelativeLayout>

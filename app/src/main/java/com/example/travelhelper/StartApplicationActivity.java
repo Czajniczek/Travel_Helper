@@ -19,17 +19,26 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class StartApplicationActivity extends AppCompatActivity {
 
-    //VARIABLES
-    private static int SPLASH_SCREEN = 3000;
-    private Animation topAnimation, bottomAnimation;
+    //region VARIABLES
+    //LAYOUT
     private ImageView image;
     private TextView textLogo, slogan;
-    private View startApplication;
+    //private View startApplication;
     private Intent intent;
-    private Pair[] pairs;
+
+    //FIREBASE
+    private FirebaseAuth firebaseAuth;
+
+    //ANIMATIONS
+    private static int SPLASH_SCREEN = 3000;
+    private Animation topAnimation, bottomAnimation;
     private ActivityOptions options;
+    private Pair[] pairs;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +60,7 @@ public class StartApplicationActivity extends AppCompatActivity {
         textLogo = findViewById(R.id.activity_start_application_logo_text_view);
         slogan = findViewById(R.id.activity_start_application_slogan_text_view);
         //startApplication = findViewById(R.id.activity_start_application);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //ANIMATIONS
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
@@ -60,19 +70,25 @@ public class StartApplicationActivity extends AppCompatActivity {
         textLogo.setAnimation(bottomAnimation);
         slogan.setAnimation(bottomAnimation);
 
-        //DELAY METHOD
-        new Handler(Looper.myLooper()).postDelayed(() -> {
+        if (firebaseAuth.getCurrentUser() != null) {
+            startActivity(new Intent(StartApplicationActivity.this, LoginActivity.class));
+            finish();
+        } else {
+            //DELAY METHOD
+            new Handler(Looper.myLooper()).postDelayed(() -> {
 
-            intent = new Intent(StartApplicationActivity.this, LoginActivity.class);
+                intent = new Intent(StartApplicationActivity.this, LoginActivity.class);
 
-            pairs = new Pair[2];
-            pairs[0] = new Pair<View, String>(image, "logo_image");
-            pairs[1] = new Pair<View, String>(textLogo, "logo_text");
+                pairs = new Pair[2];
+                pairs[0] = new Pair<View, String>(image, "logo_image");
+                pairs[1] = new Pair<View, String>(textLogo, "logo_text");
 
-            options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs);
-            startActivity(intent, options.toBundle());
-        }, SPLASH_SCREEN);
+                options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs);
+                startActivity(intent, options.toBundle());
+            }, SPLASH_SCREEN);
+        }
 
+        //LAYOUT ONCLICK LISTENER
         /*startApplication.setOnClickListener(v -> {
             Intent intent = new Intent(StartApplicationActivity.this, LoginActivity.class);
             startActivity(intent);

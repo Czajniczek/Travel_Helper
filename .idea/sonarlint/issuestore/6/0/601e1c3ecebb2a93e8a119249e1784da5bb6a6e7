@@ -1,27 +1,27 @@
 
-F
-java:S1659"$Declare "sMonth" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
 I
-java:S1659"'Declare "sToStreet" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
+java:S1659"'Declare "sUserName" on a separate line.(–Ê©üÿÿÿÿ8ÙÅ„ùì.
+L
+java:S1659"*Declare "sPhoneNumber" on a separate line.(–Ê©üÿÿÿÿ8ÙÅ„ùì.
 I
-java:S1659"'Declare "sFromCity" on a separate line.(÷ÅÏûıÿÿÿÿ8ÅòùÛì.
-‚
-java:S4165"`Remove this useless assignment; "id" already holds the assigned value along all execution paths.(£©èÚşÿÿÿÿ8ÅòùÛì.
-J
-java:S1172"-Remove this unused method parameter "userId".(ÆÅò±8§ÎùÛì.
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(à‹68¿ğäØì.
+java:S1659"'Declare "sFromCity" on a separate line.(–Ê©üÿÿÿÿ8ÅòùÛì.
 E
-java:S1659"#Declare "sHour" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
-G
-java:S1659"%Declare "sToCity" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
+java:S1659"#Declare "sHour" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
 D
-java:S1659""Declare "sDay" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
-F
-java:S1659"$Declare "userId" on a separate line.(÷ÅÏûıÿÿÿÿ8úÈí×ì.
-E
-java:S1659"#Declare "sYear" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
+java:S1659""Declare "sDay" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
+
+java:S1186	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(à‹68¿ğäØì.
 K
-java:S1659")Declare "sFromStreet" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
+java:S1659")Declare "sFromStreet" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
+F
+java:S1659"$Declare "userId" on a separate line.(–Ê©üÿÿÿÿ8úÈí×ì.
+F
+java:S1659"$Declare "sMonth" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
 G
-java:S1659"%Declare "sMinute" on a separate line.(÷ÅÏûıÿÿÿÿ8ïøë×ì.
+java:S1659"%Declare "sToCity" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
+I
+java:S1659"'Declare "sToStreet" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
+G
+java:S1659"%Declare "sMinute" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.
+E
+java:S1659"#Declare "sYear" on a separate line.(–Ê©üÿÿÿÿ8ïøë×ì.

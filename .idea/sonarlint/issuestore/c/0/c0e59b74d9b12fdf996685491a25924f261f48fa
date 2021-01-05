@@ -1,66 +1,68 @@
 
-U
-java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8§èİ¶ë.
-v
-java:S1450!"TRemove the "email" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8§ìû²ì.
+ˆ
+java:S2178w"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(¡óÅïüÿÿÿÿ8ŸİÏ³ì.
+p	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‚Âßúÿÿÿÿ8öñÿ²ì.
 
-java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8öñÿ²ì.
+java:S1186_"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8öñÿ²ì.
+}
+java:S1450&"`Remove the "documentReference" field and declare it as a local variable in the relevant methods.( Êİ8£¢üóì.
+H
+java:S1659'"&Declare "password" on a separate line.(Ò›èãøÿÿÿÿ8Ûşóì.
+D
+java:S1659'""Declare "city" on a separate line.(Ò›èãøÿÿÿÿ8Ûşóì.
+
+java:S1186J"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8öñÿ²ì.
+G
+java:S1659 "*Declare "mPhoneNumber" on a separate line.(‘éÅ÷8ÊöÁ¶ë.
+z
+java:S1450!"]Remove the "continueButton" field and declare it as a local variable in the relevant methods.(öÏº¸8Ê¢úµë.
 u
-java:S1450!"SRemove the "name" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8ª†³ì.
-
-java:S1186G"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8éÁÍ³ì.
+java:S1450'"SRemove the "name" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8û¿‚ôì.
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(´òò”
 \
 java:S1128"@Remove this unused import 'com.google.firebase.auth.AuthResult'.(âÂ8§èİ¶ë.
-o	java:S100i"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öË‡úÿÿÿÿ8öñÿ²ì.
-p	java:S100¢"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ8ìêÎ³ì.
+
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8öñÿ²ì.
+^	java:S125"<This block of commented-out lines of code should be removed.(·åÉ‹ÿÿÿÿÿ8‡Ù±‚í.
+
+java:S1186P"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8éÁÍ³ì.
+ˆ
+java:S2178w"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(¡óÅïüÿÿÿÿ8öñÿ²ì.
+k	java:S100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÖåí8öñÿ²ì.
+p	java:S100À"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ñëµøÿÿÿÿ8öñÿ²ì.
+E
+java:S1659'"#Declare "email" on a separate line.(Ò›èãøÿÿÿÿ8Ûşóì.
+v
+java:S1450'"TRemove the "email" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûşóì.
+I
+java:S1602m",Remove useless curly braces around statement(Û›ÙÎ8öñÿ²ì.
 m
 java:S1128"KRemove this unused import 'com.google.android.gms.tasks.OnFailureListener'.(ï¿ŞŞúÿÿÿÿ8÷“İ¶ë.
-H
-java:S1659!"&Declare "password" on a separate line.(Ò›èãøÿÿÿÿ8Æßú²ì.
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(´òò”
-E
-java:S1659!"#Declare "email" on a separate line.(Ò›èãøÿÿÿÿ8´×ÿ²ì.
-D
-java:S1659!""Declare "name" on a separate line.(Ò›èãøÿÿÿÿ8ª†³ì.
-z
-java:S1450"]Remove the "continueButton" field and declare it as a local variable in the relevant methods.(öÏº¸8Ê¢úµë.
-D
-java:S1659!""Declare "city" on a separate line.(Ò›èãøÿÿÿÿ8ª†³ì.
-w
-java:S1450!"URemove the "userId" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8öñÿ²ì.
-n
-java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8§èİ¶ë.
-@
-java:S1659"#Declare "mCity" on a separate line.(‘éÅ÷8õªÄ¶ë.
-I
-java:S1602d",Remove useless curly braces around statement(Û›ÙÎ8öñÿ²ì.
-p	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‚Âßúÿÿÿÿ8öñÿ²ì.
-k	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÖåí8öñÿ²ì.
-y
-java:S1450 "\Remove the "loadingDialog" field and declare it as a local variable in the relevant methods.(ï’ˆß8ñ¬ô©ì.
-p	java:S100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ñëµøÿÿÿÿ8öñÿ²ì.
+K
+java:S1659'")Declare "phoneNumber" on a separate line.(Ò›èãøÿÿÿÿ8Ûşóì.
 u
-java:S1450!"SRemove the "city" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8¤ç†³ì.
+java:S1450'"SRemove the "city" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûşóì.
+
+java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8éÁÍ³ì.
+U
+java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8§èİ¶ë.
+Y	java:S125"<This block of commented-out lines of code should be removed.(œ®ÅÑ8ÛŠôì.
+|
+java:S1450'"ZRemove the "phoneNumber" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûşóì.
+@
+java:S1659 "#Declare "mCity" on a separate line.(‘éÅ÷8õªÄ¶ë.
+
+java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8öñÿ²ì.
+o	java:S100r"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öË‡úÿÿÿÿ8öñÿ²ì.
 [
 java:S1128">Remove this unused import 'com.google.android.gms.tasks.Task'.(¦âÏô8§èİ¶ë.
-
-java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8öñÿ²ì.
-X	java:S125y"<This block of commented-out lines of code should be removed.(‚«ïê8öñÿ²ì.
-G
-java:S1659"*Declare "mPhoneNumber" on a separate line.(‘éÅ÷8ÊöÁ¶ë.
-
-java:S1186P"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8éÁÍ³ì.
-ˆ
-java:S2178n"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(¡óÅïüÿÿÿÿ8öñÿ²ì.
-K
-java:S1659!")Declare "phoneNumber" on a separate line.(Ò›èãøÿÿÿÿ8ª†³ì.
-|
-java:S1450!"ZRemove the "phoneNumber" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8‡ôÍ³ì.
-
-java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8öñÿ²ì.
-ˆ
-java:S2178n"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(¡óÅïüÿÿÿÿ8ŸİÏ³ì.
-
-java:S1186_"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8öñÿ²ì.
+p	java:S100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ8ìêÎ³ì.
 y
-java:S1450!"WRemove the "password" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8ßü²ì.
+java:S1450'"WRemove the "password" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûşóì.
+w
+java:S1450'"URemove the "userId" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8††¶‚í.
+D
+java:S1659'""Declare "name" on a separate line.(Ò›èãøÿÿÿÿ8Ûşóì.
+n
+java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8§èİ¶ë.
+Y	java:S125‚"<This block of commented-out lines of code should be removed.(‚«ïê8öñÿ²ì.

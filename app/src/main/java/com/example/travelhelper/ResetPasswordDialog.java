@@ -18,10 +18,15 @@ import java.util.Objects;
 public class ResetPasswordDialog {
 
     //VARIABLES
+    //DIALOG
     private final Activity activity;
     private AlertDialog alertDialog;
+
+    //LAYOUT
     private TextInputLayout mEmail;
     private Button resetButton;
+
+    //FIREBASE
     private FirebaseAuth firebaseAuth;
 
     public ResetPasswordDialog(Activity myActivity) {
@@ -74,13 +79,13 @@ public class ResetPasswordDialog {
                         mEmail.setError(activity.getResources().getString(R.string.reset_password_email_not_exist));
                         mEmail.requestFocus();
                     } else {
+                        alertDialog.dismiss();
                         firebaseAuth.sendPasswordResetEmail(email).addOnSuccessListener(aVoid -> {
                             Toast.makeText(activity.getApplicationContext(), "A link to change your password has been sent to your e-mail address.", Toast.LENGTH_LONG).show();
                         }).addOnFailureListener(e -> {
                             Toast.makeText(activity.getApplicationContext(), "Something has gone wrong. Try again later.", Toast.LENGTH_LONG).show();
                             /*.addOnFailureListener(e -> Toast.makeText(activity.getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show());*/
                         });
-                        alertDialog.dismiss();
                     }
                 }
             });

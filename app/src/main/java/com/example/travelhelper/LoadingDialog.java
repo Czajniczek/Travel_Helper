@@ -6,14 +6,16 @@ import android.view.LayoutInflater;
 
 public class LoadingDialog {
 
+    //region VARIABLES
     private final Activity activity;
     private AlertDialog alertDialog;
+    //endregion
 
-    LoadingDialog(Activity myActivity) {
+    public LoadingDialog(Activity myActivity) {
         activity = myActivity;
     }
 
-    void StartLoadingDialog() {
+    public void StartLoadingDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         LayoutInflater inflater = activity.getLayoutInflater();
 

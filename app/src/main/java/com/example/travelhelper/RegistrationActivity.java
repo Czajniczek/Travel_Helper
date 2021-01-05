@@ -30,7 +30,8 @@ import java.util.regex.Pattern;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    //VARIABLES
+    //region VARIABLES
+    //VALIDATION
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     //"(?=.*[0-9])" +         //at least 1 digit
@@ -42,14 +43,22 @@ public class RegistrationActivity extends AppCompatActivity {
                     ".{4,}" +               //at least 4 characters
                     "$");
 
+    //LAYOUT
     private TextInputLayout mEmail, mPassword, mRepeatPassword;
-    private ImageView image;
-    private TextView textLogo, slogan;
     private Button signUpButton, signInButton;
-    private FirebaseAuth firebaseAuth;
-    private LoadingDialog loadingDialog;
     private Intent intent;
-    private Pair[] pairs;
+
+    //DIALOGUES
+    private LoadingDialog loadingDialog;
+
+    //FIREBASE
+    private FirebaseAuth firebaseAuth;
+
+    //ANIMATIONS
+    //private ImageView image;
+    //private TextView textLogo, slogan;
+    //private Pair[] pairs;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +67,9 @@ public class RegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         //HOOKS
-        image = findViewById(R.id.sign_up_logo_image);
-        textLogo = findViewById(R.id.inscription_under_sign_up_logo);
-        slogan = findViewById(R.id.sign_up_slogan_name);
+        //image = findViewById(R.id.sign_up_logo_image);
+        //textLogo = findViewById(R.id.inscription_under_sign_up_logo);
+        //slogan = findViewById(R.id.sign_up_slogan_name);
         mEmail = findViewById(R.id.sign_up_e_mail);
         mPassword = findViewById(R.id.sign_up_password);
         mRepeatPassword = findViewById(R.id.sign_up_repeat_password);
@@ -134,6 +143,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                 mEmail.setError(getString(R.string.email_exist_error));
                                 mEmail.requestFocus();
                             } else {
+                                loadingDialog.DismissDialog();
                                 intent = new Intent(getApplicationContext(), NewUserInformationActivity.class);
                                 intent.putExtra("USER_EMAIL", email);
                                 intent.putExtra("USER_PASSWORD", password);
@@ -149,7 +159,7 @@ public class RegistrationActivity extends AppCompatActivity {
         signInButton.setOnClickListener(v -> {
             intent = new Intent(RegistrationActivity.this, LoginActivity.class);
 
-            pairs = new Pair[7];
+            /*pairs = new Pair[7];
 
             pairs[0] = new Pair<View, String>(image, "logo_image");
             pairs[1] = new Pair<View, String>(textLogo, "logo_text");
@@ -160,7 +170,12 @@ public class RegistrationActivity extends AppCompatActivity {
             pairs[6] = new Pair<View, String>(signInButton, "sign_in_sign_up_tran");
 
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(RegistrationActivity.this, pairs);
-            startActivity(intent, options.toBundle());
+            startActivity(intent, options.toBundle());*/
+
+            startActivity(intent);
+
+            //SLIDE BACK
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         });
         //endregion
     }
