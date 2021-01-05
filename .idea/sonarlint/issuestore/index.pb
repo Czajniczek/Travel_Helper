@@ -35,3 +35,5 @@ s
 Capp/src/main/java/com/example/travelhelper/AddNeedRideActivity.java,7\f\7fa188bbfa6ac61a621ad92546f8021f3ce85d42
 h
 8app/src/main/java/com/example/travelhelper/NeedRide.java,6\0\601e1c3ecebb2a93e8a119249e1784da5bb6a6e7
+~
+Napp/src/androidTest/java/com/example/travelhelper/ExampleInstrumentedTest.java,f\0\f0ad7ac583ad0f0db238e41bd77327cbbeb2eb51

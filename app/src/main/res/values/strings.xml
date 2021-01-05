@@ -60,6 +60,7 @@
     <!--region BOTTOM NAVIGATION BAR-->
     <string name="bottom_navigation_need_ride" translatable="false">Need ride</string>
     <string name="bottom_navigation_offer_ride" translatable="false">Offer ride</string>
+    <string name="bottom_navigation_weather" translatable="false">Weather</string>
     <string name="bottom_navigation_user_profile" translatable="false">Profile</string>
     <!--endregion-->
 
@@ -88,7 +89,7 @@
     <string name="activity_add_need_ride_from" translatable="false">From:</string>
     <string name="activity_add_need_ride_city" translatable="false">City</string>
     <string name="activity_add_need_ride_street" translatable="false">Street</string>
-    <string name="activity_add_need_ride_to" translatable="false">To:</string>
+    <string name="activity_add_need_ride_to" translatable="false">To</string>
     <string name="activity_add_need_ride_time" translatable="false">Time:</string>
     <string name="activity_add_need_ride_day" translatable="false">Day</string>
     <string name="activity_add_need_ride_month" translatable="false">Month</string>

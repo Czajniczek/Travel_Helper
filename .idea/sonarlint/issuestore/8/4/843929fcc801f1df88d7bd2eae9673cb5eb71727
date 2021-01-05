@@ -1,55 +1,55 @@
 
+L
+java:S1659Ž")Declare "phoneNumber" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
+G
+java:S1659Ž"$Declare "cityTo" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
+b
+java:S1128"ERemove this unused import 'androidx.appcompat.app.AppCompatActivity'.(€¶£î8±†©ùì.
 ]	java:S1258"<This block of commented-out lines of code should be removed.(¼Ñ²…ûÿÿÿÿ8ˆÖÐüì.
-e
-java:S1128 "HRemove this unused import 'com.google.firebase.firestore.EventListener'.(˜¥¨Õ8ƒÔçüì.
-V
-java:S1128"9Remove this unused import 'android.renderscript.Element'.(é¡“ˆ8õ÷ëûì.
-n
-java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çð¸Òÿÿÿÿÿ8Ó”³ûì.
+m
+java:S1128#"PRemove this unused import 'com.google.firebase.firestore.QueryDocumentSnapshot'.(†Ð•¨8‚üÂþì.
+h
+java:S1301h"KReplace this "switch" statement by "if" statements to increase readability.(ÆƒéÞ8Ûšéüì.
+I
+java:S1602_",Remove useless curly braces around statement(£ÎòÚ8§ºÂôì.
+Ÿ
+java:S1186¸"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††8¼¼¦üì.
+u	java:S131h"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÆƒéÞ8Ûšéüì.
+u
+java:S1450"WRemove the "needRide" field and declare it as a local variable in the relevant methods.(Ò¹ªâ8¼¼¦üì.
 m
 java:S1128"KRemove this unused import 'com.google.android.gms.tasks.OnFailureListener'.(ï¿ÞÞúÿÿÿÿ8ÚÑŸüì.
-r
-java:S1128""URemove this unused import 'com.google.firebase.firestore.FirebaseFirestoreException'.(Å˜šÅ8ƒÔçüì.
-v
-java:S14506"YRemove the "collection" field and declare it as a local variable in the relevant methods.(Õº‰8›óÄôì.
+n
+java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çð¸Òÿÿÿÿÿ8Ó”³ûì.
 }
 java:S14500"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(¿á© ýÿÿÿÿ8»àðõì.
 K
 java:S1659Ž"(Declare "streetFrom" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
-h
-java:S1301h"KReplace this "switch" statement by "if" statements to increase readability.(ÆƒéÞ8Ûšéüì.
-I
-java:S1602¯",Remove useless curly braces around statement(¤í®r8¼¼¦üì.
-I
-java:S1659Ž"&Declare "streetTo" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
-J
-java:S1068",Remove this unused "needRide" private field.(Ò¹ªâ8Ðéàüì.
-I
-java:S1602_",Remove useless curly braces around statement(£ÎòÚ8§ºÂôì.
-b
-java:S1128"ERemove this unused import 'androidx.appcompat.app.AppCompatActivity'.(€¶£î8±†©ùì.
-J
-java:S1602",Remove useless curly braces around statement(úÌä 8ÎÏîüì.
-u	java:S131h"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÆƒéÞ8Ûšéüì.
-I
-java:S1659Ž"&Declare "userName" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
-L
-java:S1659Ž")Declare "phoneNumber" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
-‚
-java:S1450/"`Remove the "addFloatingButton" field and declare it as a local variable in the relevant methods.(ï‰®¾ûÿÿÿÿ8çõ¼ôì.
-m
-java:S1128#"PRemove this unused import 'com.google.firebase.firestore.QueryDocumentSnapshot'.(†Ð•¨8‚üÂþì.
-E
-java:S1659Ž""Declare "time" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
-{
-java:S1450="^Remove the "needRideAdapter" field and declare it as a local variable in the relevant methods.(ÙãÀ8°öðõì.
-Ÿ
-java:S1186¸"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††8¼¼¦üì.
 E
 java:S1659Ž""Declare "date" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
-u
-java:S1450"WRemove the "needRide" field and declare it as a local variable in the relevant methods.(Ò¹ªâ8¼¼¦üì.
+I
+java:S1602¯",Remove useless curly braces around statement(¤í®r8¼¼¦üì.
+J
+java:S1068",Remove this unused "needRide" private field.(Ò¹ªâ8Ðéàüì.
+r
+java:S1128""URemove this unused import 'com.google.firebase.firestore.FirebaseFirestoreException'.(Å˜šÅ8ƒÔçüì.
+I
+java:S1659Ž"&Declare "streetTo" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
+I
+java:S1659Ž"&Declare "userName" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
+e
+java:S1128 "HRemove this unused import 'com.google.firebase.firestore.EventListener'.(˜¥¨Õ8ƒÔçüì.
+E
+java:S1659Ž""Declare "time" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
+V
+java:S1128"9Remove this unused import 'android.renderscript.Element'.(é¡“ˆ8õ÷ëûì.
+‚
+java:S1450/"`Remove the "addFloatingButton" field and declare it as a local variable in the relevant methods.(ï‰®¾ûÿÿÿÿ8çõ¼ôì.
+{
+java:S1450="^Remove the "needRideAdapter" field and declare it as a local variable in the relevant methods.(ÙãÀ8°öðõì.
 j
 java:S1128$"HRemove this unused import 'com.google.firebase.firestore.QuerySnapshot'.(Ä¡Þ©ýÿÿÿÿ8ƒÔçüì.
-G
-java:S1659Ž"$Declare "cityTo" on a separate line.(Ú§†¢ýÿÿÿÿ8¼¼¦üì.
+v
+java:S14506"YRemove the "collection" field and declare it as a local variable in the relevant methods.(Õº‰8›óÄôì.
+J
+java:S1602",Remove useless curly braces around statement(úÌä 8ÎÏîüì.

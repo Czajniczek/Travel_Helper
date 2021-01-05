@@ -88,8 +88,7 @@ public class AddNeedRideActivity extends AppCompatActivity {
 
         userId = firebaseAuth.getUid();
 
-
-
+        //region TEXT CHANGE LISTENERS
         fromCity.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -226,6 +225,7 @@ public class AddNeedRideActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
+        //endregion
 
         addButton.setOnClickListener(v -> {
 

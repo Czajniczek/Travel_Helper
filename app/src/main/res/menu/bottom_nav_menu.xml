@@ -8,8 +8,8 @@
 
     <item
         android:id="@+id/offer_ride_fragment"
-        android:icon="@drawable/ic_car"
-        android:title="@string/bottom_navigation_offer_ride" />
+        android:icon="@drawable/weather2"
+        android:title="@string/bottom_navigation_weather" />
 
     <item
         android:id="@+id/user_profile_fragment"
