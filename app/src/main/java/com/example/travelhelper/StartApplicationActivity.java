@@ -83,7 +83,7 @@ public class StartApplicationActivity extends AppCompatActivity {
                 pairs[0] = new Pair<View, String>(image, "logo_image");
                 pairs[1] = new Pair<View, String>(textLogo, "logo_text");
 
-                options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs);
+                options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs[0]);
                 startActivity(intent, options.toBundle());
             }, SPLASH_SCREEN);
         }
