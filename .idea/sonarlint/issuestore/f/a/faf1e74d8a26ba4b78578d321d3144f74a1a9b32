@@ -1,0 +1,12 @@
+
+g
+java:S1128"JRemove this unused import 'com.google.android.material.snackbar.Snackbar'.(ë„ƒŠ8›¤‘¨í.
+h
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(¬Û¼m8èú§í.
+]	java:S125"<This block of commented-out lines of code should be removed.(¯ÌÜùÿÿÿÿ8äœÂªí.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬ÎÄÜúÿÿÿÿ
+W	java:S1254"<This block of commented-out lines of code should be removed.(æ…ßA8Ö»ªªí.
+`
+java:S1128">Remove this unused import 'org.jetbrains.annotations.NotNull'.(éš®ïøÿÿÿÿ8›¤‘¨í.
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Û¼m8ç¡÷§í.
+]	java:S125"<This block of commented-out lines of code should be removed.(ºÉæ‰ùÿÿÿÿ8¬¢†¬í.

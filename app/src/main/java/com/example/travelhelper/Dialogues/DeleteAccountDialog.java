@@ -1,4 +1,4 @@
-package com.example.travelhelper;
+package com.example.travelhelper.Dialogues;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.widget.Button;
 
+import com.example.travelhelper.LoginActivity;
+import com.example.travelhelper.R;
+import com.example.travelhelper.UserDatabase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -28,12 +31,12 @@ public class DeleteAccountDialog {
     private AlertDialog alertDialog;
     //endregion
 
-    DeleteAccountDialog(Activity myActivity, UserDatabase userDatabase) {
+    public DeleteAccountDialog(Activity myActivity, UserDatabase userDatabase) {
         this.myActivity = myActivity;
         this.userDatabase = userDatabase;
     }
 
-    void StartDeleteAccountDialog() {
+    public void StartDeleteAccountDialog() {
         myContext = myActivity.getApplicationContext();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(myActivity);
