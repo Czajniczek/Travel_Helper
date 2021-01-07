@@ -2,18 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:gravity="center"
-    android:orientation="vertical"
+    style="@style/linear_layout"
     android:padding="20dp"
-    tools:context=".RegistrationActivity">
+    tools:context=".LoginAndRegistration.LoginActivity">
 
     <ImageView
         android:id="@+id/sign_up_logo_image"
-        android:layout_width="@dimen/login_logo_width_and_height"
-        android:layout_height="@dimen/login_logo_width_and_height"
+        android:layout_width="@dimen/login_logo_width"
+        android:layout_height="@dimen/login_logo_height"
         android:layout_gravity="left"
         android:contentDescription="@string/activity_login_logo_image_description"
         android:src="@drawable/car_logo"
@@ -57,10 +53,7 @@
             android:transitionName="email_tran"
             app:errorEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+            <com.google.android.material.textfield.TextInputEditText style="@style/email_input" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,10 +68,7 @@
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+            <com.google.android.material.textfield.TextInputEditText style="@style/password_input" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,10 +82,7 @@
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+            <com.google.android.material.textfield.TextInputEditText style="@style/password_input" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

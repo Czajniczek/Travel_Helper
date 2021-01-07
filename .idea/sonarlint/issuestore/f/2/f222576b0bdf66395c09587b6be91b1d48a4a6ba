@@ -1,0 +1,13 @@
+
+s
+java:S1450"VRemove the "navView" field and declare it as a local variable in the relevant methods.(è»Š­8ó¨’ôì.
+]	java:S125"<This block of commented-out lines of code should be removed.(÷”ÉŽüÿÿÿÿ8À«Îðí.
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±Ž
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ûâ„âúÿÿÿÿ8çö•ðí.
+]	java:S125	"<This block of commented-out lines of code should be removed.(‡§Ãðøÿÿÿÿ8ãÇÎðí.
+]	java:S125"<This block of commented-out lines of code should be removed.(·ß¯§úÿÿÿÿ8À«Îðí.
+~
+java:S1450"\Remove the "navController" field and declare it as a local variable in the relevant methods.(¿”Æƒøÿÿÿÿ8 ¦“ôì.
+X	java:S125"<This block of commented-out lines of code should be removed.(¡Œÿ8óŽšÏì.
+y
+java:S1450"WRemove the "fragment" field and declare it as a local variable in the relevant methods.(í‰óôûÿÿÿÿ8¿®•ôì.

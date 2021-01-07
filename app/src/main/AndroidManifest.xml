@@ -16,18 +16,18 @@
         android:theme="@style/Theme.TravelHelper"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".AddNeedRideActivity" />
-        <activity android:name=".StartApplicationActivity">
+        <activity android:name=".NeedRide.AddNeedRideActivity" />
+        <activity android:name=".OtherClasses.StartApplicationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewUserInformationActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginAndRegistration.NewUserInformationActivity" />
+        <activity android:name=".LoginAndRegistration.RegistrationActivity" />
+        <activity android:name=".LoginAndRegistration.LoginActivity" />
+        <activity android:name=".OtherClasses.MainActivity" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />

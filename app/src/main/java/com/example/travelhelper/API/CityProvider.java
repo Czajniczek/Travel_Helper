@@ -1,8 +1,6 @@
 package com.example.travelhelper.API;
 
-import com.google.android.material.snackbar.Snackbar;
-
-import org.jetbrains.annotations.NotNull;
+import com.example.travelhelper.Dialogues.LoadingDialog;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,9 +20,6 @@ public class CityProvider {
 
         String language = Locale.getDefault().getLanguage();
 
-        /*Locale location = getContext().getResources().getConfiguration().getLocales().get(0);
-        String locationCode = location.getLanguage();*/
-
         /*if (Locale.getDefault().getDisplayLanguage().equals("English")) language = "en";
         else if (Locale.getDefault().getDisplayLanguage().equals("русский")) language = "ru";
         else if (Locale.getDefault().getDisplayLanguage().equals("polski")) language = "pl";
@@ -35,7 +30,7 @@ public class CityProvider {
 
         CityService cityService = RetrofitInstance.getRetrofitInstance().create(CityService.class);
 
-        Call<City[]> cityApiCall = cityService.findCity("CITY", roundLongitude, language, roundLatitude, 1, 3);
+        Call<City[]> cityApiCall = cityService.findCity("CITY", roundLongitude, language, roundLatitude, 1, 5);
 
         cityApiCall.enqueue(new Callback<City[]>() {
             @Override
@@ -48,17 +43,5 @@ public class CityProvider {
                 cityLoaded.CityLoaded(false, null);
             }
         });
-
-        /*cityApiCall.enqueue(new Callback<City[]>() {
-            @Override
-            public void onResponse(Call<CityList> call, Response<CityList> response) {
-                cityLoaded.CityLoaded(true, response.body().getCityList());
-            }
-
-            @Override
-            public void onFailure(Call<CityList> call, Throwable t) {
-                cityLoaded.CityLoaded(false, null);
-            }
-        });*/
     }
 }

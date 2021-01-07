@@ -7,12 +7,11 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.widget.Button;
 
-import com.example.travelhelper.LoginActivity;
+import com.example.travelhelper.LoginAndRegistration.LoginActivity;
 import com.example.travelhelper.R;
-import com.example.travelhelper.UserDatabase;
+import com.example.travelhelper.User.UserDatabase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 
 public class DeleteAccountDialog {
 
@@ -59,7 +58,7 @@ public class DeleteAccountDialog {
             alertDialog.dismiss();
             user.delete();
             firebaseAuth.signOut();
-            userDatabase.ClearInstance();
+            UserDatabase.ClearInstance();
             myActivity.startActivity(new Intent(myContext, LoginActivity.class));
             myActivity.finish();
         });
@@ -72,5 +71,4 @@ public class DeleteAccountDialog {
     public void DismissDialog() {
         alertDialog.dismiss();
     }
-
 }

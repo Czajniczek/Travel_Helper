@@ -1,0 +1,36 @@
+
+I
+java:S1659„"&Declare "userName" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+]	java:S1251"<This block of commented-out lines of code should be removed.(¼Ñ²…ûÿÿÿÿ8ˆÖĞüì.
+u	java:S131`"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÆƒéŞ8ÊˆÔîí.
+G
+java:S1659„"$Declare "cityTo" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+v
+java:S1450/"YRemove the "collection" field and declare it as a local variable in the relevant methods.(Õº‰8›óÄôì.
+E
+java:S1659„""Declare "date" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+{
+java:S14506"^Remove the "needRideAdapter" field and declare it as a local variable in the relevant methods.(ÙãÀ8°öğõì.
+E
+java:S1659„""Declare "time" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+L
+java:S1659„")Declare "phoneNumber" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+I
+java:S1602X",Remove useless curly braces around statement(£ÎòÚ8§ºÂôì.
+}
+java:S1450)"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(¿á© ıÿÿÿÿ8»àğõì.
+J
+java:S1068…",Remove this unused "needRide" private field.(Ò¹ªâ8Ó›Úğí.
+K
+java:S1659„"(Declare "streetFrom" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+h
+java:S1301`"KReplace this "switch" statement by "if" statements to increase readability.(ÆƒéŞ8ÊˆÔîí.
+Ÿ
+java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††8¼¼¦üì.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÆÆÀ§ûÿÿÿÿ8Àì´îí.
+u
+java:S1450…"WRemove the "needRide" field and declare it as a local variable in the relevant methods.(Ò¹ªâ8Ó›Úğí.
+‚
+java:S1450("`Remove the "addFloatingButton" field and declare it as a local variable in the relevant methods.(ï‰®¾ûÿÿÿÿ8çõ¼ôì.
+I
+java:S1659„"&Declare "streetTo" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.

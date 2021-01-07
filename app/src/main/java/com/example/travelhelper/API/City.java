@@ -14,7 +14,7 @@ public class City {
     private Country country;
 
     @SerializedName("adminDivision1")
-    private AdminDivision adminDivision;
+    private Province province;
 
     public Country getCountry() {
         return country;
@@ -24,13 +24,11 @@ public class City {
         this.country = country;
     }
 
-    public AdminDivision getAdminDivision() {
-        return adminDivision;
+    public Province getProvince() {
+        return province;
     }
 
-    public void setAdminDivision(AdminDivision adminDivision) {
-        this.adminDivision = adminDivision;
-    }
+    public void setProvince(Province province) { this.province = province; }
 
     public String getName() {
         return name;
