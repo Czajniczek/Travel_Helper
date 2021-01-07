@@ -22,6 +22,7 @@
     <!--ERRORS-->
     <color name="red">#FFFF0000</color>
 
+    <!--TRANSPARENT COLOR-->
     <color name="transparent">#00000000</color>
 
     <!--SHADES OF YELLOW-->

@@ -46,14 +46,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-10dp"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginStart="21dp"
+            android:layout_marginStart="12dp"
             android:layout_marginBottom="10dp"
             android:text="@string/activity_add_need_ride_from"
             android:textAllCaps="true"
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:hint="@string/activity_add_need_ride_city"
-                android:minWidth="170dp"
+                android:minWidth="190dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_street"
-                android:minWidth="170dp"
+                android:minWidth="190dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginStart="21dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/activity_add_need_ride_to"
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:hint="@string/activity_add_need_ride_city"
-                android:minWidth="170dp"
+                android:minWidth="190dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -141,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_street"
-                android:minWidth="170dp"
+                android:minWidth="190dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -156,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginStart="21dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/activity_add_need_ride_time"
@@ -177,7 +177,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_day"
-                android:minWidth="103dp"
+                android:minWidth="115dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -203,7 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_month"
-                android:minWidth="103dp"
+                android:minWidth="115dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -229,7 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_year"
-                android:minWidth="103dp"
+                android:minWidth="115dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -253,7 +253,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_hour"
-                android:minWidth="100dp"
+                android:minWidth="115dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -279,7 +279,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_minute"
-                android:minWidth="100dp"
+                android:minWidth="115dp"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText

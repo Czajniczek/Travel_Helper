@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Theme.TravelHelper" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -22,6 +23,7 @@
         <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
         <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
+
 </resources>
 
     <!--

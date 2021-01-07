@@ -1,14 +1,0 @@
-
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¾ã®úÿÿÿÿ8š­µ«ì.
-K
-java:S1659")Declare "accCreation" on a separate line.(¸¶ü¸ÿÿÿÿÿ8ê÷öí.
-n	java:S116"MRename this field "Id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸¶ü¸ÿÿÿÿÿ8³Ìµ«ì.
-B
-java:S1659" Declare "Id" on a separate line.(¸¶ü¸ÿÿÿÿÿ8³Ìµ«ì.
-D
-java:S1659""Declare "city" on a separate line.(¸¶ü¸ÿÿÿÿÿ8š­µ«ì.
-E
-java:S1659"#Declare "email" on a separate line.(¸¶ü¸ÿÿÿÿÿ8ş Ğ«ì.
-x	java:S116	"WRename this field "ProfileImage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÛ—ùÿÿÿÿ8Øü”°ì.
-K
-java:S1659")Declare "phoneNumber" on a separate line.(¸¶ü¸ÿÿÿÿÿ8š­µ«ì.
