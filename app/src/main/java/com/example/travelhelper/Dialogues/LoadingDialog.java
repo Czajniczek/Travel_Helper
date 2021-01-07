@@ -9,6 +9,7 @@ import com.example.travelhelper.R;
 public class LoadingDialog {
 
     //region VARIABLES
+    //OTHERS
     private final Activity activity;
     private AlertDialog alertDialog;
     //endregion

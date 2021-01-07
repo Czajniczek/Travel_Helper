@@ -8,8 +8,8 @@
 
     <item
         android:id="@+id/offer_ride_fragment"
-        android:icon="@drawable/weather2"
-        android:title="@string/bottom_navigation_weather" />
+        android:icon="@drawable/ic_location"
+        android:title="@string/bottom_navigation_localization" />
 
     <item
         android:id="@+id/user_profile_fragment"

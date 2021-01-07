@@ -1,0 +1,19 @@
+
+c	java:S100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî
+q
+java:S1450"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø
+p
+java:S1450"ZRemove the "resetButton" field and declare it as a local variable in the relevant methods.(ó×•¨
+|
+java:S1450"ZRemove the "alertDialog" field and declare it as a local variable in the relevant methods.(Ó—½úÿÿÿÿ8„Åíí.
+
+java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8 ¯àíí.
+G
+java:S1602U",Remove useless curly braces around statement( ¨¨†ıÿÿÿÿ
+B
+java:S1602W",Remove useless curly braces around statement(úÌä 
+X	java:S125Y"<This block of commented-out lines of code should be removed.(ĞÔ¦©8µøßíí.
+
+java:S11869"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8 ¯àíí.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ²Óùüÿÿÿÿ
+c	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ûÛ

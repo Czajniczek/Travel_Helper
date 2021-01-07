@@ -95,8 +95,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_city_from"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:text="@string/activity_add_need_ride_city"
                 android:textColor="@color/black"
@@ -105,8 +104,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_street"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="2dp"
                 android:text="@string/item_need_ride_street_acronym"
@@ -114,8 +112,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_street_from"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:text="@string/activity_add_need_ride_street"
                 android:textColor="@color/black"
@@ -139,9 +136,8 @@
 
             <TextView
                 android:id="@+id/item_need_ride_to"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/activity_add_need_ride_to"
+                style="@style/w_wrap_h_wrap"
+                android:text="@string/item_need_ride_to"
                 android:textAllCaps="true"
                 android:textSize="18sp" />
 
@@ -167,8 +163,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_city_to"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:text="@string/activity_add_need_ride_city"
                 android:textColor="@color/black"
@@ -177,8 +172,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_street2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="2dp"
                 android:text="@string/item_need_ride_street_acronym"
@@ -186,8 +180,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_street_to"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:text="@string/activity_add_need_ride_street"
                 android:textColor="@color/black"
@@ -211,8 +204,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_date2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="5dp"
                 android:text="@string/item_need_ride_date"
                 android:textColor="@color/black"
@@ -221,8 +213,7 @@
 
             <TextView
                 android:id="@+id/item_need_ride_time2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/w_wrap_h_wrap"
                 android:layout_marginStart="10dp"
                 android:text="@string/item_need_ride_time"
                 android:textColor="@color/black"
@@ -232,197 +223,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <!-- <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content">
-
-         <de.hdodenhof.circleimageview.CircleImageView
-             android:id="@+id/need_ride_image"
-             android:layout_width="105dp"
-             android:layout_height="105dp"
-             android:layout_marginVertical="5dp"
-             android:layout_marginStart="5dp"
-             android:src="@drawable/ic_account"
-             tools:srcCompat="@drawable/ic_account" />
-
-         <TextView
-             android:id="@+id/item_need_ride_from"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/need_ride_image"
-             android:text="@string/activity_add_need_ride_from"
-             android:textSize="15sp" />
-
-         <TextView
-             android:id="@+id/item_need_ride_city_from"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_from"
-             android:text="@string/activity_add_need_ride_city"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         <TextView
-             android:id="@+id/item_need_ride_street"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_city_from"
-             android:text="@string/item_need_ride_street_acronym"
-             android:textSize="15sp" />
-
-         <TextView
-             android:id="@+id/item_need_ride_street_from"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_street"
-             android:text="@string/activity_add_need_ride_street"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         &lt;!&ndash;<TextView
-             android:id="@+id/item_need_ride_date"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_street_from"
-             android:text="Date:"
-             android:textSize="15dp" />
-
-         <TextView
-             android:id="@+id/item_need_ride_date2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_date"
-             android:text="Date:"
-             android:textColor="@color/black"
-             android:textSize="16sp"
-             android:textStyle="bold" />&ndash;&gt;
-
-         <TextView
-             android:id="@+id/item_need_ride_to"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_from"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/need_ride_image"
-             android:text="@string/activity_add_need_ride_to"
-             android:textSize="15sp" />
-
-         <TextView
-             android:id="@+id/item_need_ride_city_to"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_from"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_from"
-             android:text="@string/activity_add_need_ride_city"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         <TextView
-             android:id="@+id/item_need_ride_street2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_from"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_city_from"
-             android:text="@string/item_need_ride_street_acronym"
-             android:textSize="15sp" />
-
-         <TextView
-             android:id="@+id/item_need_ride_street_to"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_from"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_street2"
-             android:text="@string/activity_add_need_ride_street"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         <TextView
-             android:id="@+id/item_need_ride_time"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_street_to"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/need_ride_image"
-             android:text="@string/activity_add_need_ride_time"
-             android:textSize="15sp" />
-
-         <TextView
-             android:id="@+id/item_need_ride_date2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_street_to"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_time"
-             android:text="@string/item_need_ride_date"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         <TextView
-             android:id="@+id/item_need_ride_time2"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_street_to"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_date2"
-             android:text="@string/item_need_ride_time"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         <TextView
-             android:id="@+id/item_need_ride_user_name"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_time2"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/need_ride_image"
-             android:text="@string/user_profile_user_name_placeholder"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-         <TextView
-             android:id="@+id/item_need_ride_phone_number"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@+id/item_need_ride_time2"
-             android:layout_marginStart="15dp"
-             android:layout_marginTop="5dp"
-             android:layout_toEndOf="@+id/item_need_ride_user_name"
-             android:text="@string/user_profile_phone_number_placeholder"
-             android:textColor="@color/black"
-             android:textSize="15sp"
-             android:textStyle="bold" />
-
-     </RelativeLayout>-->
 
 </androidx.cardview.widget.CardView>

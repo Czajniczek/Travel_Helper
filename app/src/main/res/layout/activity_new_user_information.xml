@@ -2,27 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:gravity="center"
-    android:orientation="vertical"
+    style="@style/linear_layout"
     android:padding="20dp"
-    tools:context=".NewUserInformationActivity">
+    tools:context=".LoginAndRegistration.NewUserInformationActivity">
 
     <ImageView
         android:id="@+id/information_logo_image"
-        android:layout_width="@dimen/login_logo_width_and_height"
-        android:layout_height="@dimen/login_logo_width_and_height"
+        android:layout_width="@dimen/login_logo_width"
+        android:layout_height="@dimen/login_logo_height"
         android:layout_gravity="center"
         android:contentDescription="@string/activity_new_user_information_logo_image_description"
-        android:src="@drawable/information" />
+        android:src="@drawable/user_information" />
 
     <TextView
         android:id="@+id/inscription_under_sign_up_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/bungee"
         android:text="@string/activity_new_user_information_inscription_under_logo"
         android:textAlignment="center"
         android:textColor="@color/black"

@@ -59,8 +59,7 @@
 
     <!--region BOTTOM NAVIGATION BAR-->
     <string name="bottom_navigation_need_ride" translatable="false">Need ride</string>
-    <string name="bottom_navigation_offer_ride" translatable="false">Offer ride</string>
-    <string name="bottom_navigation_weather" translatable="false">Weather</string>
+    <string name="bottom_navigation_localization" translatable="false">Location</string>
     <string name="bottom_navigation_user_profile" translatable="false">Profile</string>
     <!--endregion-->
 
@@ -89,7 +88,7 @@
     <string name="activity_add_need_ride_from" translatable="false">From:</string>
     <string name="activity_add_need_ride_city" translatable="false">City</string>
     <string name="activity_add_need_ride_street" translatable="false">Street</string>
-    <string name="activity_add_need_ride_to" translatable="false">To</string>
+    <string name="activity_add_need_ride_to" translatable="false">To:</string>
     <string name="activity_add_need_ride_time" translatable="false">Time:</string>
     <string name="activity_add_need_ride_day" translatable="false">Day</string>
     <string name="activity_add_need_ride_month" translatable="false">Month</string>
@@ -105,4 +104,31 @@
     <string name="item_need_ride_street_acronym" translatable="false">st.</string>
     <string name="item_need_ride_date" translatable="false">Date</string>
     <string name="item_need_ride_time" translatable="false">Time</string>
+    <string name="item_need_ride_to" translatable="false">To</string>
+
+    <!--LOCALIZATION-->
+    <string name="localization_your_current_location" translatable="false">Your current location:</string>
+    <string name="localization_city_name" translatable="false">City name</string>
+    <string name="localization_population_placeholder" translatable="false">000000</string>
+    <string name="localization_population" translatable="false">Population</string>
+    <string name="localization_country" translatable="false">Country</string>
+    <string name="localization_province" translatable="false">Province</string>
+    <string name="localization_bored_of_traveling" translatable="false">Bored of traveling?</string>
+    <string name="localization_check_youtube" translatable="false">Check out YouTube</string>
+    <string name="localization_YT" translatable="false">YT</string>
+
+    <!--region TOASTS-->
+    <string name="toast_successfully_logged_in" translatable="false">Successfully logged in</string>
+    <string name="toast_login_error" translatable="false">Login error</string>
+    <string name="toast_password_change" translatable="false">A link to change your password has been sent to your e-mail address.</string>
+    <string name="toast_something_has_gone_wrong" translatable="false">Something has gone wrong. Try again later.</string>
+    <string name="toast_user_created" translatable="false">User successfully created.</string>
+    <string name="toast_error" translatable="false">Error</string>
+    <string name="toast_turn_on_localization" translatable="false">You must enable the location</string>
+    <string name="toast_profile_photo_error" translatable="false">Error during image setting</string>
+    <string name="toast_profile_photo_changed" translatable="false">The profile photo has been changed</string>
+    <string name="toast_error_during_data_saving" translatable="false">Error during data saving</string>
+    <string name="toast_data_has_been_updated" translatable="false">Data has been updated"</string>
+
+    <!--endregion-->
 </resources>

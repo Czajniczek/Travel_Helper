@@ -1,22 +1,20 @@
 
-W
-java:S2209>"5Change this instance-reference to a static reference.(™ú¹úÿÿÿÿ8“Ğ­÷ì.
-o	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ˆ­üÿÿÿÿ8¹åîÏì.
-o	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õâùÿÿÿÿ8ıÁéÍì.
-y
-java:S1450"WRemove the "noButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
-g
-java:S1128"KRemove this unused import 'com.google.firebase.database.DatabaseReference'.(ÉÓ¹8ÎßÀĞì.
-u
-java:S1450"SRemove the "user" field and declare it as a local variable in the relevant methods.(š·àûÿÿÿÿ8ëÇ¸÷ì.
-z
-java:S1450"XRemove the "yesButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
-u
-java:S1450"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8¥Íúƒí.
+N
+java:S1602B",Remove useless curly braces around statement(œÆäğøÿÿÿÿ8í£…Ğì.
+H
+java:S1659"&Declare "noButton" on a separate line.(ú‡¯ëÿÿÿÿÿ8ÿËøÏì.
+R
+java:S1068"0Remove this unused "userDatabase" private field.(ÂØêÿÿÿÿÿ8’óÂñí.
+o	java:S100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ˆ­üÿÿÿÿ8¹åîÏì.
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ²Óùüÿÿÿÿ8Ù¢¥¬í.
 x
-java:S1450"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8Äş·÷ì.
-N
-java:S1602C",Remove useless curly braces around statement(œÆäğøÿÿÿÿ8í£…Ğì.
-H
-java:S1659"&Declare "noButton" on a separate line.(ú‡¯ëÿÿÿÿÿ8ÿËøÏì.
+java:S1450"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8Äş·÷ì.
+u
+java:S1450"SRemove the "user" field and declare it as a local variable in the relevant methods.(š·àûÿÿÿÿ8ëÇ¸÷ì.
+u
+java:S1450"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8¥Íúƒí.
+o	java:S100&"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õâùÿÿÿÿ8ıÁéÍì.
+y
+java:S1450"WRemove the "noButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
+z
+java:S1450"XRemove the "yesButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.

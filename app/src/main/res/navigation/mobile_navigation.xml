@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/need_ride_fragment"
-        android:name="com.example.travelhelper.NeedRideFragment"
+        android:name="com.example.travelhelper.NeedRide.NeedRideFragment"
         android:label="need_ride_fragment"
         tools:layout="@layout/fragment_need_ride" />
 
     <fragment
         android:id="@+id/offer_ride_fragment"
-        android:name="com.example.travelhelper.OfferRideFragment"
+        android:name="com.example.travelhelper.Localization.Localization"
         android:label="offer_ride_fragment"
-        tools:layout="@layout/fragment_offer_ride" />
+        tools:layout="@layout/fragment_localization" />
 
     <fragment
         android:id="@+id/user_profile_fragment"
-        android:name="com.example.travelhelper.UserProfileFragment"
+        android:name="com.example.travelhelper.User.UserProfileFragment"
         android:label="user_profile_fragment"
         tools:layout="@layout/fragment_user_profile" />
 

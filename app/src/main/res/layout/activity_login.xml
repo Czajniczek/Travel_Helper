@@ -2,19 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:gravity="center"
-    android:orientation="vertical"
+    style="@style/linear_layout"
     android:padding="20dp"
-    tools:context=".LoginActivity">
+    tools:context=".LoginAndRegistration.LoginActivity">
 
     <ImageView
         android:id="@+id/sign_in_logo_image"
-        android:layout_width="@dimen/login_logo_width_and_height"
-        android:layout_height="@dimen/login_logo_width_and_height"
-        android:layout_gravity="left"
+        android:layout_width="@dimen/login_logo_width"
+        android:layout_height="@dimen/login_logo_height"
+        android:layout_gravity="start"
         android:contentDescription="@string/activity_login_logo_image_description"
         android:src="@drawable/car_logo"
         android:transitionName="logo_image" />
@@ -23,7 +19,7 @@
         android:id="@+id/activity_login_inscription_under_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_marginTop="-30dp"
         android:fontFamily="@font/bungee"
         android:text="@string/activity_login_inscription_under_logo"
@@ -36,7 +32,7 @@
         android:id="@+id/sign_in_slogan_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:text="@string/activity_login_sign_in_to_continue"
         android:textSize="@dimen/logo_slogan_text_size"
         android:transitionName="logo_desc" />
@@ -57,10 +53,7 @@
             android:transitionName="email_tran"
             app:errorEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+            <com.google.android.material.textfield.TextInputEditText style="@style/email_input" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,10 +68,7 @@
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+            <com.google.android.material.textfield.TextInputEditText style="@style/password_input" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,10 +96,9 @@
 
         <Button
             android:id="@+id/sign_in_button_in_sign_in"
+            style="@style/top_and_bottom_5dp_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
             android:background="@drawable/round_background"
             android:text="@string/sign_in"
             android:transitionName="button_tran" />

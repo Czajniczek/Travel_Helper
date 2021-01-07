@@ -1,0 +1,59 @@
+
+u
+java:S1450'"SRemove the "city" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8û¿‚ôì.
+ž
+java:S1186G"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8öñÿ²ì.
+@
+java:S1659"#Declare "mCity" on a separate line.(‘éÅ÷8ÊöÁ¶ë.
+u
+java:S1450'"SRemove the "name" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûþóì.
+y
+java:S1450'"WRemove the "password" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûþóì.
+ž
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8öñÿ²ì.
+k	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÖåí8öñÿ²ì.
+ˆ
+java:S2178t"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(¡óÅïüÿÿÿÿ8ŸÝÏ³ì.
+G
+java:S1659"*Declare "mPhoneNumber" on a separate line.(‘éÅ÷8õªÄ¶ë.
+z
+java:S1450"]Remove the "continueButton" field and declare it as a local variable in the relevant methods.(öÏº¸8Ê¢úµë.
+v
+java:S1450'"TRemove the "email" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûþóì.
+D
+java:S1659'""Declare "name" on a separate line.(Ò›èãøÿÿÿÿ8Ûþóì.
+ž
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8öñÿ²ì.
+X	java:S125~"<This block of commented-out lines of code should be removed.(‚«ïê8öñÿ²ì.
+Y	java:S125˜"<This block of commented-out lines of code should be removed.(œ®ÅÑ8žÛŠôì.
+p	java:S100ˆ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‚Âßúÿÿÿÿ8öñÿ²ì.
+|
+java:S1450'"ZRemove the "phoneNumber" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8Ûþóì.
+p	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ8ìêÎ³ì.
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(´òò”
+o	java:S100o"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öË‡úÿÿÿÿ8öñÿ²ì.
+}
+java:S1450&"`Remove the "documentReference" field and declare it as a local variable in the relevant methods.( ÊÝ8£¢üóì.
+D
+java:S1659'""Declare "city" on a separate line.(Ò›èãøÿÿÿÿ8Ûþóì.
+ˆ
+java:S2178t"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(¡óÅïüÿÿÿÿ8öñÿ²ì.
+w
+java:S1450'"URemove the "userId" field and declare it as a local variable in the relevant methods.(Ò›èãøÿÿÿÿ8††¶‚í.
+K
+java:S1659'")Declare "phoneNumber" on a separate line.(Ò›èãøÿÿÿÿ8Ûþóì.
+I
+java:S1602j",Remove useless curly braces around statement(Û›ÙÎ8öñÿ²ì.
+^	java:S125‹"<This block of commented-out lines of code should be removed.(·åÉ‹ÿÿÿÿÿ8‡Ù±‚í.
+ž
+java:S1186e"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8éÁÍ³ì.
+H
+java:S1659'"&Declare "password" on a separate line.(Ò›èãøÿÿÿÿ8Ûþóì.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìðÁðûÿÿÿÿ8Ü¾‰ðí.
+ž
+java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8öñÿ²ì.
+ž
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8éÁÍ³ì.
+p	java:S100»"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ñëµøÿÿÿÿ8öñÿ²ì.
+E
+java:S1659'"#Declare "email" on a separate line.(Ò›èãøÿÿÿÿ8Ûþóì.

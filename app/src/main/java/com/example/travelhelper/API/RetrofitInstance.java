@@ -14,9 +14,7 @@ public class RetrofitInstance {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-        if (retrofit == null) {
-            retrofit = new Retrofit.Builder().baseUrl(CITIES_API_URL).addConverterFactory(GsonConverterFactory.create()).client(client).build();
-        }
+        if (retrofit == null) retrofit = new Retrofit.Builder().baseUrl(CITIES_API_URL).addConverterFactory(GsonConverterFactory.create()).client(client).build();
         return retrofit;
     }
 }
