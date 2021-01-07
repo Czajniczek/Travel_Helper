@@ -1,23 +1,0 @@
-
-€
-java:S1104"^Make profileImageLoaded a static final constant or non-public and provide accessors if needed.(¤ñâ¤øÿÿÿÿ8Ÿ¨Ë²ì.
-n
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(§èÌîùÿÿÿÿ8ŒğÊ²ì.
-
-java:S1104"]Make profileDataLoaded a static final constant or non-public and provide accessors if needed.(ƒŞéøÿÿÿÿ8®³ö«ì.
-j	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¬¨±8¢ŒÜÁì.
-o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§èÌîùÿÿÿÿ8ŒğÊ²ì.
-X	java:S125/"<This block of commented-out lines of code should be removed.(¥æš‚8‹ÖÊ÷ì.
-]	java:S125&"<This block of commented-out lines of code should be removed.(Âßöóûÿÿÿÿ8Å»Ê÷ì.
-q
-java:S1104("TMake instance a static final constant or non-public and provide accessors if needed.(×Ì¦û8³ÌÜ«ì.
-K
-java:S1444(".Make this "public static instance" field final(×Ì¦û8³ÌÜ«ì.
-]	java:S125#"<This block of commented-out lines of code should be removed.(äÌÕæıÿÿÿÿ8«Í÷ì.
-X	java:S125Z"<This block of commented-out lines of code should be removed.(ŠÓşğ8ò¯öì.
-O
-java:S1172,"-Remove this unused method parameter "userId".(ï‘áÿÿÿÿÿ8‹ÖÊ÷ì.
-h
-java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(«ƒÉL8Ìˆö«ì.
-i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ƒÉL8Ìˆö«ì.
-X	java:S125V"<This block of commented-out lines of code should be removed.(Ü£·¬8ÆÿÛ™í.

@@ -1,134 +1,137 @@
 <resources>
+
+    <!--region APP NAME-->
     <string name="app_name">Travel Helper</string>
+    <!--endregion-->
 
     <!--region START APPLICATION-->
-    <string name="activity_start_application_logo_text_view" translatable="false">Travel helper</string>
-    <string name="activity_start_application_slogan_text_view" translatable="false">Make your journey easier</string>
+    <string name="activity_start_application_logo_text_view">Travel helper</string>
+    <string name="activity_start_application_slogan_text_view">Make your journey easier</string>
     <!--endregion-->
 
     <!--region SIGN IN-->
-    <string name="activity_login_logo_image_description" translatable="false">CAR</string>
-    <string name="activity_login_inscription_under_logo" translatable="false">Hello there Welcome back</string>
-    <string name="activity_login_sign_in_to_continue" translatable="false">Sign in to continue</string>
-    <string name="email" translatable="false">E-mail</string>
-    <string name="password" translatable="false">Password</string>
-    <string name="activity_login_sign_in_error" translatable="false">Invalid e-mail address or password</string>
-    <string name="activity_login_forgot_password" translatable="false">Forgot password?</string>
-    <string name="sign_in" translatable="false">Sign in</string>
-    <string name="activity_login_loading" translatable="false">Loading...</string>
-    <string name="activity_login_new_user_sign_up" translatable="false">New user? Sign up</string>
-    <!--endregion-->
-
-    <!--region SIGN UP-->
-    <string name="activity_registration_inscription_under_logo" translatable="false">Register before the start</string>
-    <string name="activity_registration_make_journey_easier" translatable="false">Sign up to make your journey easier</string>
-    <string name="repeat_password" translatable="false">Repeat password</string>
-    <string name="activity_registration_have_account_ask" translatable="false">Have an account? Sign in</string>
-    <string name="sign_up" translatable="false">Sign up</string>
-    <!--endregion-->
-
-    <!--region VALIDATION-->
-    <string name="field_can_not_be_empty_error" translatable="false">Field can\'t be empty</string>
-    <string name="email_validate_error" translatable="false">Not valid e-mail address</string>
-    <string name="password_is_too_weak" translatable="false">Password is too weak</string>
-    <string name="password_length_error" translatable="false">Password must contain at least 8 characters</string>
-    <string name="password_are_not_the_same" translatable="false">The passwords are not the same</string>
-    <string name="email_exist_error" translatable="false">The user with the given e-mail address exists</string>
-    <string name="wrong_phone_number" translatable="false">Wrong phone number</string>
-    <string name="wrong_city_name" translatable="false">Wrong city name</string>
-    <string name="wrong_value" translatable="false">Wrong value</string>
-    <string name="empty_field" translatable="false">Empty field</string>
+    <string name="activity_login_logo_image_description">CAR</string>
+    <string name="activity_login_inscription_under_logo">Hello there Welcome back</string>
+    <string name="activity_login_sign_in_to_continue">Sign in to continue</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="activity_login_sign_in_error">Invalid e-mail address or password</string>
+    <string name="activity_login_forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="activity_login_loading">Loading…</string>
+    <string name="activity_login_new_user_sign_up">New user? Sign up</string>
     <!--endregion-->
 
     <!--region RESET PASSWORD-->
-    <string name="reset_password" translatable="false">Reset password</string>
-    <string name="reset_password_enter_email" translatable="false">Enter your e-mail address</string>
-    <string name="reset_password_reset_button" translatable="false">Reset</string>
-    <string name="reset_password_email_not_exist" translatable="false">There is no user with a given email address.</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset_password_enter_email">Enter your e-mail address</string>
+    <string name="reset_password_reset_button">Reset</string>
+    <string name="reset_password_email_not_exist">There is no user with a given email address.</string>
+    <!--endregion-->
+
+    <!--region SIGN UP-->
+    <string name="activity_registration_inscription_under_logo">Register before the start</string>
+    <string name="activity_registration_make_journey_easier">Sign up to make your journey easier</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="activity_registration_have_account_ask">Have an account? Sign in</string>
+    <string name="sign_up">Sign up</string>
     <!--endregion-->
 
     <!--region NEW USER INFORMATION-->
-    <string name="activity_new_user_information_logo_image_description" translatable="false">Information</string>
-    <string name="activity_new_user_information_inscription_under_logo" translatable="false">Necessary data</string>
-    <string name="activity_new_user_information_input_necessary_data" translatable="false">You must provide the necessary data</string>
-    <string name="user_name" translatable="false">User name</string>
-    <string name="city" translatable="false">City</string>
-    <string name="phone_number" translatable="false">Phone number</string>
-    <string name="continue_button" translatable="false">Continue</string>
+    <string name="activity_new_user_information_logo_image_description">Information</string>
+    <string name="activity_new_user_information_inscription_under_logo">Necessary data</string>
+    <string name="activity_new_user_information_input_necessary_data">You must provide the necessary data</string>
+    <string name="user_name">User name</string>
+    <string name="city">City</string>
+    <string name="phone_number">Phone number</string>
+    <string name="continue_button">Continue</string>
+    <!--endregion-->
+
+    <!--region VALIDATION-->
+    <string name="field_can_not_be_empty_error">Field can\'t be empty</string>
+    <string name="email_validate_error">Not valid e-mail address</string>
+    <string name="password_is_too_weak">Password is too weak</string>
+    <string name="password_length_error">Password must contain at least 8 characters</string>
+    <string name="password_are_not_the_same">The passwords are not the same</string>
+    <string name="email_exist_error">The user with the given e-mail address exists</string>
+    <string name="wrong_phone_number">Wrong phone number</string>
+    <string name="wrong_city_name">Wrong city name</string>
+    <string name="wrong_value">Wrong value</string>
+    <string name="empty_field">Empty field</string>
     <!--endregion-->
 
     <!--region BOTTOM NAVIGATION BAR-->
-    <string name="bottom_navigation_need_ride" translatable="false">Need ride</string>
-    <string name="bottom_navigation_localization" translatable="false">Location</string>
-    <string name="bottom_navigation_user_profile" translatable="false">Profile</string>
-    <!--endregion-->
-
-    <!--region USER PROFILE-->
-    <string name="user_profile_user_name_placeholder" translatable="false">Gabriel Czajkowski</string>
-    <string name="user_profile_in_application_from" translatable="false">Date of account creation</string>
-    <string name="user_profile_number_of_happy_journeys" translatable="false">15</string>
-    <string name="user_profile_date_placeholder" translatable="false">12.12.2020</string>
-    <string name="user_profile_trips" translatable="false">Number of happy trips</string>
-    <string name="user_profile_city" translatable="false">City</string>
-    <string name="user_profile_city_placeholder" translatable="false">Warsaw</string>
-    <string name="user_profile_phone_number" translatable="false">Phone number</string>
-    <string name="user_profile_phone_number_placeholder" translatable="false">123456789</string>
-    <string name="user_profile_save_button" translatable="false">Save</string>
-    <string name="user_profile_email_placeholder" translatable="false">Gabriel.Czajkowski@gmail.com</string>
-    <string name="user_profile_logout_button" translatable="false">Logout</string>
-    <string name="user_profile_delete_account_button" translatable="false">Delete account</string>
-    <string name="user_profile_delete_account_question" translatable="false">Are you sure?</string>
-    <string name="user_profile_delete_account_results" translatable="false">By deleting your account you will lose access to the application.</string>
-    <string name="YES" translatable="false">DELETE</string>
-    <string name="NO" translatable="false">DISMISS</string>
-    <!--endregion-->
-
-    <!--region ADD NEW RIDE-->
-    <string name="activity_add_need_ride_inscription_under_logo" translatable="false">Where and when you want to go?</string>
-    <string name="activity_add_need_ride_from" translatable="false">From:</string>
-    <string name="activity_add_need_ride_city" translatable="false">City</string>
-    <string name="activity_add_need_ride_street" translatable="false">Street</string>
-    <string name="activity_add_need_ride_to" translatable="false">To:</string>
-    <string name="activity_add_need_ride_time" translatable="false">Time:</string>
-    <string name="activity_add_need_ride_day" translatable="false">Day</string>
-    <string name="activity_add_need_ride_month" translatable="false">Month</string>
-    <string name="activity_add_need_ride_year" translatable="false">Year</string>
-    <string name="activity_add_need_ride_hour" translatable="false">Hour</string>
-    <string name="activity_add_need_ride_minute" translatable="false">Minute</string>
-    <string name="activity_add_need_ride_add_button" translatable="false">Add</string>
-    <string name="dash" translatable="false">-</string>
-    <string name="colon_dot" translatable="false">:</string>
+    <string name="bottom_navigation_need_ride">Need ride</string>
+    <string name="bottom_navigation_localization">Location</string>
+    <string name="bottom_navigation_user_profile">Profile</string>
     <!--endregion-->
 
     <!--ITEM NEED RIDE-->
-    <string name="item_need_ride_street_acronym" translatable="false">st.</string>
-    <string name="item_need_ride_date" translatable="false">Date</string>
-    <string name="item_need_ride_time" translatable="false">Time</string>
-    <string name="item_need_ride_to" translatable="false">To</string>
+    <string name="item_need_ride_street_acronym">st.</string>
+    <string name="item_need_ride_date">Date</string>
+    <string name="item_need_ride_time">Time</string>
+    <string name="item_need_ride_to">To</string>
+
+    <!--region ADD NEW RIDE-->
+    <string name="activity_add_need_ride_inscription_under_logo">Where and when you want to go?</string>
+    <string name="activity_add_need_ride_from">From:</string>
+    <string name="activity_add_need_ride_city">City</string>
+    <string name="activity_add_need_ride_street">Street</string>
+    <string name="activity_add_need_ride_to">To:</string>
+    <string name="activity_add_need_ride_time">Time:</string>
+    <string name="activity_add_need_ride_day">Day</string>
+    <string name="activity_add_need_ride_month">Month</string>
+    <string name="activity_add_need_ride_year">Year</string>
+    <string name="activity_add_need_ride_hour">Hour</string>
+    <string name="activity_add_need_ride_minute">Minute</string>
+    <string name="activity_add_need_ride_add_button">Add</string>
+    <!--endregion-->
 
     <!--LOCALIZATION-->
-    <string name="localization_your_current_location" translatable="false">Your current location:</string>
-    <string name="localization_city_name" translatable="false">City name</string>
-    <string name="localization_population_placeholder" translatable="false">000000</string>
-    <string name="localization_population" translatable="false">Population</string>
-    <string name="localization_country" translatable="false">Country</string>
-    <string name="localization_province" translatable="false">Province</string>
-    <string name="localization_bored_of_traveling" translatable="false">Bored of traveling?</string>
-    <string name="localization_check_youtube" translatable="false">Check out YouTube</string>
-    <string name="localization_YT" translatable="false">YT</string>
+    <string name="localization_your_current_location">Your current location:</string>
+    <string name="localization_city_name">City name</string>
+    <string name="localization_population">Population</string>
+    <string name="localization_country">Country</string>
+    <string name="localization_province">Province</string>
+    <string name="localization_bored_of_traveling">Bored of traveling?</string>
+    <string name="localization_check_youtube">Check out YouTube</string>
+    <string name="localization_YT">YT</string>
+
+    <!--region USER PROFILE-->
+    <string name="user_profile_user_name_placeholder">Gabriel Czajkowski</string>
+    <string name="user_profile_in_application_from">Date of account creation</string>
+    <string name="user_profile_number_of_happy_journeys">15</string>
+    <string name="user_profile_trips">Number of happy trips</string>
+    <string name="user_profile_city">City</string>
+    <string name="user_profile_city_placeholder">Warsaw</string>
+    <string name="user_profile_phone_number">Phone number</string>
+    <string name="user_profile_phone_number_placeholder">123456789</string>
+    <string name="user_profile_save_button">Save</string>
+    <string name="user_profile_logout_button">Logout</string>
+    <string name="user_profile_delete_account_button">Delete account</string>
+    <string name="user_profile_delete_account_question">Are you sure?</string>
+    <string name="user_profile_delete_account_results">By deleting your account you will lose access to the application.</string>
+    <string name="YES">DELETE</string>
+    <string name="NO">DISMISS</string>
+    <!--endregion-->
 
     <!--region TOASTS-->
-    <string name="toast_successfully_logged_in" translatable="false">Successfully logged in</string>
-    <string name="toast_login_error" translatable="false">Login error</string>
-    <string name="toast_password_change" translatable="false">A link to change your password has been sent to your e-mail address.</string>
-    <string name="toast_something_has_gone_wrong" translatable="false">Something has gone wrong. Try again later.</string>
-    <string name="toast_user_created" translatable="false">User successfully created.</string>
-    <string name="toast_error" translatable="false">Error</string>
-    <string name="toast_turn_on_localization" translatable="false">You must enable the location</string>
-    <string name="toast_profile_photo_error" translatable="false">Error during image setting</string>
-    <string name="toast_profile_photo_changed" translatable="false">The profile photo has been changed</string>
-    <string name="toast_error_during_data_saving" translatable="false">Error during data saving</string>
-    <string name="toast_data_has_been_updated" translatable="false">Data has been updated"</string>
-
+    <string name="toast_successfully_logged_in">Successfully logged in</string>
+    <string name="toast_login_error">Login error</string>
+    <string name="toast_password_change">A link to change your password has been sent to your e-mail address.</string>
+    <string name="toast_something_has_gone_wrong">Something has gone wrong. Try again later.</string>
+    <string name="toast_user_created">User successfully created.</string>
+    <string name="toast_error">Error</string>
+    <string name="toast_turn_on_localization">You must enable the location</string>
+    <string name="toast_profile_photo_error">Error during image setting</string>
+    <string name="toast_profile_photo_changed">The profile photo has been changed</string>
+    <string name="toast_error_during_data_saving">Error during data saving</string>
+    <string name="toast_data_has_been_updated">Data has been updated"</string>
+    <string name="dash" translatable="false">-</string>
+    <string name="colon_dot" translatable="false">:</string>
+    <string name="localization_population_placeholder" translatable="false">000000</string>
+    <string name="user_profile_date_placeholder" translatable="false">01.01.1900</string>
+    <string name="user_profile_email_placeholder" translatable="false">Gabriel.Czajkowski@gmail.com</string>
     <!--endregion-->
+
 </resources>

@@ -1,18 +1,0 @@
-
-T
-java:S1128"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8ï‡ÊÉë.
-N
-java:S1128
-"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8®éÛ­ì.
-y
-java:S1450"WRemove the "fragment" field and declare it as a local variable in the relevant methods.(í‰óôûÿÿÿÿ8¿®•ôì.
-d
-java:S1128"BRemove this unused import 'com.google.firebase.auth.FirebaseAuth'.(İÄğöûÿÿÿÿ8ûñÉÉë.
-Q
-java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è8®éÛ­ì.
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±
-X	java:S125"<This block of commented-out lines of code should be removed.(¡Œÿ8óšÏì.
-s
-java:S1450"VRemove the "navView" field and declare it as a local variable in the relevant methods.(è»Š­8ó¨’ôì.
-~
-java:S1450"\Remove the "navController" field and declare it as a local variable in the relevant methods.(¿”Æƒøÿÿÿÿ8 ¦“ôì.

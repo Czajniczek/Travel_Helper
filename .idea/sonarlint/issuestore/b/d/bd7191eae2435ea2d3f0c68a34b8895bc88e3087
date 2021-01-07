@@ -1,32 +1,0 @@
-
-X	java:S125>"<This block of commented-out lines of code should be removed.(å²ˆÊ8¢þÛì.
-S
-java:S18740"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8Œ‡Áˆì.
-W	java:S1254"<This block of commented-out lines of code should be removed.(Ë±±-8£¦Áˆì.
-q
-java:S1450"TRemove the "image" field and declare it as a local variable in the relevant methods.(ÝÈ½8úÙðõë.
-X	java:S125\"<This block of commented-out lines of code should be removed.(òÅŠç8ÐàªÑì.
-W	java:S125"<This block of commented-out lines of code should be removed.(¼çä8… ‹ñì.
-x
-java:S1450&"[Remove the "topAnimation" field and declare it as a local variable in the relevant methods.(öâŠÛ8ªªýðì.
-r
-java:S1450"URemove the "slogan" field and declare it as a local variable in the relevant methods.(ÿõúû8úÙðõë.
-N
-java:S1128"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8ç‹œˆì.
-A
-java:S1659"$Declare "slogan" on a separate line.(ÿõúû8Ñ«€õë.
-S
-java:S18740"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8Œ‡Áˆì.
-t
-java:S1450"WRemove the "textLogo" field and declare it as a local variable in the relevant methods.(ÿõúû8úÙðõë.
-]
-java:S1128"@Remove this unused import 'android.view.WindowInsetsController'.(ºˆÕð8ªþŒÛì.
-u
-java:S3008%"XRename this field "SPLASH_SCREEN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŽûÄç8ªªýðì.
-{
-java:S1450&"^Remove the "bottomAnimation" field and declare it as a local variable in the relevant methods.(öâŠÛ8ªªýðì.
-Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(ô÷¡¶
-J
-java:S1659&"-Declare "bottomAnimation" on a separate line.(öâŠÛ8ªªýðì.
-x
-java:S1450""[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(Ž“ø8÷Ðûðì.
