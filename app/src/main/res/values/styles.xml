@@ -30,6 +30,45 @@
         <item name="android:textSize">@dimen/localization_main_field_text_size</item>
     </style>
 
+    <style name="location_second_field">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/logo_slogan_text_size</item>
+    </style>
+
+    <style name="add_need_ride_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/logo_slogan_text_size</item>
+    </style>
+
+    <style name="add_need_ride_twofold_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="main_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/bungee</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/inscription_under_the_logo</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="text_input">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

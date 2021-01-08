@@ -26,19 +26,14 @@
         android:transitionName="logo_image" />
 
     <TextView
+        style="@style/main_text_view"
         android:id="@+id/activity_add_need_ride_inscription_under_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="-40dp"
-        android:fontFamily="@font/bungee"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="@dimen/padding_20dp"
+        android:paddingRight="@dimen/padding_20dp"
         android:text="@string/activity_add_need_ride_inscription_under_logo"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/inscription_under_the_logo"
-        android:textStyle="bold"
         android:transitionName="logo_text" />
 
     <LinearLayout
@@ -46,20 +41,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-10dp"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:paddingLeft="@dimen/padding_10dp"
+        android:paddingRight="@dimen/padding_10dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/activity_add_need_ride_from"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            style="@style/add_need_ride_text_view"
+            android:text="@string/activity_add_need_ride_from" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:hint="@string/activity_add_need_ride_city"
-                android:minWidth="190dp"
+                android:minWidth="@dimen/add_need_ride_min_width_city_and_street_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -89,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_street"
-                android:minWidth="190dp"
+                android:minWidth="@dimen/add_need_ride_min_width_city_and_street_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -101,17 +88,9 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="12dp"
+            style="@style/add_need_ride_text_view"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/activity_add_need_ride_to"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="@string/activity_add_need_ride_to" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:hint="@string/activity_add_need_ride_city"
-                android:minWidth="190dp"
+                android:minWidth="@dimen/add_need_ride_min_width_city_and_street_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -141,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_street"
-                android:minWidth="190dp"
+                android:minWidth="@dimen/add_need_ride_min_width_city_and_street_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -153,17 +132,9 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="12dp"
+            style="@style/add_need_ride_text_view"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/activity_add_need_ride_time"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="@string/activity_add_need_ride_time" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -177,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_day"
-                android:minWidth="115dp"
+                android:minWidth="@dimen/add_need_ride_min_width_date_and_time_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -187,15 +158,8 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/dash"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+                style="@style/add_need_ride_twofold_text_view"
+                android:text="@string/dash" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/new_ride_month"
@@ -203,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_month"
-                android:minWidth="115dp"
+                android:minWidth="@dimen/add_need_ride_min_width_date_and_time_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -213,15 +177,8 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/dash"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+                style="@style/add_need_ride_twofold_text_view"
+                android:text="@string/dash" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/new_ride_year"
@@ -229,7 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_year"
-                android:minWidth="115dp"
+                android:minWidth="@dimen/add_need_ride_min_width_date_and_time_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -253,7 +210,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_hour"
-                android:minWidth="115dp"
+                android:minWidth="@dimen/add_need_ride_min_width_date_and_time_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -279,7 +236,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/activity_add_need_ride_minute"
-                android:minWidth="115dp"
+                android:minWidth="@dimen/add_need_ride_min_width_date_and_time_edit_text"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText

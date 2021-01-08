@@ -5,12 +5,19 @@
     <!--<dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>-->
 
+    <dimen name="hello_text_size">70sp</dimen>
+    <dimen name="inscription_under_hello_text_size">20sp</dimen>
     <dimen name="login_logo_width">150dp</dimen>
     <dimen name="login_logo_height">150dp</dimen>
     <dimen name="inscription_under_the_logo">40sp</dimen>
     <dimen name="logo_slogan_text_size">18sp</dimen>
     <dimen name="localization_main_field_text_size">35sp</dimen>
-    <dimen name="sp70">70sp</dimen>
     <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="padding_20dp">20dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="dialog_delete_account_are_you_sure_text_size">30sp</dimen>
+    <dimen name="dialog_delete_account_consequences_of_account_deletion_text_size">20sp</dimen>
+    <dimen name="add_need_ride_min_width_city_and_street_edit_text">190dp</dimen>
+    <dimen name="add_need_ride_min_width_date_and_time_edit_text">115dp</dimen>
 
 </resources>

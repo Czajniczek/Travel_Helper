@@ -1,4 +1,4 @@
-package com.example.travelhelper.Localization;
+package com.example.travelhelper.Location;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

@@ -16,15 +16,10 @@
 
     <TextView
         android:id="@+id/inscription_under_sign_up_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/main_text_view"
         android:layout_gravity="center"
-        android:fontFamily="@font/bungee"
         android:text="@string/activity_new_user_information_inscription_under_logo"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/inscription_under_the_logo"
-        android:textStyle="bold" />
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/sign_up_slogan_name"

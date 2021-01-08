@@ -16,16 +16,11 @@
         android:transitionName="logo_image" />
 
     <TextView
+        style="@style/main_text_view"
         android:id="@+id/activity_login_inscription_under_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="-30dp"
-        android:fontFamily="@font/bungee"
         android:text="@string/activity_login_inscription_under_logo"
-        android:textColor="@color/black"
-        android:textSize="@dimen/inscription_under_the_logo"
-        android:textStyle="bold"
         android:transitionName="logo_text" />
 
     <TextView

@@ -17,7 +17,7 @@
         android:fontFamily="@font/bangers"
         android:text="@string/activity_start_application_logo_text_view"
         android:textAlignment="center"
-        android:textSize="@dimen/sp70"
+        android:textSize="@dimen/hello_text_size"
         android:transitionName="logo_text" />
 
     <TextView
@@ -26,6 +26,6 @@
         android:fontFamily="@font/antic"
         android:text="@string/activity_start_application_slogan_text_view"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="@dimen/inscription_under_hello_text_size" />
 
 </LinearLayout>
