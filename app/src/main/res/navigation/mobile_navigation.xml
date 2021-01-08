@@ -15,7 +15,7 @@
         android:id="@+id/offer_ride_fragment"
         android:name="com.example.travelhelper.Localization.Localization"
         android:label="offer_ride_fragment"
-        tools:layout="@layout/fragment_localization" />
+        tools:layout="@layout/fragment_location" />
 
     <fragment
         android:id="@+id/user_profile_fragment"

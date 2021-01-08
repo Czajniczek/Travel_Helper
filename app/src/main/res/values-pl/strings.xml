@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--region NAZWA APLIKACJI-->
     <string name="app_name">Travel Helper</string>
+    <!--endregion-->
+
+    <!--region START APLIKACJI-->
     <string name="activity_start_application_logo_text_view">Travel helper</string>
     <string name="activity_start_application_slogan_text_view">Ułatw sobie podróżowanie</string>
+    <!--endregion-->
+
+    <!--region LOGOWANIE-->
     <string name="activity_login_logo_image_description">SAMOCHÓD</string>
     <string name="activity_login_inscription_under_logo">Witaj z powrotem</string>
     <string name="activity_login_sign_in_to_continue">Zaloguj się aby kontynuować</string>
@@ -13,15 +21,24 @@
     <string name="sign_in">Zaloguj się</string>
     <string name="activity_login_loading">Ładowanie…</string>
     <string name="activity_login_new_user_sign_up">Nowy użytkownik? Zaloguj się</string>
+    <!--endregion-->
+
+    <!--region RESET HASŁA-->
     <string name="reset_password">Zresetuj hasło</string>
     <string name="reset_password_enter_email">Wprowadź swój adres e-mail</string>
     <string name="reset_password_reset_button">Reset</string>
     <string name="reset_password_email_not_exist">Nie ma użytkownika o takim adresie e-mail</string>
+    <!--endregion-->
+
+    <!--region REJESTRACJA-->
     <string name="activity_registration_inscription_under_logo">Zarejestruj się przed rozpoczęciem</string>
     <string name="activity_registration_make_journey_easier">Zarejestruj się, aby ułatwić sobie podróżowanie</string>
     <string name="repeat_password">Powtórz hasło</string>
     <string name="activity_registration_have_account_ask">Masz konto? Zaloguj się</string>
     <string name="sign_up">Zarejestruj się</string>
+    <!--endregion-->
+
+    <!--region INFORMACJE O NOWYM UŻYTKOWNIKU-->
     <string name="activity_new_user_information_logo_image_description">Informacja</string>
     <string name="activity_new_user_information_inscription_under_logo">Niezbędne informacje</string>
     <string name="activity_new_user_information_input_necessary_data">Musisz wprowadzić niezbędne dane</string>
@@ -29,6 +46,9 @@
     <string name="city">Miasto</string>
     <string name="phone_number">Numer telefonu</string>
     <string name="continue_button">Kontunuuj</string>
+    <!--endregion-->
+
+    <!--region WALIDACJA-->
     <string name="field_can_not_be_empty_error">Pole nie może być puste</string>
     <string name="email_validate_error">Błędy adres e-mail</string>
     <string name="password_is_too_weak">Hasło jest zbyt słabe</string>
@@ -39,13 +59,22 @@
     <string name="wrong_city_name">Nieprawidłowa nazwa miasta</string>
     <string name="wrong_value">Błędna wartość</string>
     <string name="empty_field">Puste pole</string>
+    <!--endregion-->
+
+    <!--region DOLNA NAWIGACJA-->
     <string name="bottom_navigation_need_ride">Szukam przejazdu</string>
     <string name="bottom_navigation_localization">Lokalizacja</string>
     <string name="bottom_navigation_user_profile">Profil</string>
+    <!--endregion-->
+
+    <!--region ELEMENT POTRZEBUJĘ PRZEJAŻDŻKI-->
     <string name="item_need_ride_street_acronym">ul.</string>
     <string name="item_need_ride_date">Data</string>
     <string name="item_need_ride_time">Czas</string>
     <string name="item_need_ride_to">Do</string>
+    <!--endregion-->
+
+    <!--region DODAJ NOWĄ PRZEJAŻDŻKĘ-->
     <string name="activity_add_need_ride_inscription_under_logo">Gdzie i kiedy chcesz jechać?</string>
     <string name="activity_add_need_ride_from">Z:</string>
     <string name="activity_add_need_ride_city">Miasto</string>
@@ -58,6 +87,9 @@
     <string name="activity_add_need_ride_hour">Godzina</string>
     <string name="activity_add_need_ride_minute">Minuta</string>
     <string name="activity_add_need_ride_add_button">Dodaj</string>
+    <!--endregion-->
+
+    <!--region LOKALIZACJA-->
     <string name="localization_your_current_location">Twoja obecna lokalizacja:</string>
     <string name="localization_city_name">Nazwa miasta</string>
     <string name="localization_population">Populacja</string>
@@ -65,6 +97,9 @@
     <string name="localization_bored_of_traveling">Znudzony podróżą?</string>
     <string name="localization_check_youtube">Zajrzyj na YouTube</string>
     <string name="localization_YT">YT</string>
+    <!--endregion-->
+
+    <!--region PROFIL UŻYTKOWNIKA-->
     <string name="user_profile_in_application_from">Data założenia konta</string>
     <string name="user_profile_trips">Liczba szczęśliwych podróży</string>
     <string name="user_profile_city">Miasto</string>
@@ -76,6 +111,9 @@
     <string name="user_profile_delete_account_results">Usuwając konto stracisz możliwosć korzystania z aplikacji.</string>
     <string name="YES">USUŃ</string>
     <string name="NO">ANULUJ</string>
+    <!--endregion-->
+
+    <!--region POWIADOMIENIA-->
     <string name="toast_successfully_logged_in">Zalogowano pomyślnie</string>
     <string name="toast_login_error">Błąd podczaas logowania</string>
     <string name="toast_password_change">Link do zmiany hasła został wysłany na podany adres e-mail</string>
@@ -92,4 +130,6 @@
     <string name="user_profile_number_of_happy_journeys">15</string>
     <string name="user_profile_city_placeholder">Warszawa</string>
     <string name="user_profile_phone_number_placeholder">123456789</string>
+    <!--endregion-->
+
 </resources>
