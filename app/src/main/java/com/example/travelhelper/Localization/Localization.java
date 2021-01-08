@@ -27,7 +27,6 @@ import android.widget.Toast;
 import com.example.travelhelper.API.City;
 import com.example.travelhelper.API.CityProvider;
 import com.example.travelhelper.Dialogues.LoadingDialog;
-import com.example.travelhelper.LoginAndRegistration.LoginActivity;
 import com.example.travelhelper.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -98,7 +97,7 @@ public class Localization extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_localization, container, false);
+        View view = inflater.inflate(R.layout.fragment_location, container, false);
 
         cityLoaded = this::fetchCityData;
 
