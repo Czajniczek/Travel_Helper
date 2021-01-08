@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/dialog_relative_layout">
 
     <LinearLayout
@@ -16,7 +17,7 @@
             android:text="@string/user_profile_delete_account_question"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="@dimen/dialog_delete_account_are_you_sure_text_size"
             android:textStyle="bold" />
 
         <TextView
@@ -26,7 +27,7 @@
             android:layout_marginBottom="10dp"
             android:text="@string/user_profile_delete_account_results"
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="@dimen/dialog_delete_account_consequences_of_account_deletion_text_size" />
 
         <LinearLayout
             style="@style/w_wrap_h_wrap"
@@ -39,7 +40,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round_background"
-                android:text="@string/YES" />
+                android:text="@string/YES"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/delete_account_NO"
@@ -48,7 +50,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round_background"
-                android:text="@string/NO" />
+                android:text="@string/NO"
+                tools:ignore="ButtonStyle" />
 
         </LinearLayout>
 

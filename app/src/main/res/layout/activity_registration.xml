@@ -10,29 +10,24 @@
         android:id="@+id/sign_up_logo_image"
         android:layout_width="@dimen/login_logo_width"
         android:layout_height="@dimen/login_logo_height"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:contentDescription="@string/activity_login_logo_image_description"
         android:src="@drawable/car_logo"
         android:transitionName="logo_image" />
 
     <TextView
         android:id="@+id/inscription_under_sign_up_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        style="@style/main_text_view"
+        android:layout_gravity="start"
         android:layout_marginTop="-30dp"
-        android:fontFamily="@font/bungee"
         android:text="@string/activity_registration_inscription_under_logo"
-        android:textColor="@color/black"
-        android:textSize="@dimen/inscription_under_the_logo"
-        android:textStyle="bold"
         android:transitionName="logo_text" />
 
     <TextView
         android:id="@+id/sign_up_slogan_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:text="@string/activity_registration_make_journey_easier"
         android:textSize="@dimen/logo_slogan_text_size"
         android:transitionName="logo_desc" />
