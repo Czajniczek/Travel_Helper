@@ -12,7 +12,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Looper;
@@ -24,8 +23,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.travelhelper.API.City;
-import com.example.travelhelper.API.CityProvider;
+import com.example.travelhelper.API.Location;
+import com.example.travelhelper.API.LocationProvider;
 import com.example.travelhelper.Dialogues.LoadingDialog;
 import com.example.travelhelper.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -46,7 +45,7 @@ public class Localization extends Fragment {
 
     //region VARIABLES
     //LAYOUT
-    private TextView cityName, cityPopulation, country, division;
+    private TextView cityName, cityPopulation, province, country;
     private ImageView YT;
 
     //FIREBASE
@@ -58,9 +57,9 @@ public class Localization extends Fragment {
 
     //API
     private int PERMISSION_ID = 44;
-    private CityProvider.CityLoaded cityLoaded;
+    private LocationProvider.CityLoaded cityLoaded;
     private FusedLocationProviderClient fusedLocationProviderClient;
-    private List<City> cityList;
+    //private List<Location> locationList;
 
     //OTHERS
     private Activity myActivity;
@@ -70,8 +69,8 @@ public class Localization extends Fragment {
     private LocationCallback locationCallback = new LocationCallback() {
         @Override
         public void onLocationResult(LocationResult locationResult) {
-            Location lastLocation = locationResult.getLastLocation();
-            CityProvider.fetchCityData(cityLoaded, lastLocation.getLatitude(), lastLocation.getLongitude());
+            android.location.Location lastLocation = locationResult.getLastLocation();
+            LocationProvider.fetchCityData(cityLoaded, lastLocation.getLatitude(), lastLocation.getLongitude());
         }
     };
 
@@ -81,11 +80,10 @@ public class Localization extends Fragment {
 
         //firebaseFirestore = FirebaseFirestore.getInstance();
         //storageReference = FirebaseStorage.getInstance().getReference();
-
         myActivity = getActivity();
         myContext = myActivity.getApplicationContext();
 
-        loadingDialog = new LoadingDialog(myActivity);
+        loadingDialog = new LoadingDialog(myActivity, true);
         loadingDialog.StartLoadingDialog();
     }
 
@@ -101,17 +99,15 @@ public class Localization extends Fragment {
 
         cityLoaded = this::fetchCityData;
 
-        //addFloatingButton = view.findViewById(R.id.offer_ride_floating_button);
-
         cityName = view.findViewById(R.id.city_name);
         cityPopulation = view.findViewById(R.id.city_population);
+        province = view.findViewById(R.id.city_division);
         country = view.findViewById(R.id.city_country);
-        division = view.findViewById(R.id.city_division);
         YT = view.findViewById(R.id.localization_yt);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(myActivity);
 
-        getLastLocation();
+        GetLastLocation();
 
         YT.setOnClickListener(v -> {
             Intent launchIntent = myContext.getPackageManager().getLaunchIntentForPackage("com.google.android.youtube");
@@ -123,68 +119,67 @@ public class Localization extends Fragment {
         return view;
     }
 
-    private void fetchCityData(boolean isLoaded, List<City> cityList) {
+    private void fetchCityData(boolean isLoaded, List<Location> locationList) {
         loadingDialog.DismissDialog();
-        if (isLoaded) {
-            this.cityList = cityList;
 
-            if (cityList.isEmpty()) {
+        if (isLoaded) {
+            //this.locationList = locationList;
+
+            if (locationList.isEmpty()) {
                 cityName.setText(getResources().getString(R.string.toast_error));
                 cityPopulation.setText(getResources().getString(R.string.toast_error));
                 country.setText(getResources().getString(R.string.toast_error));
-                division.setText(getResources().getString(R.string.toast_error));
+                province.setText(getResources().getString(R.string.toast_error));
             } else {
-                if (cityList.get(0).getName() != null)
-                    cityName.setText(cityList.get(0).getName());
+                if (locationList.get(0).getName() != null) cityName.setText(locationList.get(0).getName());
                 else cityName.setText(getResources().getString(R.string.toast_error));
 
-                if (cityList.get(0).getPopulation() != null)
-                    cityPopulation.setText(cityList.get(0).getPopulation());
+                if (locationList.get(0).getPopulation() != null)
+                    cityPopulation.setText(locationList.get(0).getPopulation());
                 else cityPopulation.setText(getResources().getString(R.string.toast_error));
 
-                if (cityList.get(0).getCountry() != null)
-                    country.setText(cityList.get(0).getCountry().getName());
+                if (locationList.get(0).getCountry() != null)
+                    country.setText(locationList.get(0).getCountry().getName());
                 else country.setText(getResources().getString(R.string.toast_error));
 
-                if (cityList.get(0).getProvince() != null)
-                    division.setText(cityList.get(0).getProvince().getName());
-                else division.setText(getResources().getString(R.string.toast_error));
+                if (locationList.get(0).getProvince() != null)
+                    province.setText(locationList.get(0).getProvince().getName());
+                else province.setText(getResources().getString(R.string.toast_error));
             }
-
         } else
-            Toast.makeText(myContext, getResources().getString(R.string.toast_error), Toast.LENGTH_LONG).show();
+            Toast.makeText(myContext, getResources().getString(R.string.toast_error_during_location_loading), Toast.LENGTH_LONG).show();
     }
 
     @SuppressLint("MissingPermission")
-    private void getLastLocation() {
-        if (checkPermissions()) {
-            if (isLocationEnabled())
-                fusedLocationProviderClient.getLastLocation().addOnCompleteListener(task -> requestNewLocationData());
+    private void GetLastLocation() {
+        if (CheckPermissions()) {
+            if (IsLocationEnabled())
+                fusedLocationProviderClient.getLastLocation().addOnCompleteListener(task -> RequestNewLocationData());
             else {
                 Toast.makeText(myContext, getResources().getString(R.string.toast_turn_on_localization), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivity(intent);
             }
-        } else requestPermissions();
+        } else RequestPermissions();
     }
 
-    private boolean checkPermissions() {
+    private boolean CheckPermissions() {
         return ActivityCompat.checkSelfPermission(myContext, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(myContext, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 
-    private boolean isLocationEnabled() {
+    private boolean IsLocationEnabled() {
         LocationManager locationManager = (LocationManager) myActivity.getSystemService(Context.LOCATION_SERVICE);
 
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
 
-    private void requestPermissions() {
+    private void RequestPermissions() {
         ActivityCompat.requestPermissions(myActivity, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_ID);
     }
 
     @SuppressLint("MissingPermission")
-    private void requestNewLocationData() {
+    private void RequestNewLocationData() {
 
         LocationRequest locationRequest = new LocationRequest();
 

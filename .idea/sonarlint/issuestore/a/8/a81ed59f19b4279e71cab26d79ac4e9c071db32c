@@ -1,43 +1,53 @@
 
-i	java:S100“"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ
-—
-java:S1186f"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
-—
-java:S1186u"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
 C
-java:S1602ï",Remove useless curly braces around statement(úÌä 
-C
-java:S1602ş",Remove useless curly braces around statement(ŠèŒĞ
+java:S1602­",Remove useless curly braces around statement(ŠèŒĞ
+k	java:S100Œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÃÈ8Š®œ©î.
+Ÿ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Ùä©î.
+Y	java:S125¿"<This block of commented-out lines of code should be removed.(µ¯Ò8¦¿À»î.
 {
-java:S14507"YRemove the "saveButton" field and declare it as a local variable in the relevant methods.(Éÿ¤ûÿÿÿÿ8¥›¡ğí.
-d	java:S100ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ö»À
-u
-java:S14509"XRemove the "myToolbar" field and declare it as a local variable in the relevant methods.(¼‚Ü€8¥›¡ğí.
-i	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­šúÉøÿÿÿÿ
+java:S1450@"YRemove the "saveButton" field and declare it as a local variable in the relevant methods.(Éÿ¤ûÿÿÿÿ8¥›¡ğí.
+n
+java:S1128#"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8¼€Ùªî.
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ÿ£ÈÓ
-=
-java:S16596""Declare "city" on a separate line.(¦ùãĞıÿÿÿÿ
-„
-java:S2178‰"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ïßãé8¥›¡ğí.
-—
-java:S1186o"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
-
-java:S1450>"bRemove the "deleteAccountDialog" field and declare it as a local variable in the relevant methods.(ø¡–è8¥›¡ğí.
-i	java:S100ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ìšûÿÿÿÿ
-d	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî
-z
-java:S1450D"XRemove the "resultUri" field and declare it as a local variable in the relevant methods.(ÕŠÁùûÿÿÿÿ8¥›¡ğí.
-H
-java:S1602í",Remove useless curly braces around statement(˜•–íÿÿÿÿÿ
-x
-java:S1450B"VRemove the "fileRef" field and declare it as a local variable in the relevant methods.(êÈıüÿÿÿÿ8¥›¡ğí.
-]	java:S125!"<This block of commented-out lines of code should be removed.(­à·Íüÿÿÿÿ8¤í›ñí.
-d	java:S100Ó"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÃÈ
-M
-java:S5411À"*Use the primitive boolean expression here.(ÁÓ¥éúÿÿÿÿ8¥›¡ğí.
 E
-java:S16596"*Declare "mPhoneNumber" on a separate line.(¦ùãĞıÿÿÿÿ
-—
-java:S1186~"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
-X
-java:S2209£"5Change this instance-reference to a static reference.(™ú¹úÿÿÿÿ8™—¢ğí.
+java:S1659?"*Declare "mPhoneNumber" on a separate line.(ˆ³ò²úÿÿÿÿ
+˜
+java:S1186–"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+]	java:S125n"<This block of commented-out lines of code should be removed.(—ÿ´¥ıÿÿÿÿ8±Û¿»î.
+^	java:S125¡"<This block of commented-out lines of code should be removed.(¶±­øÿÿÿÿ8Ì¬ïªî.
+x
+java:S1450H"VRemove the "fileRef" field and declare it as a local variable in the relevant methods.(êÈıüÿÿÿÿ8¥›¡ğí.
+d	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ö»À
+p	java:S100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àª…¿üÿÿÿÿ8êÁŠ©î.
+]	java:S125>"<This block of commented-out lines of code should be removed.(ì–†±ıÿÿÿÿ8ì½¿»î.
+Ÿ
+java:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8Ùä©î.
+p	java:S100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ñëµøÿÿÿÿ8¥Æ‰©î.
+^	java:S125ô"<This block of commented-out lines of code should be removed.(ööÈùÿÿÿÿ8ó„Ä»î.
+i	java:S100ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­šúÉøÿÿÿÿ
+z
+java:S1450J"XRemove the "resultUri" field and declare it as a local variable in the relevant methods.(ÕŠÁùûÿÿÿÿ8¥›¡ğí.
+^	java:S125«"<This block of commented-out lines of code should be removed.(ª„•ıÿÿÿÿ8ÇìÀ»î.
+i	java:S100›"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ìšûÿÿÿÿ
+X	java:S125v"<This block of commented-out lines of code should be removed.(ÕËñã8–ù¿»î.
+˜
+java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+Y	java:S125œ"<This block of commented-out lines of code should be removed.(ß»8ñûşªî.
+H
+java:S1602”",Remove useless curly braces around statement(˜•–íÿÿÿÿÿ
+]	java:S125!"<This block of commented-out lines of code should be removed.(­à·Íüÿÿÿÿ8¤í›ñí.
+[
+java:S1128$">Remove this unused import 'com.google.android.gms.tasks.Task'.(¦âÏô8¼€Ùªî.
+
+java:S1450D"bRemove the "deleteAccountDialog" field and declare it as a local variable in the relevant methods.(ø¡–è8¥›¡ğí.
+]	java:S125>"<This block of commented-out lines of code should be removed.(ì–†±ıÿÿÿÿ8ì½¿»î.
+u
+java:S1450:"XRemove the "myToolbar" field and declare it as a local variable in the relevant methods.(¼‚Ü€8ˆõş¨î.
+‰
+java:S2178¸"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(ù·¦÷øÿÿÿÿ8¥›¡ğí.
+C
+java:S1602–",Remove useless curly braces around statement(úÌä 
+M
+java:S5411ç"*Use the primitive boolean expression here.(ÁÓ¥éúÿÿÿÿ8¥›¡ğí.
+^	java:S125³"<This block of commented-out lines of code should be removed.(ıÑÿ¿ùÿÿÿÿ8ÂÀÃ»î.

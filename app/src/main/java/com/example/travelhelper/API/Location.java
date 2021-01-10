@@ -2,7 +2,7 @@ package com.example.travelhelper.API;
 
 import com.google.gson.annotations.SerializedName;
 
-public class City {
+public class Location {
 
     @SerializedName("localizedName")
     private String name;

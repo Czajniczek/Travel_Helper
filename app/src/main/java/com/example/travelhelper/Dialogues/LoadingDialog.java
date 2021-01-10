@@ -12,10 +12,12 @@ public class LoadingDialog {
     //OTHERS
     private final Activity activity;
     private AlertDialog alertDialog;
+    private Boolean cancelable;
     //endregion
 
-    public LoadingDialog(Activity myActivity) {
+    public LoadingDialog(Activity myActivity, Boolean cancelable) {
         activity = myActivity;
+        this.cancelable = cancelable;
     }
 
     public void StartLoadingDialog() {
@@ -23,7 +25,7 @@ public class LoadingDialog {
         LayoutInflater inflater = activity.getLayoutInflater();
 
         builder.setView(inflater.inflate(R.layout.dialog_loading, null));
-        builder.setCancelable(false);
+        builder.setCancelable(cancelable);
 
         alertDialog = builder.create();
         alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);

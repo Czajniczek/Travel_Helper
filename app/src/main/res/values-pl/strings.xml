@@ -130,6 +130,11 @@
     <string name="user_profile_number_of_happy_journeys">15</string>
     <string name="user_profile_city_placeholder">Warszawa</string>
     <string name="user_profile_phone_number_placeholder">123456789</string>
+    <string name="wrong_street_name">Nieprawidłowa nazwa ulicy</string>
+    <string name="toast_user_data_could_not_be_saved">Nie udało się zapisać danych użytkownika.</string>
+    <string name="toast_successfully_added_advertisement">Nowe ogłoszenie zostało pomyślnie dodane.</string>
+    <string name="toast_error_during_location_loading">Błąd podczas pobierania lokalizacji.</string>
+    <string name="toast_error_downloading_user_image">Błąd podczas pobierania zdjęcia użytkownika.</string>
     <!--endregion-->
 
 </resources>

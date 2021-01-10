@@ -2,6 +2,7 @@ package com.example.travelhelper.LoginAndRegistration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -36,7 +37,7 @@ public class NewUserInformationActivity extends AppCompatActivity {
     private FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
     private DocumentReference documentReference;
-    private String userId, email, password, name, phoneNumber, city;
+    private String email, password;
     //endregion
 
     @Override
@@ -56,7 +57,7 @@ public class NewUserInformationActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
-        //region TextChange LISTENERS
+        //region TEXT CHANGE LISTENERS
         mUserName.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -103,43 +104,51 @@ public class NewUserInformationActivity extends AppCompatActivity {
         });
         //endregion
 
-        continueButton.setOnClickListener(v -> {
-            Registration(email, password);
-        });
+        //region ON CLICK LISTENERS
+        continueButton.setOnClickListener(v -> Registration(email, password));
+        //endregion
     }
 
     private void Registration(String email, String password) {
-        name = mUserName.getEditText().getText().toString().trim();
-        phoneNumber = mPhoneNumber.getEditText().getText().toString().trim();
-        city = mCity.getEditText().getText().toString().trim();
+        String name = mUserName.getEditText().getText().toString().trim();
+        String phoneNumber = mPhoneNumber.getEditText().getText().toString().trim();
+        String city = mCity.getEditText().getText().toString().trim();
 
-        if (!ValidateUserName() | !ValidatePhoneNumber() | !ValidateCity()) return;
+        if (!ValidateUserName() | !ValidatePhoneNumber() | !ValidateCity()) {
+            if (!ValidateUserName()) {
+                mUserName.requestFocus();
+                return;
+            } else if (!ValidatePhoneNumber()) {
+                mPhoneNumber.requestFocus();
+                return;
+            } else {
+                mCity.requestFocus();
+                return;
+            }
+        }
 
-        loadingDialog = new LoadingDialog(this);
+        loadingDialog = new LoadingDialog(this, false);
         loadingDialog.StartLoadingDialog();
 
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                Toast.makeText(NewUserInformationActivity.this, getResources().getString(R.string.toast_user_created), Toast.LENGTH_SHORT).show();
-                SaveUserData(name, email, phoneNumber, city);
-            } else {
-                /*Toast.makeText(NewUserInformationActivity.this, "Error: " + task.getException(), Toast.LENGTH_SHORT).show();*/
-                Toast.makeText(NewUserInformationActivity.this, getResources().getString(R.string.toast_something_has_gone_wrong), Toast.LENGTH_SHORT).show();
+            if (task.isSuccessful()) SaveUserData(name, email, phoneNumber, city);
+            else {
                 loadingDialog.DismissDialog();
+                Toast.makeText(NewUserInformationActivity.this, getResources().getString(R.string.toast_something_has_gone_wrong), Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(e -> {
-            Toast.makeText(NewUserInformationActivity.this, getResources().getString(R.string.toast_something_has_gone_wrong), Toast.LENGTH_LONG).show();
             loadingDialog.DismissDialog();
+            Toast.makeText(NewUserInformationActivity.this, getResources().getString(R.string.toast_something_has_gone_wrong), Toast.LENGTH_LONG).show();
         });
     }
 
     private void SaveUserData(String name, String email, String phoneNumber, String city) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        String currentTime = sdf.format(new Date());
-        //String currentTime = Calendar.getInstance().getTime().toString();
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        String currentTime = simpleDateFormat.format(new Date());
 
-        userId = firebaseAuth.getCurrentUser().getUid();
-        documentReference = firebaseFirestore.collection("users").document(userId);
+        //https://firebase.google.com/docs/firestore/manage-data/add-data
+        String userId = firebaseAuth.getCurrentUser().getUid();
+        documentReference = firebaseFirestore.collection("Users").document(userId);
 
         Map<String, Object> userMap = new HashMap<>();
         userMap.put("Username", name);
@@ -149,11 +158,11 @@ public class NewUserInformationActivity extends AppCompatActivity {
         userMap.put("Date of account creation", currentTime);
 
         documentReference.set(userMap).addOnSuccessListener(aVoid -> {
-            //Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
             loadingDialog.DismissDialog();
+            Toast.makeText(NewUserInformationActivity.this, getResources().getString(R.string.toast_user_created), Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
-        }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show());
+        }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_user_data_could_not_be_saved), Toast.LENGTH_LONG).show());
     }
 
     //region VALIDATION
