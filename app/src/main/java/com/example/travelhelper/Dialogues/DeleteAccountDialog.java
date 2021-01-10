@@ -81,6 +81,7 @@ public class DeleteAccountDialog {
             });
             profilePhoto.delete();
             user.delete();
+            FirebaseFirestore.getInstance().clearPersistence();
 
             /*FirebaseAuth.getInstance().signOut();
             UserDatabase.ClearInstance();*/
