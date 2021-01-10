@@ -27,8 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     //region VARIABLES
     //LAYOUT
     private TextInputLayout mEmail, mPassword;
-    private Button signInButton, signUpButton, forgotPassword;
-    //private ImageView image;
+    private Button forgotPassword, signInButton, signUpButton;
     private TextView signInError;
     private Intent intent;
 
@@ -77,11 +76,6 @@ public class LoginActivity extends AppCompatActivity {
         signUpButton = findViewById(R.id.sign_up_button_in_sign_in);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        /*if (firebaseAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            finish();
-        }*/
-
         //region TEXT CHANGE LISTENERS
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
@@ -117,7 +111,6 @@ public class LoginActivity extends AppCompatActivity {
         //endregion
 
         //region ON CLICK LISTENERS
-
         forgotPassword.setOnClickListener(v -> {
             resetPasswordDialog = new ResetPasswordDialog(LoginActivity.this);
             resetPasswordDialog.StartResetPasswordDialog();
@@ -127,19 +120,22 @@ public class LoginActivity extends AppCompatActivity {
             String email = mEmail.getEditText().getText().toString().trim();
             String password = mPassword.getEditText().getText().toString().trim();
 
-            if (!ValidateEmail() | !ValidatePassword()) return;
+            if (!ValidateEmail() | !ValidatePassword()) {
+                if (!ValidateEmail()) mEmail.requestFocus();
+                else mPassword.requestFocus();
+                return;
+            }
 
-            loadingDialog = new LoadingDialog(LoginActivity.this);
+            loadingDialog = new LoadingDialog(LoginActivity.this, false);
             loadingDialog.StartLoadingDialog();
 
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
-                    Toast.makeText(LoginActivity.this, getResources().getString(R.string.toast_successfully_logged_in), Toast.LENGTH_SHORT).show();
                     loadingDialog.DismissDialog();
+                    Toast.makeText(LoginActivity.this, getResources().getString(R.string.toast_successfully_logged_in), Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     finish();
                 } else {
-                    /*Toast.makeText(LoginActivity.this, "Error: " + task.getException(), Toast.LENGTH_LONG).show();*/
                     loadingDialog.DismissDialog();
                     Toast.makeText(LoginActivity.this, getResources().getString(R.string.toast_login_error), Toast.LENGTH_LONG).show();
                 }

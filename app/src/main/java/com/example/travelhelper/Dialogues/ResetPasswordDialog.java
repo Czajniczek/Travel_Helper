@@ -51,7 +51,7 @@ public class ResetPasswordDialog {
         resetButton = alertDialog.findViewById(R.id.forgot_password_reset_button);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //region TextChange LISTENERS
+        //region TEXT CHANGE LISTENERS
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -68,12 +68,14 @@ public class ResetPasswordDialog {
         });
         //endregion
 
+        //region ON CLICK LISTENERS
         resetButton.setOnClickListener(v -> {
             String email = mEmail.getEditText().getText().toString().trim();
 
             if (!ValidateEmail()) return;
 
             //Checking whether the e-mail address provided exists
+            //https://firebase.google.com/docs/auth/web/manage-users
             firebaseAuth.fetchSignInMethodsForEmail(email).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     List<String> methods = Objects.requireNonNull(task.getResult()).getSignInMethods();
@@ -86,12 +88,12 @@ public class ResetPasswordDialog {
                             Toast.makeText(activity.getApplicationContext(), activity.getResources().getString(R.string.toast_password_change), Toast.LENGTH_LONG).show();
                         }).addOnFailureListener(e -> {
                             Toast.makeText(activity.getApplicationContext(), activity.getResources().getString(R.string.toast_something_has_gone_wrong), Toast.LENGTH_LONG).show();
-                            /*.addOnFailureListener(e -> Toast.makeText(activity.getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show());*/
                         });
                     }
                 }
             });
         });
+        //endregion
     }
 
     //region VALIDATION

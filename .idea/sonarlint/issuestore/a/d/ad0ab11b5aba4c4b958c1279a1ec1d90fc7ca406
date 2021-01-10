@@ -1,36 +1,44 @@
 
-}
-java:S1450)"[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(¿á© ıÿÿÿÿ8»àğõì.
-h
-java:S1301`"KReplace this "switch" statement by "if" statements to increase readability.(ÆƒéŞ8ÊˆÔîí.
-]	java:S1251"<This block of commented-out lines of code should be removed.(¼Ñ²…ûÿÿÿÿ8ˆÖĞüì.
-Ÿ
-java:S1186«"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††8¼¼¦üì.
-G
-java:S1659„"$Declare "cityTo" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
-J
-java:S1068…",Remove this unused "needRide" private field.(Ò¹ªâ8Ó›Úğí.
-u	java:S131`"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÆƒéŞ8ÊˆÔîí.
-u
-java:S1450…"WRemove the "needRide" field and declare it as a local variable in the relevant methods.(Ò¹ªâ8Ó›Úğí.
-v
-java:S1450/"YRemove the "collection" field and declare it as a local variable in the relevant methods.(Õº‰8›óÄôì.
-E
-java:S1659„""Declare "time" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
-L
-java:S1659„")Declare "phoneNumber" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
-I
-java:S1659„"&Declare "userName" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
-K
-java:S1659„"(Declare "streetFrom" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
-E
-java:S1659„""Declare "date" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
-I
-java:S1602X",Remove useless curly braces around statement(£ÎòÚ8§ºÂôì.
 ‚
-java:S1450("`Remove the "addFloatingButton" field and declare it as a local variable in the relevant methods.(ï‰®¾ûÿÿÿÿ8çõ¼ôì.
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÆÆÀ§ûÿÿÿÿ8Àì´îí.
+java:S14500"`Remove the "addFloatingButton" field and declare it as a local variable in the relevant methods.(ï‰®¾ûÿÿÿÿ8¤ı§î.
+n
+java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8Ù®ÀÌî.
+T
+java:S1128("2Remove this unused import 'retrofit2.http.DELETE'.(ù³ç°ûÿÿÿÿ8Ï¹Åî.
+v
+java:S14505"YRemove the "collection" field and declare it as a local variable in the relevant methods.(Õº‰8›óÄôì.
+h
+java:S1301g"KReplace this "switch" statement by "if" statements to increase readability.(ÆƒéŞ8ˆÌÌî.
+K
+java:S1659ª"(Declare "streetFrom" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
 I
-java:S1659„"&Declare "streetTo" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+java:S1659ª"&Declare "userName" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+O
+java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8œ‰Ø§î.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÆÆÀ§ûÿÿÿÿ8Àì´îí.
+O
+java:S1602Ã",Remove useless curly braces around statement(Â×¼Éúÿÿÿÿ8ã¯êÌî.
+I
+java:S1659ª"&Declare "streetTo" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+Y	java:S125¿"<This block of commented-out lines of code should be removed.(éßüğ8 ËáÌî.
+Ÿ
+java:S1186Ó"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¡é††8¼¼¦üì.
+}
+java:S1450."[Remove the "recyclerView" field and declare it as a local variable in the relevant methods.(¿á© ıÿÿÿÿ8»àğõì.
+^	java:S125«"<This block of commented-out lines of code should be removed.(¼Ñ²…ûÿÿÿÿ8 ËáÌî.
+G
+java:S1659ª"$Declare "cityTo" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+L
+java:S1659ª")Declare "phoneNumber" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
+Y	java:S125Å"<This block of commented-out lines of code should be removed.(Ä‘Üİ8ã¯êÌî.
+X	java:S125†"<This block of commented-out lines of code should be removed.(¶Ê.8¤ÍÛÌî.
+E
+java:S1659ª""Declare "time" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.
 {
-java:S14506"^Remove the "needRideAdapter" field and declare it as a local variable in the relevant methods.(ÙãÀ8°öğõì.
+java:S1450<"^Remove the "needRideAdapter" field and declare it as a local variable in the relevant methods.(ÙãÀ8Ù®ÀÌî.
+]	java:S1257"<This block of commented-out lines of code should be removed.(¼Ñ²…ûÿÿÿÿ8ˆÖĞüì.
+u	java:S131g"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÆƒéŞ8ˆÌÌî.
+j
+java:S1128!"HRemove this unused import 'com.google.firebase.firestore.QuerySnapshot'.(Ä¡Ş©ıÿÿÿÿ8Ù®ÀÌî.
+E
+java:S1659ª""Declare "date" on a separate line.(Ú§†¢ıÿÿÿÿ8¼¼¦üì.

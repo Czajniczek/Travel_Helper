@@ -35,7 +35,7 @@ public class StartApplicationActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     //ANIMATIONS
-    private static int SPLASH_SCREEN = 3000;
+    private static int SPLASH_SCREEN = 3000; //3s
     private Animation topAnimation, bottomAnimation;
     //private ActivityOptions options;
     //private Pair[] pairs;
@@ -71,11 +71,12 @@ public class StartApplicationActivity extends AppCompatActivity {
         textLogo.setAnimation(bottomAnimation);
         slogan.setAnimation(bottomAnimation);
 
+        //https://firebase.google.com/docs/auth/android/manage-users
+        //https://github.com/firebase/snippets-android/blob/9177e3178e35e358f7c1cf850ab6550bb9448af1/auth/app/src/main/java/com/google/firebase/quickstart/auth/MainActivity.java#L66-L71
         if (firebaseAuth.getCurrentUser() != null) {
             startActivity(new Intent(StartApplicationActivity.this, MainActivity.class));
             finish();
         } else {
-            //DELAY METHOD
             new Handler(Looper.myLooper()).postDelayed(() -> {
 
                 //intent = new Intent(StartApplicationActivity.this, LoginActivity.class);
@@ -86,6 +87,7 @@ public class StartApplicationActivity extends AppCompatActivity {
 
                 //options = ActivityOptions.makeSceneTransitionAnimation(StartApplicationActivity.this, pairs[0]);
                 //startActivity(intent, options.toBundle());
+
                 startActivity(new Intent(StartApplicationActivity.this, LoginActivity.class));
                 finish();
             }, SPLASH_SCREEN);

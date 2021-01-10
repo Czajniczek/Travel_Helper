@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.travelhelper.R;
 import com.example.travelhelper.Dialogues.LoadingDialog;
+import com.google.android.gms.dynamic.IFragmentWrapper;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -67,7 +68,7 @@ public class RegistrationActivity extends AppCompatActivity {
         signInButton = findViewById(R.id.sign_in_button_in_sign_up);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //region TextChange LISTENERS
+        //region TEXT CHANGE LISTENERS
         mEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -114,21 +115,31 @@ public class RegistrationActivity extends AppCompatActivity {
         });
         //endregion
 
-        //region OnClick LISTENERS
+        //region ON CLICK LISTENERS
         signUpButton.setOnClickListener(v -> {
                     String email = mEmail.getEditText().getText().toString().trim();
                     String password = mPassword.getEditText().getText().toString().trim();
 
-                    if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword()) return;
+                    if (!ValidateEmail() | !ValidatePassword() | !ValidateRepeatPassword()) {
+                        if (!ValidateEmail()) {
+                            mEmail.requestFocus();
+                            return;
+                        } else if (!ValidatePassword()) {
+                            mPassword.requestFocus();
+                            return;
+                        } else {
+                            mRepeatPassword.requestFocus();
+                            return;
+                        }
+                    }
 
-                    loadingDialog = new LoadingDialog(RegistrationActivity.this);
+                    loadingDialog = new LoadingDialog(RegistrationActivity.this, false);
                     loadingDialog.StartLoadingDialog();
 
                     //Checking whether the e-mail address provided exists
                     firebaseAuth.fetchSignInMethodsForEmail(email).addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             List<String> methods = task.getResult().getSignInMethods();
-
                             if (!methods.isEmpty()) {
                                 mEmail.setError(getString(R.string.email_exist_error));
                                 mEmail.requestFocus();

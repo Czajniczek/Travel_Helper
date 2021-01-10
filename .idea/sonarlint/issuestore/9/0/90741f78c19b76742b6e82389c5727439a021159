@@ -1,36 +1,36 @@
 
-x
-java:S1450'"[Remove the "topAnimation" field and declare it as a local variable in the relevant methods.(öâŠÛ8´á“ìí.
-X	java:S125W"<This block of commented-out lines of code should be removed.(ª„Ê´8´á“ìí.
-{
-java:S1450'"^Remove the "bottomAnimation" field and declare it as a local variable in the relevant methods.(öâŠÛ8´á“ìí.
-X	java:S110"<This class has 9 parents which is greater than 5 authorized.(ô÷¡¶8´á“ìí.
-S
-java:S18741"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8´á“ìí.
-X	java:S125?"<This block of commented-out lines of code should be removed.(å²ˆÊ8´á“ìí.
-r
-java:S1450"URemove the "slogan" field and declare it as a local variable in the relevant methods.(ÿõúû8ßÎìí.
-t
-java:S1450"WRemove the "textLogo" field and declare it as a local variable in the relevant methods.(ÿõúû8´á“ìí.
-x
-java:S1450#"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8Û½²ìí.
-X	java:S125"<This block of commented-out lines of code should be removed.(õ¸÷º8ñ‡“ìí.
-W	java:S125"<This block of commented-out lines of code should be removed.(¼çä8´á“ìí.
-S
-java:S18741"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8´á“ìí.
-u
-java:S3008&"XRename this field "SPLASH_SCREEN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÄç8´á“ìí.
-J
-java:S1659'"-Declare "bottomAnimation" on a separate line.(öâŠÛ8´á“ìí.
-X	java:S125S"<This block of commented-out lines of code should be removed.(œª±ø8´á“ìí.
-X	java:S125_"<This block of commented-out lines of code should be removed.(òÅŠç8´á“ìí.
 q
 java:S1450"TRemove the "image" field and declare it as a local variable in the relevant methods.(İÈ½8€‹Íìí.
-X	java:S125"<This block of commented-out lines of code should be removed.(ŸÕÃ8ñ‡“ìí.
-X	java:S125("<This block of commented-out lines of code should be removed.(¢êÅœ8´á“ìí.
 ]	java:S125"<This block of commented-out lines of code should be removed.(‡§Ãğøÿÿÿÿ8Öª“ìí.
+t
+java:S1450"WRemove the "textLogo" field and declare it as a local variable in the relevant methods.(ÿõúû8´á“ìí.
+]	java:S125R"<This block of commented-out lines of code should be removed.(Û’¤™üÿÿÿÿ8ÿÖ³ìí.
+X	java:S125a"<This block of commented-out lines of code should be removed.(òÅŠç8Î¹Ğ¤î.
+X	java:S125"<This block of commented-out lines of code should be removed.(õ¸÷º8ñ‡“ìí.
+X	java:S110"<This class has 9 parents which is greater than 5 authorized.(ô÷¡¶8´á“ìí.
+x
+java:S1450'"[Remove the "topAnimation" field and declare it as a local variable in the relevant methods.(öâŠÛ8´á“ìí.
+r
+java:S1450"URemove the "slogan" field and declare it as a local variable in the relevant methods.(ÿõúû8ßÎìí.
+S
+java:S18741"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8´á“ìí.
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ûâ„âúÿÿÿÿ8†­”ğí.
 W	java:S1255"<This block of commented-out lines of code should be removed.(Ë±±-8´á“ìí.
+W	java:S125"<This block of commented-out lines of code should be removed.(¼çä8Î¹Ğ¤î.
+X	java:S125("<This block of commented-out lines of code should be removed.(¢êÅœ8´á“ìí.
+J
+java:S1659'"-Declare "bottomAnimation" on a separate line.(öâŠÛ8´á“ìí.
+X	java:S125?"<This block of commented-out lines of code should be removed.(å²ˆÊ8Î¹Ğ¤î.
 A
 java:S1659"$Declare "slogan" on a separate line.(ÿõúû8´á“ìí.
-]	java:S125Q"<This block of commented-out lines of code should be removed.(Û’¤™üÿÿÿÿ8ÿÖ³ìí.
+X	java:S125X"<This block of commented-out lines of code should be removed.(ª„Ê´8´á“ìí.
+{
+java:S1450'"^Remove the "bottomAnimation" field and declare it as a local variable in the relevant methods.(öâŠÛ8´á“ìí.
+S
+java:S18741"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8´á“ìí.
+x
+java:S1450#"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8º®¬¤î.
+X	java:S125"<This block of commented-out lines of code should be removed.(ŸÕÃ8ñ‡“ìí.
+X	java:S125T"<This block of commented-out lines of code should be removed.(œª±ø8´á“ìí.
+t
+java:S3008&"XRename this field "SPLASH_SCREEN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ùğS8´á“ìí.

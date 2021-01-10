@@ -56,6 +56,7 @@
     <string name="email_exist_error">The user with the given e-mail address exists</string>
     <string name="wrong_phone_number">Wrong phone number</string>
     <string name="wrong_city_name">Wrong city name</string>
+    <string name="wrong_street_name">Wrong street name</string>
     <string name="wrong_value">Wrong value</string>
     <string name="empty_field">Empty field</string>
     <!--endregion-->
@@ -118,10 +119,14 @@
     <!--region TOASTS-->
     <string name="toast_successfully_logged_in">Successfully logged in</string>
     <string name="toast_login_error">Login error</string>
+    <string name="toast_user_data_could_not_be_saved">The user data could not be saved.</string>
     <string name="toast_password_change">A link to change your password has been sent to your e-mail address.</string>
     <string name="toast_something_has_gone_wrong">Something has gone wrong. Try again later.</string>
+    <string name="toast_successfully_added_advertisement">A new advertisement was successfully added.</string>
     <string name="toast_user_created">User successfully created.</string>
     <string name="toast_error">Error</string>
+    <string name="toast_error_during_location_loading">Error while downloading a location.</string>
+    <string name="toast_error_downloading_user_image">Error when downloading a user image.</string>
     <string name="toast_turn_on_localization">You must enable the location</string>
     <string name="toast_profile_photo_error">Error during image setting</string>
     <string name="toast_profile_photo_changed">The profile photo has been changed</string>

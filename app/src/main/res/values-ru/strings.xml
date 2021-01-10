@@ -127,6 +127,11 @@
     <string name="user_profile_number_of_happy_journeys">15</string>
     <string name="user_profile_city_placeholder">Варшава</string>
     <string name="user_profile_phone_number_placeholder">123456789</string>
+    <string name="wrong_street_name">Неправильное название улицы</string>
+    <string name="toast_user_data_could_not_be_saved">Данные пользователя не могут быть сохранены.</string>
+    <string name="toast_successfully_added_advertisement">Новое объявление было успешно добавлено.</string>
+    <string name="toast_error_during_location_loading">Ошибка при загрузке местоположения.</string>
+    <string name="toast_error_downloading_user_image">Ошибка при загрузке фотографии.</string>
     <!--endregion-->
 
 </resources>

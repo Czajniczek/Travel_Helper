@@ -214,15 +214,44 @@ public class AddNeedRideActivity extends AppCompatActivity {
         });
         //endregion
 
+        //region ON CLICK LISTENERS
         addButton.setOnClickListener(v -> {
 
-            if (!ValidateCityFrom() | !ValidateStreetFrom() | !ValidateStreetTo() |
-                    !ValidateCityTo() | !DayValidation() | !MonthValidation() |
-                    !YearValidation() | !HourValidation() | !MinuteValidation())
-                return;
+            if (!ValidateCityFrom() | !ValidateStreetFrom() | !ValidateCityTo() | !ValidateStreetTo() |
+                    !DayValidation() | !MonthValidation() | !YearValidation() | !HourValidation() | !MinuteValidation()) {
+                if (!ValidateCityFrom()) {
+                    fromCity.requestFocus();
+                    return;
+                } else if (!ValidateStreetFrom()) {
+                    fromStreet.requestFocus();
+                    return;
+                } else if (!ValidateCityTo()) {
+                    toCity.requestFocus();
+                    return;
+                } else if (!ValidateStreetTo()) {
+                    toStreet.requestFocus();
+                    return;
+                } else if (!DayValidation()) {
+                    day.requestFocus();
+                    return;
+                } else if (!MonthValidation()) {
+                    month.requestFocus();
+                    return;
+                } else if (!YearValidation()) {
+                    year.requestFocus();
+                    return;
+                } else if (!HourValidation()) {
+                    hour.requestFocus();
+                    return;
+                } else {
+                    minute.requestFocus();
+                    return;
+                }
+            }
 
             AddNewNeedRide();
         });
+        //endregion
     }
 
     private void AddNewNeedRide() {
@@ -249,9 +278,9 @@ public class AddNeedRideActivity extends AppCompatActivity {
         noticeMap.put("Minute", sMinute);
         noticeMap.put("User ID", userId);
 
-        String id = firebaseFirestore.collection("Need ride").document().getId();
-        firebaseFirestore.collection("Need ride").document(id).set(noticeMap).addOnSuccessListener(v -> {
-            //Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+        //String id = firebaseFirestore.collection("Need ride").document().getId();
+        firebaseFirestore.collection("Need ride").document().set(noticeMap).addOnSuccessListener(v -> {
+            Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_successfully_added_advertisement), Toast.LENGTH_SHORT).show();
             finish();
         }).addOnFailureListener(v -> Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_something_has_gone_wrong), Toast.LENGTH_LONG).show());
     }
@@ -263,7 +292,7 @@ public class AddNeedRideActivity extends AppCompatActivity {
         if (city.isEmpty()) {
             fromCity.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
-        } else if (!city.matches("[a-zA-Z]+$") || !city.matches(".{3,}")) {
+        } else if (!city.matches(".{3,}")) {
             fromCity.setError(getString(R.string.wrong_city_name));
             return false;
         } else {
@@ -278,6 +307,9 @@ public class AddNeedRideActivity extends AppCompatActivity {
         if (street.isEmpty()) {
             fromStreet.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
+        } else if (!street.matches(".{3,}")) {
+            fromStreet.setError(getString(R.string.wrong_street_name));
+            return false;
         } else {
             fromStreet.setError(null);
             return true;
@@ -290,7 +322,7 @@ public class AddNeedRideActivity extends AppCompatActivity {
         if (city.isEmpty()) {
             toCity.setError(getString(R.string.field_can_not_be_empty_error));
             return false;
-        } else if (!city.matches("[a-zA-Z]+$") || !city.matches(".{3,}")) {
+        } else if (!city.matches(".{3,}")) {
             toCity.setError(getString(R.string.wrong_city_name));
             return false;
         } else {
@@ -304,6 +336,9 @@ public class AddNeedRideActivity extends AppCompatActivity {
 
         if (street.isEmpty()) {
             toStreet.setError(getString(R.string.field_can_not_be_empty_error));
+            return false;
+        } else if (!street.matches(".{3,}")) {
+            toStreet.setError(getString(R.string.wrong_street_name));
             return false;
         } else {
             toStreet.setError(null);

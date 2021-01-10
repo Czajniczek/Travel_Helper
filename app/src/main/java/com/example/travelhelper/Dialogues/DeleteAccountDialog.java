@@ -6,12 +6,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.example.travelhelper.LoginAndRegistration.LoginActivity;
 import com.example.travelhelper.R;
 import com.example.travelhelper.User.UserDatabase;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class DeleteAccountDialog {
 
@@ -19,20 +32,14 @@ public class DeleteAccountDialog {
     //LAYOUT
     private Button yesButton, noButton;
 
-    //FIREBASE
-    private UserDatabase userDatabase;
-    private FirebaseAuth firebaseAuth;
-    private FirebaseUser user;
-
     //OTHERS
     private final Activity myActivity;
     private Context myContext;
     private AlertDialog alertDialog;
     //endregion
 
-    public DeleteAccountDialog(Activity myActivity, UserDatabase userDatabase) {
+    public DeleteAccountDialog(Activity myActivity) {
         this.myActivity = myActivity;
-        this.userDatabase = userDatabase;
     }
 
     public void StartDeleteAccountDialog() {
@@ -51,14 +58,33 @@ public class DeleteAccountDialog {
         //HOOKS
         yesButton = alertDialog.findViewById(R.id.delete_account_YES);
         noButton = alertDialog.findViewById(R.id.delete_account_NO);
-        firebaseAuth = FirebaseAuth.getInstance();
-        user = firebaseAuth.getCurrentUser();
+
+        //FIREBASE
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = user.getUid();
+        DocumentReference usersReference = FirebaseFirestore.getInstance().collection("Users").document(userId);
+        CollectionReference needRideReference = FirebaseFirestore.getInstance().collection("Need ride");
+        StorageReference profilePhoto = FirebaseStorage.getInstance().getReference().child("Users/" + userId + "/User photo");
 
         yesButton.setOnClickListener(v -> {
-            alertDialog.dismiss();
+            usersReference.delete().addOnCompleteListener(aVoid -> Toast.makeText(myContext, "User deleted", Toast.LENGTH_LONG).show());
+            needRideReference.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
+                        String documentId = documentSnapshot.getId();
+                        if (documentSnapshot.getString("User ID").equals(userId)) {
+                            DocumentReference documentReference2 = FirebaseFirestore.getInstance().collection("Need ride").document(documentId);
+                            documentReference2.delete();
+                        }
+                    }
+                }
+            });
+            profilePhoto.delete();
             user.delete();
-            firebaseAuth.signOut();
-            UserDatabase.ClearInstance();
+
+            /*FirebaseAuth.getInstance().signOut();
+            UserDatabase.ClearInstance();*/
+            alertDialog.dismiss();
             myActivity.startActivity(new Intent(myContext, LoginActivity.class));
             myActivity.finish();
         });

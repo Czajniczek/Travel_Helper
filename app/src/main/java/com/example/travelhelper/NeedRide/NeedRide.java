@@ -6,8 +6,7 @@ public class NeedRide {
     private String id, sFromCity, sFromStreet, sToCity, sToStreet, sDay, sMonth, sYear, sHour, sMinute, userId, sUserName, sPhoneNumber;
     //endregion
 
-    public NeedRide() {
-    }
+    public NeedRide() { }
 
     public String getId() {
         return id;

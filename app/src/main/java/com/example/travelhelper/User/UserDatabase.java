@@ -59,18 +59,17 @@ public class UserDatabase {
     }
 
     public void getUserFromFirebase(String userId) {
-        DocumentReference documentReference = firebaseFirestore.collection("users").document(userId);
+        DocumentReference documentReference = firebaseFirestore.collection("Users").document(userId);
         user = new User(userId);
 
         //PROFILE IMAGE
-        StorageReference profileRef = storageReference.child("users/" + userId + "/profile.jpg");
+        StorageReference profileRef = storageReference.child("Users/" + userId + "/User photo");
         profileRef.getDownloadUrl().addOnSuccessListener(uri -> {
             user.setProfileImage(uri);
             if (profileImageLoaded != null) profileImageLoaded.ProfileImageLoaded(uri);
         }).addOnFailureListener(e -> {
             user.setProfileImage(Uri.parse("android.resource://" + context.getPackageName() + "/drawable/default_user_image"));
             if (profileImageLoaded != null) profileImageLoaded.ProfileImageLoaded(user.getProfileImage());
-            //Toast.makeText(context, "Error: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         });
 
         documentReference.addSnapshotListener((documentSnapshot, e) -> {

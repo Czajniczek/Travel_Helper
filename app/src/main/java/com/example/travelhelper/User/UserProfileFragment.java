@@ -32,8 +32,13 @@ import com.example.travelhelper.LoginAndRegistration.LoginActivity;
 import com.example.travelhelper.R;
 //import com.example.travelhelper.User.User;
 //import com.example.travelhelper.User.UserDatabase;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -50,12 +55,13 @@ public class UserProfileFragment extends Fragment {
 
     //region VARIABLES
     //LAYOUT
-    private EditText userName;
-    private TextInputLayout mUserEmail, city, mPhoneNumber;
-    private Button saveButton;
-    private ImageView profileImage;
     private Toolbar myToolbar;
+    private ImageView profileImage;
+    private EditText userName;
     private TextView accCreate;
+    //private TextInputLayout mUserEmail;
+    private TextInputLayout city, mPhoneNumber;
+    private Button saveButton;
 
     //FIREBASE
     private User user;
@@ -80,24 +86,36 @@ public class UserProfileFragment extends Fragment {
         firebaseStorage = FirebaseStorage.getInstance();
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        myActivity = getActivity();
+        myContext = myActivity.getApplicationContext();
+
+        myToolbar = myActivity.findViewById(R.id.my_toolbar);
+        ((AppCompatActivity) myActivity).setSupportActionBar(myToolbar);
+        ((AppCompatActivity) myActivity).getSupportActionBar().setDisplayShowTitleEnabled(false);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_profile, container, false);
 
         //HOOKS
+        profileImage = view.findViewById(R.id.user_profile_user_image);
         userName = view.findViewById(R.id.user_profile_user_name);
-        mUserEmail = view.findViewById(R.id.user_profile_email);
+        accCreate = view.findViewById(R.id.user_profile_date_of_account_create);
+        //mUserEmail = view.findViewById(R.id.user_profile_email);
         city = view.findViewById(R.id.user_profile_city);
         mPhoneNumber = view.findViewById(R.id.user_profile_phone_number);
-        profileImage = view.findViewById(R.id.user_profile_user_image);
         saveButton = view.findViewById(R.id.user_profile_save_button);
-        accCreate = view.findViewById(R.id.user_profile_date_of_account_create);
 
         setHasOptionsMenu(true);
 
-        //region TextChange LISTENERS
-        mUserEmail.getEditText().addTextChangedListener(new TextWatcher() {
+        //region TEXT CHANGE LISTENERS
+        /*mUserEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -105,6 +123,21 @@ public class UserProfileFragment extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 ValidateEmail();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });*/
+
+        city.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ValidateCity();
             }
 
             @Override
@@ -128,16 +161,34 @@ public class UserProfileFragment extends Fragment {
         });
         //endregion
 
-        //region OnClick LISTENERS
+        //region ON CLICK LISTENERS
         profileImage.setOnClickListener(view1 -> CropImage.activity()
                 .setGuidelines(CropImageView.Guidelines.ON).setCropShape(CropImageView.CropShape.OVAL)
                 .start(getActivity()));
 
         saveButton.setOnClickListener(v -> {
-            if (!ValidateEmail() | !ValidatePhoneNumber()) return;
+
+            /*if (!ValidateEmail() | !ValidateCity() | !ValidatePhoneNumber()) {
+                if (!ValidateEmail()) {
+                    mUserEmail.requestFocus();
+                    return;
+                } else if (!ValidateCity()) {
+                    city.requestFocus();
+                    return;
+                } else {
+                    mPhoneNumber.requestFocus();
+                    return;
+                }
+            }*/
+
+            if (!ValidateCity() | !ValidatePhoneNumber()) {
+                if (!ValidateCity()) city.requestFocus();
+                else mPhoneNumber.requestFocus();
+                return;
+            }
 
             user.setUserName(userName.getText().toString());
-            user.setEmail(mUserEmail.getEditText().getText().toString());
+            //user.setEmail(mUserEmail.getEditText().getText().toString());
             user.setCity(city.getEditText().getText().toString());
             user.setPhoneNumber(mPhoneNumber.getEditText().getText().toString());
             UpdateUserDataFirebase();
@@ -160,29 +211,17 @@ public class UserProfileFragment extends Fragment {
 
         if (id == R.id.user_menu_logout) {
             firebaseAuth.signOut();
-            userDatabase.ClearInstance();
+            UserDatabase.ClearInstance();
             startActivity(new Intent(myContext, LoginActivity.class));
             myActivity.finish();
             return true;
         } else if (id == R.id.user_menu_thrash_can) {
-            deleteAccountDialog = new DeleteAccountDialog(myActivity, userDatabase);
+            deleteAccountDialog = new DeleteAccountDialog(myActivity);
             deleteAccountDialog.StartDeleteAccountDialog();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        myActivity = getActivity();
-        myContext = myActivity.getApplicationContext();
-
-        myToolbar = myActivity.findViewById(R.id.my_toolbar);
-        ((AppCompatActivity) myActivity).setSupportActionBar(myToolbar);
-        ((AppCompatActivity) myActivity).getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
@@ -202,15 +241,10 @@ public class UserProfileFragment extends Fragment {
         user = userDatabase.getUser();
 
         userName.setText(user.getUserName());
-        mUserEmail.getEditText().setText(user.getEmail());
+        //mUserEmail.getEditText().setText(user.getEmail());
         mPhoneNumber.getEditText().setText(user.getPhoneNumber());
         city.getEditText().setText(user.getCity());
         accCreate.setText(user.getAccCreation());
-    }
-
-    private void SetProfileImage(Uri imageUri) {
-        if (getActivity() == null) return;
-        Glide.with(getActivity()).load(imageUri).placeholder(R.drawable.ic_account).error(R.drawable.ic_account).into(profileImage);
     }
 
     @Override
@@ -231,9 +265,14 @@ public class UserProfileFragment extends Fragment {
         }
     }
 
+    private void SetProfileImage(Uri imageUri) {
+        if (getActivity() == null) return;
+        Glide.with(getActivity()).load(imageUri).placeholder(R.drawable.ic_account).error(R.drawable.ic_account).into(profileImage);
+    }
+
     private void LoadUserProfileImageToFirebase() {
 
-        fileRef = firebaseStorage.getReference().child("users/" + firebaseAuth.getUid() + "/profile.jpg");
+        fileRef = firebaseStorage.getReference().child("Users/" + firebaseAuth.getUid() + "/User photo");
         fileRef.putFile(user.getProfileImage()).addOnSuccessListener(taskSnapshot -> {
             Toast.makeText(myContext, getResources().getString(R.string.toast_profile_photo_changed), Toast.LENGTH_SHORT).show();
         }).addOnFailureListener(e -> {
@@ -242,7 +281,15 @@ public class UserProfileFragment extends Fragment {
     }
 
     public void UpdateUserDataFirebase() {
-        DocumentReference documentReference = FirebaseFirestore.getInstance().collection("users").document(user.getId());
+        /*FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+        user1.updateEmail(user.getEmail()).addOnSuccessListener(task -> {
+                Toast.makeText(myContext, "Udało się kurwa", Toast.LENGTH_LONG).show();
+        });*/
+
+        /*FirebaseUser user2 = FirebaseAuth.getInstance().getCurrentUser();
+        AuthCredential authCredential = EmailAuthProvider.getCredential(user2.getEmail(),user2.get)*/
+
+        DocumentReference documentReference = FirebaseFirestore.getInstance().collection("Users").document(user.getId());
 
         Map<String, Object> userMap = new HashMap<>();
 
@@ -257,7 +304,7 @@ public class UserProfileFragment extends Fragment {
     }
 
     //region VALIDATION
-    private boolean ValidateEmail() {
+    /*private boolean ValidateEmail() {
         String email = mUserEmail.getEditText().getText().toString().trim();
 
         if (email.isEmpty()) {
@@ -268,6 +315,21 @@ public class UserProfileFragment extends Fragment {
             return false;
         } else {
             mUserEmail.setError(null);
+            return true;
+        }
+    }*/
+
+    private boolean ValidateCity() {
+        String mCity = city.getEditText().getText().toString().trim();
+
+        if (mCity.isEmpty()) {
+            city.setError(getString(R.string.field_can_not_be_empty_error));
+            return false;
+        } else if (!mCity.matches(".{3,}")) {
+            city.setError(getString(R.string.wrong_city_name));
+            return false;
+        } else {
+            city.setError(null);
             return true;
         }
     }
