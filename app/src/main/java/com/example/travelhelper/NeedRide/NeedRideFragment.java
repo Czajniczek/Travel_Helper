@@ -101,7 +101,7 @@ public class NeedRideFragment extends Fragment {
             if (value == null) return;
             for (DocumentChange dc : value.getDocumentChanges()) {
                 switch (dc.getType()) {
-                    case REMOVED: break;
+                    //case REMOVED: break;
                     case ADDED:
                         DocumentSnapshot doc = dc.getDocument();
                         NeedRide needRide = new NeedRide();
