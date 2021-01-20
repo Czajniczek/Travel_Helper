@@ -171,26 +171,6 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!--<com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/user_profile_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="@string/email"
-                app:boxBackgroundColor="@color/white"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:drawableStart="@drawable/ic_email"
-                    android:drawablePadding="10dp"
-                    android:inputType="textNoSuggestions"
-                    android:text="@string/user_profile_email_placeholder" />
-
-            </com.google.android.material.textfield.TextInputLayout>-->
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/user_profile_city"
                 android:layout_width="match_parent"

@@ -20,8 +20,9 @@ public class LocationProvider {
 
         //String language = Locale.getDefault().getLanguage();
 
-        if (Locale.getDefault().getDisplayLanguage().equals("English")) language = "en";
-        else if (Locale.getDefault().getDisplayLanguage().equals("русский")) language = "ru";
+        /*if (Locale.getDefault().getDisplayLanguage().equals("English")) language = "en";
+        else */
+        if (Locale.getDefault().getDisplayLanguage().equals("русский")) language = "ru";
         else if (Locale.getDefault().getDisplayLanguage().equals("polski")) language = "pl";
         else language = "en";
 

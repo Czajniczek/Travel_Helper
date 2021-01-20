@@ -281,11 +281,6 @@ public class UserProfileFragment extends Fragment {
     }
 
     public void UpdateUserDataFirebase() {
-        /*FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
-        user1.updateEmail(user.getEmail()).addOnSuccessListener(task -> {
-                Toast.makeText(myContext, "Udało się kurwa", Toast.LENGTH_LONG).show();
-        });*/
-
         /*FirebaseUser user2 = FirebaseAuth.getInstance().getCurrentUser();
         AuthCredential authCredential = EmailAuthProvider.getCredential(user2.getEmail(),user2.get)*/
 
@@ -294,7 +289,7 @@ public class UserProfileFragment extends Fragment {
         Map<String, Object> userMap = new HashMap<>();
 
         userMap.put("Username", user.getUserName());
-        userMap.put("E-mail", user.getEmail());
+        //userMap.put("E-mail", user.getEmail());
         userMap.put("City", user.getCity());
         userMap.put("Phone number", user.getPhoneNumber());
 

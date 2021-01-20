@@ -101,7 +101,6 @@ public class NeedRideFragment extends Fragment {
             if (value == null) return;
             for (DocumentChange dc : value.getDocumentChanges()) {
                 switch (dc.getType()) {
-                    //case REMOVED: break;
                     case ADDED:
                         DocumentSnapshot doc = dc.getDocument();
                         NeedRide needRide = new NeedRide();
@@ -130,36 +129,6 @@ public class NeedRideFragment extends Fragment {
                 }
             }
         });
-
-        /*collection.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                for (QueryDocumentSnapshot document : task.getResult()) {
-                    NeedRide needRide = new NeedRide();
-                    needRide.setId(document.getId());
-                    needRide.setsFromCity(document.getString("From city"));
-                    needRide.setsFromStreet(document.getString("From street"));
-                    needRide.setsToCity(document.getString("To city"));
-                    needRide.setsToStreet(document.getString("To street"));
-                    needRide.setsDay(document.getString("Day"));
-                    needRide.setsMonth(document.getString("Month"));
-                    needRide.setsYear(document.getString("Year"));
-                    needRide.setsHour(document.getString("Hour"));
-                    needRide.setsMinute(document.getString("Minute"));
-                    needRide.setUserId(document.getString("User ID"));
-                    DocumentReference documentReference = firebaseFirestore.collection("Users").document(needRide.getUserId());
-                    Task<DocumentSnapshot> userSnap = documentReference.get();
-                    userSnap.addOnCompleteListener(task1 -> {
-                        if (task1.isSuccessful()) {
-                            DocumentSnapshot documentSnapshot = task1.getResult();
-                            needRide.setsUserName(documentSnapshot.getString("Username"));
-                            needRide.setsPhoneNumber(documentSnapshot.getString("Phone number"));
-                            needRides.add(needRide);
-                            needRideAdapter.notifyDataSetChanged();
-                        }
-                    });
-                }
-            }
-        });*/
 
         return view;
     }

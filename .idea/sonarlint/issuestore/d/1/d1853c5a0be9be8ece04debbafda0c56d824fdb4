@@ -1,38 +1,38 @@
 
-V	java:S110"<This class has 9 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
-S
-java:S1874@"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8µÇ‘ñì.
-z
-java:S1450"]Remove the "forgotPassword" field and declare it as a local variable in the relevant methods.(ûÃÂß8ÙÍ«°ë.
-
-java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8µÇ‘ñì.
-G
-java:S1659"*Declare "signInButton" on a separate line.(ûÃÂß8ï´Ø¤î.
-S
-java:S1874@"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8µÇ‘ñì.
-x
-java:S1450'"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8çâœÎî.
-
-java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Öˆ¬í.
-^	java:S125—"<This block of commented-out lines of code should be removed.(–™Çÿÿÿÿÿ8©¥ø¥î.
-x
-java:S1450"[Remove the "signUpButton" field and declare it as a local variable in the relevant methods.(ûÃÂß8ÙÍ«°ë.
 
 java:S1186R"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8µÇ‘ñì.
+G
+java:S1659"*Declare "signInButton" on a separate line.(ûÃÂß8ï´Ø¤î.
 X	java:S125D"<This block of commented-out lines of code should be removed.(üíŒƒ8µÇ‘ñì.
+X	java:S1256"<This block of commented-out lines of code should be removed.(šá’©8î¦’ñì.
 
 java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8µÇ‘ñì.
-k	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8©¥ø¥î.
-p	java:S100»"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­„Ûüÿÿÿÿ8©¥ø¥î.
-x
-java:S1450"[Remove the "signInButton" field and declare it as a local variable in the relevant methods.(ûÃÂß8ï´Ø¤î.
-X	java:S1256"<This block of commented-out lines of code should be removed.(šá’©8î¦’ñì.
 G
 java:S1659"*Declare "signUpButton" on a separate line.(ûÃÂß8úÖ­ë.
-a
-java:S58401"?Remove this boundary that can never match or rewrite the regex.(Î‹¥Ÿıÿÿÿÿ8öœšìí.
+
+java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±8µÇ‘ñì.
+S
+java:S1874@"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8µÇ‘ñì.
+p	java:S100»"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­„Ûüÿÿÿÿ8©¥ø¥î.
+^	java:S125—"<This block of commented-out lines of code should be removed.(–™Çÿÿÿÿÿ8©¥ø¥î.
 ‚
 java:S2178{"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(üàİF8‘Æò¥î.
+a
+java:S58401"?Remove this boundary that can never match or rewrite the regex.(Î‹¥Ÿıÿÿÿÿ8öœšìí.
+x
+java:S1450"[Remove the "signInButton" field and declare it as a local variable in the relevant methods.(ûÃÂß8ï´Ø¤î.
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìğÁğûÿÿÿÿ8ùøïí.
+z
+java:S1450"]Remove the "forgotPassword" field and declare it as a local variable in the relevant methods.(ûÃÂß8ÙÍ«°ë.
+S
+java:S1874@"7Remove this use of "FLAG_FULLSCREEN"; it is deprecated.(±ùËD8µÇ‘ñì.
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(·¡ïõøÿÿÿÿ
 D
 java:S1659"'Declare "mPassword" on a separate line.(ú¨Ê¿8ïéç«ë.
+
+java:S1186l"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8Öˆ¬í.
+x
+java:S1450"[Remove the "signUpButton" field and declare it as a local variable in the relevant methods.(ûÃÂß8ÙÍ«°ë.
+k	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é’Éî8©¥ø¥î.
+x
+java:S1450'"[Remove the "firebaseAuth" field and declare it as a local variable in the relevant methods.(“ø8çâœÎî.
