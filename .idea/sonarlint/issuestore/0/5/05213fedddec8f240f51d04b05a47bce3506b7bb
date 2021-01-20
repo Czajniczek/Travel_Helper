@@ -1,25 +1,25 @@
 
-[
-java:S1128">Remove this unused import 'com.google.android.gms.tasks.Task'.(¦âÏô8ºîÁÎî.
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ²Óùüÿÿÿÿ8Ù¢¥¬í.
-o	java:S100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ˆ­üÿÿÿÿ8 Ş¼î.
-N
-java:S1602]",Remove useless curly braces around statement(œÆäğøÿÿÿÿ8 Ş¼î.
-U
-java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8ºîÁÎî.
-h
-java:S1128"KRemove this unused import 'com.google.android.gms.tasks.OnSuccessListener'.(íå¡8óÙ€¼î.
-u
-java:S1450%"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8óÙ€¼î.
-y
-java:S1450!"WRemove the "noButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
-z
-java:S1450!"XRemove the "yesButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
-H
-java:S1659!"&Declare "noButton" on a separate line.(ú‡¯ëÿÿÿÿÿ8ÿËøÏì.
-j
-java:S1128"HRemove this unused import 'com.google.firebase.firestore.QuerySnapshot'.(Ä¡Ş©ıÿÿÿÿ8ºîÁÎî.
-X	java:S125V"<This block of commented-out lines of code should be removed.(ô‡¾Ñ8ÏÜ‡Îî.
-o	java:S100-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õâùÿÿÿÿ8ıÁéÍì.
 n
 java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8ºîÁÎî.
+U
+java:S1128"8Remove this unused import 'androidx.annotation.NonNull'.(ˆÛúÜ8ºîÁÎî.
+j
+java:S1128"HRemove this unused import 'com.google.firebase.firestore.QuerySnapshot'.(Ä¡Ş©ıÿÿÿÿ8ºîÁÎî.
+h
+java:S1128"KRemove this unused import 'com.google.android.gms.tasks.OnSuccessListener'.(íå¡8óÙ€¼î.
+y
+java:S1450!"WRemove the "noButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
+o	java:S100-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±õâùÿÿÿÿ8ıÁéÍì.
+X	java:S125V"<This block of commented-out lines of code should be removed.(ô‡¾Ñ8 µ»ßñ.
+u
+java:S1450%"XRemove the "myContext" field and declare it as a local variable in the relevant methods.(’÷†å8óÙ€¼î.
+o	java:S100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ˆ­üÿÿÿÿ8 Ş¼î.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ²Óùüÿÿÿÿ8Ù¢¥¬í.
+N
+java:S1602]",Remove useless curly braces around statement(œÆäğøÿÿÿÿ8 Ş¼î.
+H
+java:S1659!"&Declare "noButton" on a separate line.(ú‡¯ëÿÿÿÿÿ8ÿËøÏì.
+z
+java:S1450!"XRemove the "yesButton" field and declare it as a local variable in the relevant methods.(ú‡¯ëÿÿÿÿÿ8î†üÏì.
+[
+java:S1128">Remove this unused import 'com.google.android.gms.tasks.Task'.(¦âÏô8ºîÁÎî.

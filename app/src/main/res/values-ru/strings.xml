@@ -11,7 +11,7 @@
     <string name="activity_login_logo_image_description">автомобиль</string>
     <string name="activity_login_inscription_under_logo">С возвращением</string>
     <string name="activity_login_sign_in_to_continue">Войдите, чтобы продолжить</string>
-    <string name="email">E-mail</string>
+    <string name="email">Эл. почта</string>
     <string name="password">Пароль</string>
     <string name="activity_login_sign_in_error">Недействительный адрес электронной почты или пароль</string>
     <string name="activity_login_forgot_password">Забыли пароль?</string>

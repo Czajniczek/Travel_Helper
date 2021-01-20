@@ -1,33 +1,33 @@
 
-s
-java:S3252¨"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(“óŽ»ùÿÿÿÿ
-Å
-java:S1845±"¡Rename method "RequestPermissions" to prevent any misunderstanding/clash with method "requestPermissions" defined in superclass "androidx.fragment.app.Fragment".(°áüÌûÿÿÿÿ8‡¦¯¨î.
-B
-java:S16590",Declare "cityPopulation" on a separate line.(Š´¢®
-s
-java:S3252§"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(…Â×Ýùÿÿÿÿ
 g
 java:S14501"QRemove the "YT" field and declare it as a local variable in the relevant methods.(ô¯ä¦
-W	java:S125>"<This block of commented-out lines of code should be removed.(ÿØÃ8¸÷¨î.
-V	java:S1254"<This block of commented-out lines of code should be removed.(ì¦‘²ùÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„€–²
+m	java:S116;"XRename this field "PERMISSION_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼î—©
+s
+java:S3252§"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(…Â×Ýùÿÿÿÿ
 p	java:S100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°áüÌûÿÿÿÿ8‡¦¯¨î.
-p	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«²„ûÿÿÿÿ8‡¦¯¨î.
-V	java:S125#"<This block of commented-out lines of code should be removed.(Š”™ÿÿÿÿÿ
-V	java:S125Q"<This block of commented-out lines of code should be removed.(êó­Åÿÿÿÿÿ
-p	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÎÆÂøÿÿÿÿ8×ø®¨î.
-X	java:S125~"<This block of commented-out lines of code should be removed.(û»¾Ú8¯Ú÷¨î.
-E
-java:S1185["(Remove this method to simply inherit it.(Ö‰ü¼8£Î¨î.
-C
-java:S16590"&Declare "province" on a separate line.(Š´¢®8É½Ÿ¨î.
-b	java:S1161"MRename this field "YT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¯ä¦
-m
-java:S3776z"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(éåŠ³üÿÿÿÿ
-k	java:S100š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ãõ8½Ù®¨î.
 ;
 java:S16590"%Declare "country" on a separate line.(Š´¢®
-m	java:S116;"XRename this field "PERMISSION_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼î—©
-p	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìú¨˜úÿÿÿÿ8Éº¯¨î.
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„€–²
 Q	java:S125"<This block of commented-out lines of code should be removed.(ñ®¨÷
+E
+java:S1185["(Remove this method to simply inherit it.(Ö‰ü¼8£Î¨î.
+X	java:S125~"<This block of commented-out lines of code should be removed.(û»¾Ú8¯Ú÷¨î.
+Å
+java:S1845±"¡Rename method "RequestPermissions" to prevent any misunderstanding/clash with method "requestPermissions" defined in superclass "androidx.fragment.app.Fragment".(°áüÌûÿÿÿÿ8‡¦¯¨î.
+s
+java:S3252¨"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(“óŽ»ùÿÿÿÿ
+m
+java:S3776z"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(éåŠ³üÿÿÿÿ
+p	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«²„ûÿÿÿÿ8‡¦¯¨î.
+p	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÎÆÂøÿÿÿÿ8×ø®¨î.
+V	java:S1254"<This block of commented-out lines of code should be removed.(ì¦‘²ùÿÿÿÿ
+C
+java:S16590"&Declare "province" on a separate line.(Š´¢®8É½Ÿ¨î.
+V	java:S125Q"<This block of commented-out lines of code should be removed.(êó­Åÿÿÿÿÿ
+k	java:S100š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ãõ8½Ù®¨î.
+p	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìú¨˜úÿÿÿÿ8Éº¯¨î.
+V	java:S125#"<This block of commented-out lines of code should be removed.(Š”™ÿÿÿÿÿ
+W	java:S125>"<This block of commented-out lines of code should be removed.(ÿØÃ8¸÷¨î.
+b	java:S1161"MRename this field "YT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¯ä¦
+B
+java:S16590",Declare "cityPopulation" on a separate line.(Š´¢®

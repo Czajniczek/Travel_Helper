@@ -1,6 +1,7 @@
 
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ž”Ý8ç¡÷§í.
+]	java:S125"<This block of commented-out lines of code should be removed.(ºÉæ‰ùÿÿÿÿ8„í«üñ.
 i
 java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(³ž”Ý8èú§í.
-]	java:S125"<This block of commented-out lines of code should be removed.(ÏÊæÉûÿÿÿÿ8 ··¨î.
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬ÎÄÜúÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(ÏÊæÉûÿÿÿÿ8 ··¨î.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ž”Ý8ç¡÷§í.
