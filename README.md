@@ -1,2 +1,2 @@
 # Travel_Helper
-Travel assistance application
+The main assumption and purpose of the "Travel Helper" application is to help with travelling. The application allows, among other things, to publish announcements with the demand for transport. The user fills in information about the starting and destination locations and the time when he or she would like to start the journey. In addition, users can check their current location. In addition to the city itself, basic information such as population, region and country is provided. The user also has the option to quickly switch to the YouTube application to add variety to a drawn-out journey. To use the "Travel Helper" you must be registered.
